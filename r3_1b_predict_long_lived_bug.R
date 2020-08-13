@@ -13,29 +13,32 @@
 #'         17/09/2019 16:00 pre-process in the train method removed
 #'
 # clean R Studio session.
-
 rm(list = ls(all.names = TRUE))
 options(readr.num_columns = 0)
 timestamp <- format(Sys.time(), "%Y%m%d")
 
-# setup project folders.
-IN_DEBUG_MODE   <- FALSE
-FORCE_NEW_FILE  <- TRUE
-BASEDIR <- file.path("~", "Workspace", "doctorate", "projects")
-PRJDIR  <- file.path(BASEDIR, "long-lived-bug-prediction", "machine-learning")
-SRCDIR  <- file.path(PRJDIR, "R")
-LIBDIR  <- file.path(SRCDIR, "lib")
-DATADIR <- file.path(PRJDIR, "source", "datasets")
+# Constants --------------------------------------------------------------------
+debug_on     <- TRUE
+force_create <- TRUE
+processors   <- ifelse(debug_on, 3, 3)
+base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
+lib_path    <- file.path(base_path, "R")
+data_path   <- file.path(base_path, "data")
+output_path <- file.path(base_path, "output")
+output_data_path <- file.path(output_path, "data")
+# Constants --------------------------------------------------------------------
 
+
+# Libraries --------------------------------------------------------------------
 if (!require("caret")) install.packages("caret")
 if (!require("doParallel")) install.packages("doParallel")
 if (!require("e1071")) install.packages("e1071")
-if (!require("klaR")) install.packages("klaR")  # naive bayes package.
+if (!require("klaR")) install.packages("klaR")
 if (!require("kernlab")) install.packages("kernlab")
 if (!require("futile.logger")) install.packages("futile.logger")
 if (!require("nnet")) install.packages("nnet")
 if (!require("qdap")) install.packages("qdap")
-if (!require("randomForest")) install.packages("randomForest")
+if (!require("randomForest")) install.packages("randonForest")
 if (!require("SnowballC")) install.packages("SnowballC")
 if (!require("smotefamily")) install.packages("smotefamily")
 if (!require("tidyverse")) install.packages("tidyverse")
@@ -57,61 +60,78 @@ library(tidyverse)
 library(tidytext)
 library(tm)
 
-source(file.path(LIBDIR, "balance_dataset.R"))
-source(file.path(LIBDIR, "calculate_metrics.R"))
-source(file.path(LIBDIR, "convert_to_term_matrix.R"))
-source(file.path(LIBDIR, "clean_corpus.R"))
-source(file.path(LIBDIR, "clean_text.R"))
-source(file.path(LIBDIR, "format_file_name.R"))
-source(file.path(LIBDIR, "get_last_evaluation_file.R"))
-source(file.path(LIBDIR, "get_next_parameter_number.R"))
-source(file.path(LIBDIR, "get_resampling_method.R"))
-source(file.path(LIBDIR, "insert_one_evaluation_data.R"))
-source(file.path(LIBDIR, "make_dtm.R"))
-source(file.path(LIBDIR, "train_helper.R"))
+source(file.path(lib_path, "balance_dataset.R"))
+source(file.path(lib_path, "calculate_metrics.R"))
+source(file.path(lib_path, "convert_to_term_matrix.R"))
+source(file.path(lib_path, "clean_corpus.R"))
+source(file.path(lib_path, "clean_text.R"))
+source(file.path(lib_path, "format_file_name.R"))
+source(file.path(lib_path, "get_metrics_file.R"))
+source(file.path(lib_path, "get_next_parameter.R"))
+source(file.path(lib_path, "get_resampling_method.R"))
+source(file.path(lib_path, "insert_one_evaluation_data.R"))
+source(file.path(lib_path, "make_dtm.R"))
+source(file.path(lib_path, "train_helper.R"))
+source(file.path(lib_path, "balance_dataset.R"))
+# Libraries --------------------------------------------------------------------
 
-# main function
-processors <- ifelse(IN_DEBUG_MODE, 30, 30)
-r_cluster <- makePSOCKcluster(processors)
+# Experimental parameters ------------------------------------------------------
+r_cluster    <- makePSOCKcluster(processors)
 registerDoParallel(r_cluster)
-project.name <- "eclipse"
+thresholds  <- c(365)
+resamplings <- c("cv10")
+max_terms   <- c(100)
 class_label <- "long_lived"
-if (IN_DEBUG_MODE) {
-  #seeds <- c(DEFAULT_SEED)
+prefix_reports <- "20200731"
+project_name <- 'eclipse'
+
+if (debug_on) {
+  classifiers  <- c(KNN)
   seeds <- c(DEFAULT_SEED, 283, 1087, 2293, 3581)
 } else {
+  classifiers  <- c(KNN, NB, NNET, RF, SVM)
   seeds <- c(DEFAULT_SEED, 283, 1087, 2293, 3581)
   flog.appender(
     appender.file(
       file.path(
-        DATADIR, 
-        sprintf("%s_predict_long_lived_bug_e1_train_metrics_rev1.log", timestamp)
+        output_path, 
+        sprintf("logs/%s_r3_1b_predict_long_lived.log", prefix_reports)
       )
     )
   )
 }
 #
 flog.threshold(TRACE)
-flog.trace("Long live prediction Research Question 3 - Experiment 1")
-flog.trace("Evaluation metrics ouput path: %s", DATADIR)
+flog.trace("Long live prediction Research Question 3 - Experiment 1b")
+flog.trace("Evaluation metrics ouput path: %s", output_data_path)
 
-modo.exec = ifelse(IN_DEBUG_MODE, "debug", "final")
-metrics.file = sprintf("%s_rq3e1_all_best_train_tunes_%s.csv", timestamp, modo.exec)
-metrics.path = file.path(DATADIR, metrics.file)
-metrics.data = read_csv(metrics.path)
+metrics_file  <- sprintf( "%s_r3_1a_predict_long_lived_bug_results_%s.csv", 
+                          prefix_reports, ifelse(debug_on, "debug", "final")) 
+
+metrics_path   = file.path(output_data_path, metrics_file)
+metrics_data   = read_csv(metrics_path)
+all.best.metrics   = metrics_data[FALSE, ]
+
+flog.trace("Reading the best model by classifier")
+for(predictor in classifiers){
+  best.metrics = metrics_data %>% 
+    filter(classifier == predictor) %>%
+    top_n(1, balanced_acc)
+  all.best.metrics <- rbind(all.best.metrics, best.metrics)
+}
+modo.exec <- ifelse(debug_on, "debug", "final")
 results.file <- sprintf(
-  "%s_rq3e1_train_fold_metrics_%s_%s.csv", 
-  timestamp, 
-  project.name,
+  "%s_r3_1b_predict_long_lived_bug_%s.csv", 
+  prefix_reports, 
   modo.exec
 )
 
-flog.trace("Curfirrent project name : %s", project.name)
-reports.file <- file.path(DATADIR, sprintf("20190917_%s_bug_report_data.csv", project.name))
+flog.trace("Current project name : %s", project_name)
+reports.file <- file.path(data_path, sprintf("%s_%s_bug_report_data.csv", prefix_reports, project_name))
 flog.trace("Bug report file name: %s", reports.file)
 
 reports <- read_csv(reports.file, na = c("", "NA"))
-if (IN_DEBUG_MODE) {
+if (debug_on) {
   flog.trace("DEBUG_MODE: Sample bug reports dataset")
   set.seed(DEFAULT_SEED)
   reports <- sample_n(reports, 1000)
@@ -126,26 +146,26 @@ reports$short_description <- clean_text(reports$short_description)
 reports$long_description  <- clean_text(reports$long_description)
 results.started <- FALSE
 
-for (row in 1:nrow(metrics.data)) {
-  parameter <- metrics.data[row, ]
+for (row in 1:nrow(all.best.metrics)) {
+  parameter <- all.best.metrics[row, ]
 
   for (seed in seeds) {
     set.seed(seed)
     flog.trace("SEED <%d>", seed)
     flog.trace("Current parameters:\n N.Terms...: [%d]\n Classifier: [%s]\n Metric...: [%s]\n Feature...: [%s]\n Threshold.: [%s]\n Balancing.: [%s]\n Resampling: [%s]",
-      parameter$n_term, parameter$classifier, parameter$metric, parameter$feature,
+      parameter$max_term, parameter$classifier, parameter$train_metric, parameter$feature,
       parameter$threshold, parameter$balancing, parameter$resampling)
 
     flog.trace("Converting dataframe to term matrix")
-    flog.trace("Text mining: extracting %d terms from %s", parameter$n_term,parameter$feature)
-    reports.dataset <- convert_to_term_matrix(reports, parameter$feature, parameter$n_term)
+    flog.trace("Text mining: extracting %d terms from %s", parameter$max_term,parameter$feature)
+    reports.dataset <- convert_to_term_matrix(reports, parameter$feature, parameter$max_term)
     flog.trace("Text mining: extracted %d terms from %s", ncol(reports.dataset) - 2, parameter$feature)
 
     flog.trace("Partitioning dataset in training and testing")
     reports.dataset$long_lived <- as.factor(ifelse(reports.dataset$bug_fix_time <= parameter$threshold, "N", "Y"))
-    in_train <- createDataPartition(reports.dataset$long_lived, p = 0.75, list = FALSE)
-    train.dataset <- reports.dataset[in_train, ]
-    test.dataset  <- reports.dataset[-in_train, ]
+    #in_train <- createDataPartition(reports.dataset$long_lived, p = 0.75, list = FALSE)
+    train.dataset <- reports.dataset
+    #test.dataset  <- reports.dataset[-in_train, ]
 
     flog.trace("Balancing training dataset")
     balanced.dataset = balance_dataset(
@@ -157,8 +177,8 @@ for (row in 1:nrow(metrics.data)) {
     X_train <- subset(balanced.dataset, select = -c(long_lived))
     y_train <- balanced.dataset[, class_label]
 
-    X_test <- subset(test.dataset, select = -c(bug_id, bug_fix_time, long_lived))
-    y_test <- test.dataset[, class_label]
+    #X_test <- subset(test.dataset, select = -c(bug_id, bug_fix_time, long_lived))
+    #y_test <- test.dataset[, class_label]
 
     flog.trace("Training prediction model ")
     if (parameter$classifier == KNN) {
@@ -177,25 +197,26 @@ for (row in 1:nrow(metrics.data)) {
       grid = expand.grid(sigma = c(parameter$value1), C = c(parameter$value2))
     }
 
-    if (parameter$metric == ROC)
-      fit_control <- caret::trainControl(
-        method = "cv", 
-        number = 10, 
-        classProbs = TRUE,
-        summaryFunction = twoClassSummary
-      ) 
-    else 
-      fit_control <- caret::trainControl(
-        method = "cv", 
-        number = 10
-      )
+    
+    #  if (parameter$metric == ROC)
+    #  fit_control <- caret::trainControl(
+    #    method = "cv", 
+    #    number = 10, 
+    #    classProbs = TRUE,
+    #    summaryFunction = twoClassSummary
+    #  ) 
+    #else 
+    fit_control <- caret::trainControl(
+      method = "cv", 
+      number = 10
+    )
 
     fit_model <- train_with(
       .x = X_train, 
       .y = y_train, 
       .classifier = parameter$classifier,
       .control = fit_control, 
-      .metric = parameter$metric, 
+      .metric = parameter$train_metric, 
       .seed = seed, 
       .grid = grid
     )
@@ -240,7 +261,7 @@ for (row in 1:nrow(metrics.data)) {
       results.started <- TRUE
     }
     all_train.results <- rbind(all_train.results, train.results)
-    write_csv(all_train.results, file.path(DATADIR, results.file))
+    write_csv(all_train.results, file.path(output_data_path, results.file))
     flog.trace("Training results recorded on CSV file.")
   }
 }
