@@ -22,7 +22,7 @@ timestamp <- format(Sys.time(), "%Y%m%d")
 # Constants --------------------------------------------------------------------
 debug_on     <- FALSE
 force_create <- TRUE
-processors   <- ifelse(debug_on, 3, 3)
+processors   <- ifelse(debug_on, 3, 30)
 base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
 lib_path    <- file.path(base_path, "R")
 data_path   <- file.path(base_path, "data")
@@ -97,13 +97,13 @@ if (debug_on) {
   classifiers <- c(KNN, NB, NNET, RF, SVM)
   features    <- c("short_description", "long_description")
   balancings  <- c(UNBALANCED, SMOTEMETHOD)
-  train_metrics <- c(ACC, KPP, ROC)
+  train_metrics <- c(ACC)
 
   flog.appender(
     appender.file(
       file.path(
         output_path, "logs",
-        sprintf("%s_predict_long_lived_bug_e1_best_tune_rev1.log", timestamp)
+        sprintf("%s_r3_1a_predict_long_lived_bug.log", timestamp)
       )
     )
   )
