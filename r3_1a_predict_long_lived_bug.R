@@ -93,7 +93,8 @@ if (debug_on) {
   balancings    <- c(SMOTEMETHOD)
   train_metrics <- c(ACC)
 } else {
-  projects    <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  #projects    <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  projects    <- c("eclipse")
   classifiers <- c(KNN, NB, NNET, RF, SVM)
   features    <- c("short_description", "long_description")
   balancings  <- c(UNBALANCED, SMOTEMETHOD)

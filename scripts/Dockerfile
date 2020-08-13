@@ -19,9 +19,9 @@ RUN mkdir -p /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/R/
 RUN mkdir -p /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/data/
 RUN mkdir -p /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/output/data/
 RUN mkdir -p /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/output/logs/
-COPY  *.R /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/
-COPY  R/*.R /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/R/
-COPY  data/*.csv /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/data/
+COPY  ./*.R /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/
+COPY  ./R/* /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/R/
+COPY  ./data/*.csv /home/lgomes/Workspace/long-lived-bug-predictor-ml-in-r/data/
 
 RUN chown ${USER_ID}:${GROUP_ID} -R /home/lgomes
 USER lgomes
