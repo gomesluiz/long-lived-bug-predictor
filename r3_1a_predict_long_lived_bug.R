@@ -22,7 +22,7 @@ timestamp <- format(Sys.time(), "%Y%m%d")
 # Constants --------------------------------------------------------------------
 debug_on     <- FALSE
 force_create <- TRUE
-processors   <- ifelse(debug_on, 3, 3)
+processors   <- ifelse(debug_on, 3, 7)
 base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
 lib_path    <- file.path(base_path, "R")
 data_path   <- file.path(base_path, "data")
