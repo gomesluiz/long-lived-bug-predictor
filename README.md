@@ -7,3 +7,4 @@ Template for a R machine learning project based on [Rich Fitzjhon](https://nicer
 * **doc**: paper under construction or any other documentation. 
 * **notebooks**: jupyter notebooks in R or Python.
 * **output**: simulation output, processed datasets, logs, or other processed stuffs.
+##
