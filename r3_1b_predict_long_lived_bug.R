@@ -18,7 +18,7 @@ options(readr.num_columns = 0)
 timestamp <- format(Sys.time(), "%Y%m%d")
 
 # Constants --------------------------------------------------------------------
-debug_on     <- TRUE
+debug_on     <- FALSE
 force_create <- TRUE
 processors   <- ifelse(debug_on, 3, 3)
 base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
@@ -95,7 +95,7 @@ if (debug_on) {
     appender.file(
       file.path(
         output_path, 
-        sprintf("logs/%s_r3_1b_predict_long_lived.log", prefix_reports)
+        sprintf("logs/%s_r3_1b_predict_long_lived.log", timestamp)
       )
     )
   )
@@ -106,7 +106,7 @@ flog.trace("Long live prediction Research Question 3 - Experiment 1b")
 flog.trace("Evaluation metrics ouput path: %s", output_data_path)
 
 metrics_file  <- sprintf( "%s_r3_1a_predict_long_lived_bug_results_%s.csv", 
-                          prefix_reports, ifelse(debug_on, "debug", "final")) 
+                          "20200813", ifelse(debug_on, "debug", "final")) 
 
 metrics_path   = file.path(output_data_path, metrics_file)
 metrics_data   = read_csv(metrics_path)

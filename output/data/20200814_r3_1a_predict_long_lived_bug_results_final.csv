@@ -1,3 +1,0 @@
-tn,fn,fp,tp,Resample,acc,sensitivity,specificity,balanced_acc,hyper1,value1,hyper2,value2,hyper3,value3,classifier,balancing,resampling,train_metric,max_term,feature,threshold,train_size,train_size_class_0,train_size_class_1,seed
-528,345,0,835,Fold05,0.7980093676814989,0.7076271186440678,1,0.853813559322034,k,5,,0,,0,knn,smote,cv10,Accuracy,100,long_description,365,17081,8729,8352,144
-870,3,68,1,Fold10,0.9246284501061571,0.25,0.9275053304904051,0.5887526652452025,k,5,,0,,0,knn,unbalanced,cv10,Accuracy,100,long_description,365,9425,8729,696,144
