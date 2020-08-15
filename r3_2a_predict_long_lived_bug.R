@@ -5,7 +5,7 @@
 #' Luiz Alberto (gomes.luiz@gmail.com)
 #'
 #' @usage:
-#' $ nohup Rscript ./01a_predict_long_lived_bug_e1.R > \\
+#' $ nohup Rscript ./02a_predict_long_lived_bug_e1.R > \\
 #'   01a_predict_long_lived_bug_e1.log 2>&1 &
 #'
 #' @details:
