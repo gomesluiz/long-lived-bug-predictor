@@ -22,7 +22,7 @@ timestamp <- format(Sys.time(), "%Y%m%d")
 # Constants --------------------------------------------------------------------
 debug_on     <- FALSE
 force_create <- TRUE
-processors   <- ifelse(debug_on, 3, 16)
+processors   <- ifelse(debug_on, 3, 6)
 base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
 lib_path    <- file.path(base_path, "R")
 data_path   <- file.path(base_path, "data")
@@ -92,14 +92,14 @@ balancings  <- c(SMOTEMETHOD)
 train_metrics <- c(ACC)
 
 if (debug_on) {
-  max_terms   <- c(100, 150, 200)
+  max_terms   <- c(100, 150)
 } else {
   max_terms   <- c(100, 150, 200, 250, 300)
   flog.appender(
     appender.file(
       file.path(
         output_path, "logs",
-        sprintf("%s_r3_2a_predict_long_lived_bug.log", timestamp)
+        sprintf("%s_r4_2a_predict_long_lived_bug.log", timestamp)
       )
     )
   )
@@ -112,39 +112,16 @@ parameters <- crossing(
 )
 # Experimental parameters ------------------------------------------------------
 flog.threshold(TRACE)
-flog.trace("Long live prediction Research Question 3 - Experiment 2")
+flog.trace("Long live prediction Research Question 4 - Experiment 2")
 flog.trace("Evaluation metrics ouput path: %s", output_path)
 
 results_started <- FALSE
-results_file  <- sprintf( "%s_r3_2a_predict_long_lived_bug_results_%s.csv", 
+results_file  <- sprintf( "%s_r4_2a_predict_long_lived_bug_results_%s.csv", 
                           timestamp, ifelse(debug_on, "debug", "final")) 
+start_parameter <- 1 
 for (project_name in projects) {
   flog.trace("Project name: %s", project_name)
   flog.trace("Loading or create metrics file")
-
-  # create or load yielded metrics files ---------------------------------------
-  start_parameter <- 1 
-  mask_file       <- sprintf("r3_2a_results_%s.csv" , project_name)
-  metrics_file    <- get_metrics_file(output_path, mask_file)
-
-  if (!is.na(metrics_file)) {
-    all_metrics    <- read_csv(metrics_file)
-    next_parameter <- get_next_parameter_number(all_metrics, parameters)
-    if (next_parameter != -1) {
-      start_parameter <- next_parameter
-    }
-  }
-
-  # A new metric file have to be generated.
-  if ((start_parameter == 1) || (force_create == TRUE)) {
-    #start_parameter <- 1
-    metrics_file    <- format_file_name(output_data_path, timestamp, mask_file)
-    flog.trace("Metrics file create: %s", metrics_file)
-  } else {
-    flog.trace("Metrics file: %s", metrics_file)
-  }
-  # create or load yielded metrics files ---------------------------------------
-  
   flog.trace("Starting in parameter number: %d", start_parameter)
   reports_file <- file.path(data_path, sprintf("%s_%s_bug_report_data.csv", 
                                                prefix_reports,  project_name))
@@ -165,7 +142,6 @@ for (project_name in projects) {
   reports_data$long_description  <- clean_text(reports_data$long_description)
   # feature engineering --------------------------------------------------------
   
-  last_feature  <- "@"
   best_accuracy <- 0
   for (i in start_parameter:nrow(parameters)) {
     set.seed(DEFAULT_SEED)
@@ -203,12 +179,14 @@ for (project_name in projects) {
 
     flog.trace("Training model ")
     fit_control <- get_resampling_method(parameter$resamplings)
-    fit_model <- train_with(
-      .x = X_train,
-      .y = y_train,
-      .classifier = parameter$classifiers,
-      .control = fit_control,
-      .metric = parameter$train_metrics
+    fit_grid    <- expand.grid(C = c(2**(5)),sigma = c(2**(-5)))
+    fit_model   <- train(
+      x = X_train,
+      y = y_train,
+      method   = "svmRadial",
+      trControl = fit_control,
+      tuneGrid  = fit_grid,
+      metric    = parameter$train_metrics
     )
     
     flog.trace("Recording training resultas in CSV file")
@@ -230,46 +208,6 @@ for (project_name in projects) {
     train.results$specificity <- ifelse(negatives == 0, 0, train.results$tn/negatives)
     
     train.results$balanced_acc <- (train.results$sensitivity + train.results$specificity)/2
-    
-    train.results$hyper1 = "" 
-    train.results$value1 = 0 
-    train.results$hyper2 = "" 
-    train.results$value2 = 0 
-    train.results$hyper3 = "" 
-    train.results$value3 = 0 
-    if (parameter$classifiers == KNN)
-    {
-      train.results$hyper1 <-  'k'
-      train.results$value1 <- fit_model$resampledCM$k
-    }
-    if (parameter$classifiers == NB)
-    {
-      train.results$hyper1 <-  'fL'
-      train.results$value1 <- fit_model$resampledCM$fL
-      train.results$hyper2 <-  'usekernel'
-      train.results$value2 <- fit_model$resampledCM$usekernel
-      train.results$hyper3 <-  'adjust'
-      train.results$value3 <- fit_model$resampledCM$adjust
-    }
-    if (parameter$classifiers == NNET)
-    {
-      train.results$hyper1 <-  'size'
-      train.results$value1 <- fit_model$resampledCM$size
-      train.results$hyper2 <-  'decay'
-      train.results$value2 <- fit_model$resampledCM$decay
-    }
-    if (parameter$classifiers == RF)
-    {
-      train.results$hyper1 <-  'mtry'
-      train.results$value1 <- fit_model$resampledCM$mtry
-    }
-    if (parameter$classifiers == SVM)
-    {
-      train.results$hyper1 <-  'sigma'
-      train.results$value1 <- fit_model$resampledCM$sigma
-      train.results$hyper2 <-  'C'
-      train.results$value2 <- fit_model$resampledCM$C
-    }
     
     metrics_record = train.results %>% 
       top_n(1, balanced_acc)

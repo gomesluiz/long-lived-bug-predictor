@@ -1,0 +1,3 @@
+tn,fn,fp,tp,Resample,acc,sensitivity,specificity,balanced_acc,classifier,balancing,resampling,train_metric,max_term,feature,threshold,train_size,train_size_class_0,train_size_class_1,seed
+90,0,0,84,Fold02,1,1,1,1,svm,smote,cv10,Accuracy,100,long_description,365,1740,900,840,144
+91,0,0,84,Fold01,1,1,1,1,svm,smote,cv10,Accuracy,150,long_description,365,1744,904,840,144
