@@ -1,0 +1,93 @@
+TRACE [2020-08-15 17:55:26] Long live prediction Research Question 3 - Experiment 2
+TRACE [2020-08-15 17:55:26] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output
+TRACE [2020-08-15 17:55:26] Project name: eclipse
+TRACE [2020-08-15 17:55:26] Loading or create metrics file
+TRACE [2020-08-15 17:55:26] Metrics file create: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data/20200815_r3_2a_results_eclipse.csv
+TRACE [2020-08-15 17:55:26] Starting in parameter number: 1
+TRACE [2020-08-15 17:55:26] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-08-15 17:55:26] Clean text features
+TRACE [2020-08-15 17:56:00] Processing feature         : long_description
+TRACE [2020-08-15 17:56:00] Processing number of terms : 100
+TRACE [2020-08-15 17:56:00] Processing classifier      : svm
+TRACE [2020-08-15 17:56:00] Processing training metric : Accuracy
+TRACE [2020-08-15 17:56:00] Processing threshold       : 365
+TRACE [2020-08-15 17:56:00] Processing balancing       : smote
+TRACE [2020-08-15 17:56:00] Processing resampling      : cv10
+TRACE [2020-08-15 17:56:00] Converting dataframe to term matrix
+TRACE [2020-08-15 17:56:18] Text mining: extracted 100 terms from long_description
+TRACE [2020-08-15 17:56:18] Partitioning dataset in training and testing
+TRACE [2020-08-15 17:56:18] Balancing training dataset
+TRACE [2020-08-15 17:56:18] [balance_dataset]: balancing method: smote
+TRACE [2020-08-15 17:56:20] Training model 
+TRACE [2020-08-15 17:56:20] [get_resampling_method] Resampling model 10cv
+TRACE [2020-08-15 17:56:20] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-08-15 19:06:01] Recording training resultas in CSV file
+TRACE [2020-08-15 19:06:01] Training results recorded on CSV file.
+TRACE [2020-08-15 19:06:01] Processing feature         : long_description
+TRACE [2020-08-15 19:06:01] Processing number of terms : 150
+TRACE [2020-08-15 19:06:01] Processing classifier      : svm
+TRACE [2020-08-15 19:06:01] Processing training metric : Accuracy
+TRACE [2020-08-15 19:06:01] Processing threshold       : 365
+TRACE [2020-08-15 19:06:01] Processing balancing       : smote
+TRACE [2020-08-15 19:06:01] Processing resampling      : cv10
+TRACE [2020-08-15 19:06:01] Converting dataframe to term matrix
+TRACE [2020-08-15 19:06:18] Text mining: extracted 150 terms from long_description
+TRACE [2020-08-15 19:06:18] Partitioning dataset in training and testing
+TRACE [2020-08-15 19:06:18] Balancing training dataset
+TRACE [2020-08-15 19:06:18] [balance_dataset]: balancing method: smote
+TRACE [2020-08-15 19:06:22] Training model 
+TRACE [2020-08-15 19:06:22] [get_resampling_method] Resampling model 10cv
+TRACE [2020-08-15 19:06:22] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-08-15 20:39:49] Recording training resultas in CSV file
+TRACE [2020-08-15 20:39:49] Training results recorded on CSV file.
+TRACE [2020-08-15 20:39:49] Processing feature         : long_description
+TRACE [2020-08-15 20:39:49] Processing number of terms : 200
+TRACE [2020-08-15 20:39:49] Processing classifier      : svm
+TRACE [2020-08-15 20:39:49] Processing training metric : Accuracy
+TRACE [2020-08-15 20:39:49] Processing threshold       : 365
+TRACE [2020-08-15 20:39:49] Processing balancing       : smote
+TRACE [2020-08-15 20:39:49] Processing resampling      : cv10
+TRACE [2020-08-15 20:39:49] Converting dataframe to term matrix
+TRACE [2020-08-15 20:40:06] Text mining: extracted 200 terms from long_description
+TRACE [2020-08-15 20:40:06] Partitioning dataset in training and testing
+TRACE [2020-08-15 20:40:06] Balancing training dataset
+TRACE [2020-08-15 20:40:06] [balance_dataset]: balancing method: smote
+TRACE [2020-08-15 20:40:11] Training model 
+TRACE [2020-08-15 20:40:11] [get_resampling_method] Resampling model 10cv
+TRACE [2020-08-15 20:40:11] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-08-15 22:31:54] Recording training resultas in CSV file
+TRACE [2020-08-15 22:31:54] Training results recorded on CSV file.
+TRACE [2020-08-15 22:31:54] Processing feature         : long_description
+TRACE [2020-08-15 22:31:54] Processing number of terms : 250
+TRACE [2020-08-15 22:31:54] Processing classifier      : svm
+TRACE [2020-08-15 22:31:54] Processing training metric : Accuracy
+TRACE [2020-08-15 22:31:54] Processing threshold       : 365
+TRACE [2020-08-15 22:31:54] Processing balancing       : smote
+TRACE [2020-08-15 22:31:54] Processing resampling      : cv10
+TRACE [2020-08-15 22:31:54] Converting dataframe to term matrix
+TRACE [2020-08-15 22:32:11] Text mining: extracted 250 terms from long_description
+TRACE [2020-08-15 22:32:11] Partitioning dataset in training and testing
+TRACE [2020-08-15 22:32:11] Balancing training dataset
+TRACE [2020-08-15 22:32:11] [balance_dataset]: balancing method: smote
+TRACE [2020-08-15 22:32:17] Training model 
+TRACE [2020-08-15 22:32:17] [get_resampling_method] Resampling model 10cv
+TRACE [2020-08-15 22:32:17] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-08-16 00:52:10] Recording training resultas in CSV file
+TRACE [2020-08-16 00:52:10] Training results recorded on CSV file.
+TRACE [2020-08-16 00:52:10] Processing feature         : long_description
+TRACE [2020-08-16 00:52:10] Processing number of terms : 300
+TRACE [2020-08-16 00:52:10] Processing classifier      : svm
+TRACE [2020-08-16 00:52:10] Processing training metric : Accuracy
+TRACE [2020-08-16 00:52:10] Processing threshold       : 365
+TRACE [2020-08-16 00:52:10] Processing balancing       : smote
+TRACE [2020-08-16 00:52:10] Processing resampling      : cv10
+TRACE [2020-08-16 00:52:10] Converting dataframe to term matrix
+TRACE [2020-08-16 00:52:26] Text mining: extracted 300 terms from long_description
+TRACE [2020-08-16 00:52:26] Partitioning dataset in training and testing
+TRACE [2020-08-16 00:52:26] Balancing training dataset
+TRACE [2020-08-16 00:52:26] [balance_dataset]: balancing method: smote
+TRACE [2020-08-16 00:52:33] Training model 
+TRACE [2020-08-16 00:52:33] [get_resampling_method] Resampling model 10cv
+TRACE [2020-08-16 00:52:33] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-08-16 03:40:22] Recording training resultas in CSV file
+TRACE [2020-08-16 03:40:22] Training results recorded on CSV file.
