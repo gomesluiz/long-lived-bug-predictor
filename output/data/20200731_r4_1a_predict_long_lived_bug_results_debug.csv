@@ -1,6 +1,0 @@
-tn,fn,fp,tp,Resample,acc,sensitivity,specificity,balanced_acc,hyper1,value1,hyper2,value2,hyper3,value3,classifier,balancing,resampling,train_metric,max_term,feature,threshold,train_size,train_size_class_0,train_size_class_1,seed
-63,18,0,78,Fold08,0.8867924528301887,0.8125,1,0.90625,k,5,,0,,0,knn,smote,cv10,Accuracy,100,short_description,365,1587,807,780,144
-81,0,68,10,Fold01,0.5723270440251572,1,0.5436241610738255,0.7718120805369127,fL,0,usekernel,1,adjust,1,nb,smote,cv10,Accuracy,100,short_description,365,1587,807,780,144
-72,9,3,75,Fold04,0.9245283018867925,0.8928571428571429,0.96,0.9264285714285714,size,30,decay,0.5,,0,nn,smote,cv10,Accuracy,100,short_description,365,1587,807,780,144
-79,2,3,75,Fold02,0.9685534591194969,0.974025974025974,0.9634146341463414,0.9687203040861577,mtry,100,,0,,0,rf,smote,cv10,Accuracy,100,short_description,365,1587,807,780,144
-80,1,0,78,Fold03,0.9937106918238994,0.9873417721518988,1,0.9936708860759493,sigma,0.03125,C,32,,0,svm,smote,cv10,Accuracy,100,short_description,365,1587,807,780,144
