@@ -177,9 +177,10 @@ for (project_name in projects) {
       ifelse(reports_matrix$bug_fix_time > parameter$threshold, 1, 0)
     )
     
-    in_train <- createDataPartition(reports_matrix$long_lived, p = 0.80, list = FALSE)
-    X_train <- reports_matrix[in_train, ]
-    X_test  <- reports_matrix[-in_train, ]
+    #in_train <- createDataPartition(reports_matrix$long_lived, p = 0.80, list = FALSE)
+    #X_train <- reports_matrix[in_train, ]
+    X_train <- reports_matrix
+    #X_test  <- reports_matrix[-in_train, ]
 
     flog.trace("Balancing training dataset")
     reports_balanced <- balance_dataset(

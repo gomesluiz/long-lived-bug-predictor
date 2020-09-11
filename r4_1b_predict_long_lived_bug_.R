@@ -106,25 +106,19 @@ flog.trace("Long live prediction Research Question 3 - Experiment 1b")
 flog.trace("Evaluation metrics ouput path: %s", output_data_path)
 
 metrics_file  <- sprintf( "%s_r3_1a_predict_long_lived_bug_results_%s.csv", 
-                          "20200910", ifelse(debug_on, "debug", "final")) 
+                          "20200813", ifelse(debug_on, "debug", "final")) 
 
 metrics_path   = file.path(output_data_path, metrics_file)
 metrics_data   = read_csv(metrics_path)
 all.best.metrics   = metrics_data[FALSE, ]
 
 flog.trace("Reading the best model by classifier")
-#for(predictor in classifiers){
-#  best.metrics = metrics_data %>% 
-#    filter(classifier == predictor) %>%
-#    top_n(1, balanced_acc)
-#  all.best.metrics <- rbind(all.best.metrics, best.metrics)
-#}
-#for(predictor in classifiers){
-#  best.metrics = metrics_data %>% 
-#    filter(classifier == predictor) %>%
-#    top_n(1, balanced_acc)
-all.best.metrics <- metrics_data 
-#}
+for(predictor in classifiers){
+  best.metrics = metrics_data %>% 
+    filter(classifier == predictor) %>%
+    top_n(1, balanced_acc)
+  all.best.metrics <- rbind(all.best.metrics, best.metrics)
+}
 modo.exec <- ifelse(debug_on, "debug", "final")
 results.file <- sprintf(
   "%s_r3_1b_predict_long_lived_bug_%s.csv", 
@@ -154,23 +148,18 @@ results.started <- FALSE
 
 for (row in 1:nrow(all.best.metrics)) {
   parameter <- all.best.metrics[row, ]
-  reports.dataset <- convert_to_term_matrix
-  (
-    reports, parameter$feature, parameter$max_term
-  )
-  
+
   for (seed in seeds) {
     set.seed(seed)
     flog.trace("SEED <%d>", seed)
-    
     flog.trace("Current parameters:\n N.Terms...: [%d]\n Classifier: [%s]\n Metric...: [%s]\n Feature...: [%s]\n Threshold.: [%s]\n Balancing.: [%s]\n Resampling: [%s]",
-      parameter$max_term, parameter$classifier, parameter$train_metric
-      , parameter$feature, parameter$threshold, parameter$balancing
-      , parameter$resampling)
+      parameter$max_term, parameter$classifier, parameter$train_metric, parameter$feature,
+      parameter$threshold, parameter$balancing, parameter$resampling)
 
     flog.trace("Converting dataframe to term matrix")
-               ncol(reports.dataset) - 2, parameter$feature
-    )
+    flog.trace("Text mining: extracting %d terms from %s", parameter$max_term,parameter$feature)
+    reports.dataset <- convert_to_term_matrix(reports, parameter$feature, parameter$max_term)
+    flog.trace("Text mining: extracted %d terms from %s", ncol(reports.dataset) - 2, parameter$feature)
 
     flog.trace("Partitioning dataset in training and testing")
     reports.dataset$long_lived <- as.factor(ifelse(reports.dataset$bug_fix_time <= parameter$threshold, "N", "Y"))
@@ -179,10 +168,8 @@ for (row in 1:nrow(all.best.metrics)) {
     #test.dataset  <- reports.dataset[-in_train, ]
 
     flog.trace("Balancing training dataset")
-    balanced.dataset = balance_dataset
-    (
-      train.dataset, 
-      class_label, 
+    balanced.dataset = balance_dataset(
+      train.dataset, class_label, 
       c("bug_id", "bug_fix_time"), 
       parameter$balancing
     )
@@ -228,10 +215,10 @@ for (row in 1:nrow(all.best.metrics)) {
       .x = X_train, 
       .y = y_train, 
       .classifier = parameter$classifier,
-      .control    = fit_control, 
-      .metric     = parameter$train_metric, 
-      .seed       = seed, 
-      .grid       = grid
+      .control = fit_control, 
+      .metric = parameter$train_metric, 
+      .seed = seed, 
+      .grid = grid
     )
 
     flog.trace("Recording training resultas in CSV file")
