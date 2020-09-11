@@ -1,1 +1,0 @@
-from paretochart import paretochart
