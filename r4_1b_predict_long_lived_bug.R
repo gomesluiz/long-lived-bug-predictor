@@ -163,7 +163,7 @@ for (row in 1:nrow(all.best.metrics)) {
     flog.trace("Partitioning dataset in training and testing")
     reports.dataset$long_lived <- as.factor(ifelse(reports.dataset$bug_fix_time <= parameter$threshold, "N", "Y"))
     in_train <- createDataPartition(reports.dataset$long_lived, p = 0.75, list = FALSE)
-    train.dataset <- reports.dataset[in_train,  ]
+    train.dataset <- reports.dataset
     test.dataset  <- reports.dataset[-in_train, ]
 
     flog.trace("Balancing training dataset")
