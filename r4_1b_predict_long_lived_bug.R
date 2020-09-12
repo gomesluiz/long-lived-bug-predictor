@@ -85,9 +85,9 @@ prefix_reports <- "20200731"
 project_name <- 'eclipse'
 
 if (debug_on) {
-  seeds <- c(175, 283, 1087, 2293, 3581)
+  seeds <- c(DEFAULT_SEED, 283, 1087, 2293, 3581)
 } else {
-  seeds <- c(175, 283, 1087, 2293, 3581)
+  seeds <- c(DEFAULT_SEED, 283, 1087, 2293, 3581)
   flog.appender(
     appender.file(
       file.path(
