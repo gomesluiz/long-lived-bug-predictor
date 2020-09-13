@@ -3330,3 +3330,1669 @@ TRACE [2020-09-12 20:00:00] [train_with_svm] Training model with SVM and Accurac
 TRACE [2020-09-12 20:00:36] Calculating training results metrics
 TRACE [2020-09-12 20:00:36] Testing predicting model 
 TRACE [2020-09-12 20:00:37] Training results recorded on CSV file.
+TRACE [2020-09-12 22:07:29] Long live prediction Research Question 4 - Experiment 1b
+TRACE [2020-09-12 22:07:29] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-12 22:07:29] Reading the best model by classifier
+TRACE [2020-09-12 22:07:29] Current project name : eclipse
+TRACE [2020-09-12 22:07:29] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-12 22:07:29] Clean text features
+TRACE [2020-09-12 22:08:04] Converting dataframe to term matrix
+TRACE [2020-09-12 22:08:21] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 22:08:21] SEED <144>
+TRACE [2020-09-12 22:08:21] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:08:21] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:08:21] Balancing training dataset
+TRACE [2020-09-12 22:08:21] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:08:24] Training prediction model 
+TRACE [2020-09-12 22:08:24] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:08:39] Calculating training results metrics
+TRACE [2020-09-12 22:08:39] Testing predicting model 
+TRACE [2020-09-12 22:08:44] SEED <283>
+TRACE [2020-09-12 22:08:44] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:08:44] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:08:44] Balancing training dataset
+TRACE [2020-09-12 22:08:45] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:08:47] Training prediction model 
+TRACE [2020-09-12 22:08:47] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:09:00] Calculating training results metrics
+TRACE [2020-09-12 22:09:00] Testing predicting model 
+TRACE [2020-09-12 22:09:05] SEED <1087>
+TRACE [2020-09-12 22:09:05] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:09:05] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:09:05] Balancing training dataset
+TRACE [2020-09-12 22:09:05] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:09:07] Training prediction model 
+TRACE [2020-09-12 22:09:07] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:09:21] Calculating training results metrics
+TRACE [2020-09-12 22:09:21] Testing predicting model 
+TRACE [2020-09-12 22:09:26] SEED <2293>
+TRACE [2020-09-12 22:09:26] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:09:26] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:09:26] Balancing training dataset
+TRACE [2020-09-12 22:09:26] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:09:28] Training prediction model 
+TRACE [2020-09-12 22:09:28] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:09:41] Calculating training results metrics
+TRACE [2020-09-12 22:09:41] Testing predicting model 
+TRACE [2020-09-12 22:09:47] SEED <3581>
+TRACE [2020-09-12 22:09:47] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:09:47] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:09:47] Balancing training dataset
+TRACE [2020-09-12 22:09:47] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:09:49] Training prediction model 
+TRACE [2020-09-12 22:09:49] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:10:02] Calculating training results metrics
+TRACE [2020-09-12 22:10:02] Testing predicting model 
+TRACE [2020-09-12 22:10:07] Training results recorded on CSV file.
+TRACE [2020-09-12 22:10:07] Converting dataframe to term matrix
+TRACE [2020-09-12 22:10:24] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 22:10:24] SEED <144>
+TRACE [2020-09-12 22:10:24] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:10:24] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:10:24] Balancing training dataset
+TRACE [2020-09-12 22:10:24] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:10:24] Training prediction model 
+TRACE [2020-09-12 22:10:24] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:10:28] Calculating training results metrics
+TRACE [2020-09-12 22:10:28] Testing predicting model 
+TRACE [2020-09-12 22:10:31] SEED <283>
+TRACE [2020-09-12 22:10:31] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:10:31] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:10:31] Balancing training dataset
+TRACE [2020-09-12 22:10:31] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:10:31] Training prediction model 
+TRACE [2020-09-12 22:10:31] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:10:35] Calculating training results metrics
+TRACE [2020-09-12 22:10:35] Testing predicting model 
+TRACE [2020-09-12 22:10:37] SEED <1087>
+TRACE [2020-09-12 22:10:37] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:10:37] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:10:37] Balancing training dataset
+TRACE [2020-09-12 22:10:37] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:10:37] Training prediction model 
+TRACE [2020-09-12 22:10:37] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:10:41] Calculating training results metrics
+TRACE [2020-09-12 22:10:41] Testing predicting model 
+TRACE [2020-09-12 22:10:44] SEED <2293>
+TRACE [2020-09-12 22:10:44] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:10:44] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:10:44] Balancing training dataset
+TRACE [2020-09-12 22:10:44] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:10:44] Training prediction model 
+TRACE [2020-09-12 22:10:44] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:10:47] Calculating training results metrics
+TRACE [2020-09-12 22:10:47] Testing predicting model 
+TRACE [2020-09-12 22:10:50] SEED <3581>
+TRACE [2020-09-12 22:10:50] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:10:50] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:10:50] Balancing training dataset
+TRACE [2020-09-12 22:10:50] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:10:50] Training prediction model 
+TRACE [2020-09-12 22:10:50] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 22:10:54] Calculating training results metrics
+TRACE [2020-09-12 22:10:54] Testing predicting model 
+TRACE [2020-09-12 22:10:56] Training results recorded on CSV file.
+TRACE [2020-09-12 22:10:56] Converting dataframe to term matrix
+TRACE [2020-09-12 22:11:14] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 22:11:14] SEED <144>
+TRACE [2020-09-12 22:11:14] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:11:14] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:11:14] Balancing training dataset
+TRACE [2020-09-12 22:11:14] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:11:16] Training prediction model 
+TRACE [2020-09-12 22:11:16] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:15:13] Calculating training results metrics
+TRACE [2020-09-12 22:15:13] Testing predicting model 
+TRACE [2020-09-12 22:15:15] SEED <283>
+TRACE [2020-09-12 22:15:15] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:15:15] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:15:15] Balancing training dataset
+TRACE [2020-09-12 22:15:15] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:15:17] Training prediction model 
+TRACE [2020-09-12 22:15:17] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:19:14] Calculating training results metrics
+TRACE [2020-09-12 22:19:14] Testing predicting model 
+TRACE [2020-09-12 22:19:16] SEED <1087>
+TRACE [2020-09-12 22:19:16] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:19:16] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:19:16] Balancing training dataset
+TRACE [2020-09-12 22:19:16] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:19:19] Training prediction model 
+TRACE [2020-09-12 22:19:19] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:23:15] Calculating training results metrics
+TRACE [2020-09-12 22:23:15] Testing predicting model 
+TRACE [2020-09-12 22:23:18] SEED <2293>
+TRACE [2020-09-12 22:23:18] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:23:18] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:23:18] Balancing training dataset
+TRACE [2020-09-12 22:23:18] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:23:20] Training prediction model 
+TRACE [2020-09-12 22:23:20] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:27:17] Calculating training results metrics
+TRACE [2020-09-12 22:27:17] Testing predicting model 
+TRACE [2020-09-12 22:27:19] SEED <3581>
+TRACE [2020-09-12 22:27:19] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:27:19] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:27:19] Balancing training dataset
+TRACE [2020-09-12 22:27:19] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:27:21] Training prediction model 
+TRACE [2020-09-12 22:27:21] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:31:19] Calculating training results metrics
+TRACE [2020-09-12 22:31:19] Testing predicting model 
+TRACE [2020-09-12 22:31:22] Training results recorded on CSV file.
+TRACE [2020-09-12 22:31:22] Converting dataframe to term matrix
+TRACE [2020-09-12 22:31:39] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 22:31:39] SEED <144>
+TRACE [2020-09-12 22:31:39] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:31:39] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:31:39] Balancing training dataset
+TRACE [2020-09-12 22:31:39] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:31:39] Training prediction model 
+TRACE [2020-09-12 22:31:39] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:33:51] Calculating training results metrics
+TRACE [2020-09-12 22:33:51] Testing predicting model 
+TRACE [2020-09-12 22:34:04] SEED <283>
+TRACE [2020-09-12 22:34:04] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:34:04] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:34:04] Balancing training dataset
+TRACE [2020-09-12 22:34:04] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:34:04] Training prediction model 
+TRACE [2020-09-12 22:34:04] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:36:16] Calculating training results metrics
+TRACE [2020-09-12 22:36:16] Testing predicting model 
+TRACE [2020-09-12 22:36:29] SEED <1087>
+TRACE [2020-09-12 22:36:29] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:36:29] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:36:29] Balancing training dataset
+TRACE [2020-09-12 22:36:29] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:36:29] Training prediction model 
+TRACE [2020-09-12 22:36:29] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:38:40] Calculating training results metrics
+TRACE [2020-09-12 22:38:40] Testing predicting model 
+TRACE [2020-09-12 22:38:54] SEED <2293>
+TRACE [2020-09-12 22:38:54] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:38:54] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:38:54] Balancing training dataset
+TRACE [2020-09-12 22:38:54] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:38:54] Training prediction model 
+TRACE [2020-09-12 22:38:54] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:41:05] Calculating training results metrics
+TRACE [2020-09-12 22:41:05] Testing predicting model 
+TRACE [2020-09-12 22:41:19] SEED <3581>
+TRACE [2020-09-12 22:41:19] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:41:19] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:41:19] Balancing training dataset
+TRACE [2020-09-12 22:41:19] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:41:19] Training prediction model 
+TRACE [2020-09-12 22:41:19] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 22:43:30] Calculating training results metrics
+TRACE [2020-09-12 22:43:30] Testing predicting model 
+TRACE [2020-09-12 22:43:44] Training results recorded on CSV file.
+TRACE [2020-09-12 22:43:44] Converting dataframe to term matrix
+TRACE [2020-09-12 22:44:01] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 22:44:01] SEED <144>
+TRACE [2020-09-12 22:44:01] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:44:01] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:44:01] Balancing training dataset
+TRACE [2020-09-12 22:44:01] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:44:04] Training prediction model 
+TRACE [2020-09-12 22:44:04] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:45:06] Calculating training results metrics
+TRACE [2020-09-12 22:45:06] Testing predicting model 
+TRACE [2020-09-12 22:45:06] SEED <283>
+TRACE [2020-09-12 22:45:06] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:45:06] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:45:06] Balancing training dataset
+TRACE [2020-09-12 22:45:06] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:45:08] Training prediction model 
+TRACE [2020-09-12 22:45:08] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:46:10] Calculating training results metrics
+TRACE [2020-09-12 22:46:10] Testing predicting model 
+TRACE [2020-09-12 22:46:10] SEED <1087>
+TRACE [2020-09-12 22:46:10] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:46:10] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:46:10] Balancing training dataset
+TRACE [2020-09-12 22:46:10] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:46:12] Training prediction model 
+TRACE [2020-09-12 22:46:12] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:47:14] Calculating training results metrics
+TRACE [2020-09-12 22:47:14] Testing predicting model 
+TRACE [2020-09-12 22:47:14] SEED <2293>
+TRACE [2020-09-12 22:47:14] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:47:14] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:47:14] Balancing training dataset
+TRACE [2020-09-12 22:47:14] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:47:16] Training prediction model 
+TRACE [2020-09-12 22:47:16] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:48:18] Calculating training results metrics
+TRACE [2020-09-12 22:48:18] Testing predicting model 
+TRACE [2020-09-12 22:48:18] SEED <3581>
+TRACE [2020-09-12 22:48:18] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:48:18] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:48:18] Balancing training dataset
+TRACE [2020-09-12 22:48:18] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:48:20] Training prediction model 
+TRACE [2020-09-12 22:48:20] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:49:21] Calculating training results metrics
+TRACE [2020-09-12 22:49:21] Testing predicting model 
+TRACE [2020-09-12 22:49:21] Training results recorded on CSV file.
+TRACE [2020-09-12 22:49:21] Converting dataframe to term matrix
+TRACE [2020-09-12 22:49:39] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 22:49:39] SEED <144>
+TRACE [2020-09-12 22:49:39] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:49:39] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:49:39] Balancing training dataset
+TRACE [2020-09-12 22:49:39] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:49:39] Training prediction model 
+TRACE [2020-09-12 22:49:39] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:49:51] Calculating training results metrics
+TRACE [2020-09-12 22:49:51] Testing predicting model 
+TRACE [2020-09-12 22:49:51] SEED <283>
+TRACE [2020-09-12 22:49:51] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:49:51] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:49:51] Balancing training dataset
+TRACE [2020-09-12 22:49:51] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:49:51] Training prediction model 
+TRACE [2020-09-12 22:49:51] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:50:04] Calculating training results metrics
+TRACE [2020-09-12 22:50:04] Testing predicting model 
+TRACE [2020-09-12 22:50:04] SEED <1087>
+TRACE [2020-09-12 22:50:04] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:50:04] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:50:04] Balancing training dataset
+TRACE [2020-09-12 22:50:04] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:50:04] Training prediction model 
+TRACE [2020-09-12 22:50:04] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:50:16] Calculating training results metrics
+TRACE [2020-09-12 22:50:16] Testing predicting model 
+TRACE [2020-09-12 22:50:16] SEED <2293>
+TRACE [2020-09-12 22:50:16] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:50:16] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:50:16] Balancing training dataset
+TRACE [2020-09-12 22:50:16] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:50:16] Training prediction model 
+TRACE [2020-09-12 22:50:16] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:50:30] Calculating training results metrics
+TRACE [2020-09-12 22:50:30] Testing predicting model 
+TRACE [2020-09-12 22:50:30] SEED <3581>
+TRACE [2020-09-12 22:50:30] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:50:30] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:50:30] Balancing training dataset
+TRACE [2020-09-12 22:50:30] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:50:30] Training prediction model 
+TRACE [2020-09-12 22:50:30] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-12 22:50:43] Calculating training results metrics
+TRACE [2020-09-12 22:50:43] Testing predicting model 
+TRACE [2020-09-12 22:50:43] Training results recorded on CSV file.
+TRACE [2020-09-12 22:50:43] Converting dataframe to term matrix
+TRACE [2020-09-12 22:51:00] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 22:51:00] SEED <144>
+TRACE [2020-09-12 22:51:00] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:51:00] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:51:00] Balancing training dataset
+TRACE [2020-09-12 22:51:00] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:51:03] Training prediction model 
+TRACE [2020-09-12 22:51:03] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 22:52:16] Calculating training results metrics
+TRACE [2020-09-12 22:52:16] Testing predicting model 
+TRACE [2020-09-12 22:52:16] SEED <283>
+TRACE [2020-09-12 22:52:16] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:52:16] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:52:16] Balancing training dataset
+TRACE [2020-09-12 22:52:16] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:52:18] Training prediction model 
+TRACE [2020-09-12 22:52:18] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 22:53:30] Calculating training results metrics
+TRACE [2020-09-12 22:53:30] Testing predicting model 
+TRACE [2020-09-12 22:53:30] SEED <1087>
+TRACE [2020-09-12 22:53:30] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:53:30] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:53:30] Balancing training dataset
+TRACE [2020-09-12 22:53:30] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:53:32] Training prediction model 
+TRACE [2020-09-12 22:53:32] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 22:54:44] Calculating training results metrics
+TRACE [2020-09-12 22:54:44] Testing predicting model 
+TRACE [2020-09-12 22:54:44] SEED <2293>
+TRACE [2020-09-12 22:54:44] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:54:44] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:54:44] Balancing training dataset
+TRACE [2020-09-12 22:54:44] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:54:46] Training prediction model 
+TRACE [2020-09-12 22:54:46] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 22:55:59] Calculating training results metrics
+TRACE [2020-09-12 22:55:59] Testing predicting model 
+TRACE [2020-09-12 22:55:59] SEED <3581>
+TRACE [2020-09-12 22:55:59] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:55:59] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:55:59] Balancing training dataset
+TRACE [2020-09-12 22:55:59] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 22:56:01] Training prediction model 
+TRACE [2020-09-12 22:56:01] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 22:57:13] Calculating training results metrics
+TRACE [2020-09-12 22:57:13] Testing predicting model 
+TRACE [2020-09-12 22:57:13] Training results recorded on CSV file.
+TRACE [2020-09-12 22:57:13] Converting dataframe to term matrix
+TRACE [2020-09-12 22:57:30] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 22:57:30] SEED <144>
+TRACE [2020-09-12 22:57:30] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:57:30] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:57:30] Balancing training dataset
+TRACE [2020-09-12 22:57:30] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:57:31] Training prediction model 
+TRACE [2020-09-12 22:57:31] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 22:58:30] Calculating training results metrics
+TRACE [2020-09-12 22:58:30] Testing predicting model 
+TRACE [2020-09-12 22:58:30] SEED <283>
+TRACE [2020-09-12 22:58:30] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:58:30] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:58:30] Balancing training dataset
+TRACE [2020-09-12 22:58:30] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:58:30] Training prediction model 
+TRACE [2020-09-12 22:58:30] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 22:59:30] Calculating training results metrics
+TRACE [2020-09-12 22:59:30] Testing predicting model 
+TRACE [2020-09-12 22:59:30] SEED <1087>
+TRACE [2020-09-12 22:59:30] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 22:59:30] Partitioning dataset in training and testing
+TRACE [2020-09-12 22:59:30] Balancing training dataset
+TRACE [2020-09-12 22:59:30] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 22:59:30] Training prediction model 
+TRACE [2020-09-12 22:59:30] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 23:00:30] Calculating training results metrics
+TRACE [2020-09-12 23:00:30] Testing predicting model 
+TRACE [2020-09-12 23:00:30] SEED <2293>
+TRACE [2020-09-12 23:00:30] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:00:30] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:00:30] Balancing training dataset
+TRACE [2020-09-12 23:00:30] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:00:30] Training prediction model 
+TRACE [2020-09-12 23:00:30] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 23:01:30] Calculating training results metrics
+TRACE [2020-09-12 23:01:30] Testing predicting model 
+TRACE [2020-09-12 23:01:30] SEED <3581>
+TRACE [2020-09-12 23:01:30] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:01:30] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:01:30] Balancing training dataset
+TRACE [2020-09-12 23:01:30] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:01:30] Training prediction model 
+TRACE [2020-09-12 23:01:30] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-12 23:02:30] Calculating training results metrics
+TRACE [2020-09-12 23:02:30] Testing predicting model 
+TRACE [2020-09-12 23:02:30] Training results recorded on CSV file.
+TRACE [2020-09-12 23:02:30] Converting dataframe to term matrix
+TRACE [2020-09-12 23:02:48] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 23:02:48] SEED <144>
+TRACE [2020-09-12 23:02:48] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:02:48] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:02:48] Balancing training dataset
+TRACE [2020-09-12 23:02:48] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:02:50] Training prediction model 
+TRACE [2020-09-12 23:02:50] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:11:00] Calculating training results metrics
+TRACE [2020-09-12 23:11:00] Testing predicting model 
+TRACE [2020-09-12 23:11:02] SEED <283>
+TRACE [2020-09-12 23:11:02] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:11:02] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:11:02] Balancing training dataset
+TRACE [2020-09-12 23:11:02] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:11:04] Training prediction model 
+TRACE [2020-09-12 23:11:04] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:18:56] Calculating training results metrics
+TRACE [2020-09-12 23:18:56] Testing predicting model 
+TRACE [2020-09-12 23:18:57] SEED <1087>
+TRACE [2020-09-12 23:18:57] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:18:57] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:18:57] Balancing training dataset
+TRACE [2020-09-12 23:18:57] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:18:59] Training prediction model 
+TRACE [2020-09-12 23:18:59] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:26:31] Calculating training results metrics
+TRACE [2020-09-12 23:26:31] Testing predicting model 
+TRACE [2020-09-12 23:26:32] SEED <2293>
+TRACE [2020-09-12 23:26:32] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:26:32] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:26:32] Balancing training dataset
+TRACE [2020-09-12 23:26:32] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:26:34] Training prediction model 
+TRACE [2020-09-12 23:26:34] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:34:06] Calculating training results metrics
+TRACE [2020-09-12 23:34:06] Testing predicting model 
+TRACE [2020-09-12 23:34:07] SEED <3581>
+TRACE [2020-09-12 23:34:07] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:34:07] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:34:07] Balancing training dataset
+TRACE [2020-09-12 23:34:07] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:34:09] Training prediction model 
+TRACE [2020-09-12 23:34:09] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:42:10] Calculating training results metrics
+TRACE [2020-09-12 23:42:10] Testing predicting model 
+TRACE [2020-09-12 23:42:11] Training results recorded on CSV file.
+TRACE [2020-09-12 23:42:11] Converting dataframe to term matrix
+TRACE [2020-09-12 23:42:28] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-12 23:42:28] SEED <144>
+TRACE [2020-09-12 23:42:28] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:42:28] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:42:28] Balancing training dataset
+TRACE [2020-09-12 23:42:28] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:42:28] Training prediction model 
+TRACE [2020-09-12 23:42:29] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:44:23] Calculating training results metrics
+TRACE [2020-09-12 23:44:23] Testing predicting model 
+TRACE [2020-09-12 23:44:25] SEED <283>
+TRACE [2020-09-12 23:44:25] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:44:25] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:44:25] Balancing training dataset
+TRACE [2020-09-12 23:44:25] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:44:25] Training prediction model 
+TRACE [2020-09-12 23:44:25] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:46:14] Calculating training results metrics
+TRACE [2020-09-12 23:46:14] Testing predicting model 
+TRACE [2020-09-12 23:46:15] SEED <1087>
+TRACE [2020-09-12 23:46:15] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:46:15] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:46:15] Balancing training dataset
+TRACE [2020-09-12 23:46:15] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:46:15] Training prediction model 
+TRACE [2020-09-12 23:46:15] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:48:04] Calculating training results metrics
+TRACE [2020-09-12 23:48:04] Testing predicting model 
+TRACE [2020-09-12 23:48:05] SEED <2293>
+TRACE [2020-09-12 23:48:05] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:48:05] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:48:05] Balancing training dataset
+TRACE [2020-09-12 23:48:05] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:48:05] Training prediction model 
+TRACE [2020-09-12 23:48:05] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:49:54] Calculating training results metrics
+TRACE [2020-09-12 23:49:54] Testing predicting model 
+TRACE [2020-09-12 23:49:55] SEED <3581>
+TRACE [2020-09-12 23:49:55] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:49:55] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:49:55] Balancing training dataset
+TRACE [2020-09-12 23:49:55] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:49:55] Training prediction model 
+TRACE [2020-09-12 23:49:55] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-12 23:51:42] Calculating training results metrics
+TRACE [2020-09-12 23:51:42] Testing predicting model 
+TRACE [2020-09-12 23:51:42] Training results recorded on CSV file.
+TRACE [2020-09-12 23:51:42] Converting dataframe to term matrix
+TRACE [2020-09-12 23:51:49] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-12 23:51:49] SEED <144>
+TRACE [2020-09-12 23:51:49] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:51:49] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:51:49] Balancing training dataset
+TRACE [2020-09-12 23:51:49] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:51:51] Training prediction model 
+TRACE [2020-09-12 23:51:51] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:52:01] Calculating training results metrics
+TRACE [2020-09-12 23:52:01] Testing predicting model 
+TRACE [2020-09-12 23:52:04] SEED <283>
+TRACE [2020-09-12 23:52:04] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:52:04] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:52:04] Balancing training dataset
+TRACE [2020-09-12 23:52:04] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:52:06] Training prediction model 
+TRACE [2020-09-12 23:52:06] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:52:16] Calculating training results metrics
+TRACE [2020-09-12 23:52:16] Testing predicting model 
+TRACE [2020-09-12 23:52:20] SEED <1087>
+TRACE [2020-09-12 23:52:20] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:52:20] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:52:20] Balancing training dataset
+TRACE [2020-09-12 23:52:20] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:52:21] Training prediction model 
+TRACE [2020-09-12 23:52:21] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:52:31] Calculating training results metrics
+TRACE [2020-09-12 23:52:31] Testing predicting model 
+TRACE [2020-09-12 23:52:35] SEED <2293>
+TRACE [2020-09-12 23:52:35] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:52:35] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:52:35] Balancing training dataset
+TRACE [2020-09-12 23:52:35] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:52:37] Training prediction model 
+TRACE [2020-09-12 23:52:37] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:52:46] Calculating training results metrics
+TRACE [2020-09-12 23:52:46] Testing predicting model 
+TRACE [2020-09-12 23:52:50] SEED <3581>
+TRACE [2020-09-12 23:52:50] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:52:50] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:52:50] Balancing training dataset
+TRACE [2020-09-12 23:52:50] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:52:51] Training prediction model 
+TRACE [2020-09-12 23:52:51] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:53:01] Calculating training results metrics
+TRACE [2020-09-12 23:53:01] Testing predicting model 
+TRACE [2020-09-12 23:53:04] Training results recorded on CSV file.
+TRACE [2020-09-12 23:53:04] Converting dataframe to term matrix
+TRACE [2020-09-12 23:53:12] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-12 23:53:12] SEED <144>
+TRACE [2020-09-12 23:53:12] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:53:12] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:53:12] Balancing training dataset
+TRACE [2020-09-12 23:53:12] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:53:12] Training prediction model 
+TRACE [2020-09-12 23:53:12] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:53:15] Calculating training results metrics
+TRACE [2020-09-12 23:53:15] Testing predicting model 
+TRACE [2020-09-12 23:53:17] SEED <283>
+TRACE [2020-09-12 23:53:17] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:53:17] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:53:17] Balancing training dataset
+TRACE [2020-09-12 23:53:17] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:53:17] Training prediction model 
+TRACE [2020-09-12 23:53:17] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:53:20] Calculating training results metrics
+TRACE [2020-09-12 23:53:20] Testing predicting model 
+TRACE [2020-09-12 23:53:22] SEED <1087>
+TRACE [2020-09-12 23:53:22] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:53:22] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:53:22] Balancing training dataset
+TRACE [2020-09-12 23:53:22] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:53:22] Training prediction model 
+TRACE [2020-09-12 23:53:22] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:53:25] Calculating training results metrics
+TRACE [2020-09-12 23:53:25] Testing predicting model 
+TRACE [2020-09-12 23:53:26] SEED <2293>
+TRACE [2020-09-12 23:53:26] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:53:26] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:53:26] Balancing training dataset
+TRACE [2020-09-12 23:53:26] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:53:26] Training prediction model 
+TRACE [2020-09-12 23:53:26] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:53:29] Calculating training results metrics
+TRACE [2020-09-12 23:53:29] Testing predicting model 
+TRACE [2020-09-12 23:53:31] SEED <3581>
+TRACE [2020-09-12 23:53:31] Current parameters:
+ N.Terms...: [100]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:53:31] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:53:31] Balancing training dataset
+TRACE [2020-09-12 23:53:31] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-12 23:53:31] Training prediction model 
+TRACE [2020-09-12 23:53:31] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-12 23:53:34] Calculating training results metrics
+TRACE [2020-09-12 23:53:34] Testing predicting model 
+TRACE [2020-09-12 23:53:36] Training results recorded on CSV file.
+TRACE [2020-09-12 23:53:36] Converting dataframe to term matrix
+TRACE [2020-09-12 23:53:43] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-12 23:53:43] SEED <144>
+TRACE [2020-09-12 23:53:43] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:53:43] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:53:43] Balancing training dataset
+TRACE [2020-09-12 23:53:43] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:53:45] Training prediction model 
+TRACE [2020-09-12 23:53:45] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-12 23:57:12] Calculating training results metrics
+TRACE [2020-09-12 23:57:12] Testing predicting model 
+TRACE [2020-09-12 23:57:14] SEED <283>
+TRACE [2020-09-12 23:57:14] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-12 23:57:14] Partitioning dataset in training and testing
+TRACE [2020-09-12 23:57:14] Balancing training dataset
+TRACE [2020-09-12 23:57:14] [balance_dataset]: balancing method: smote
+TRACE [2020-09-12 23:57:16] Training prediction model 
+TRACE [2020-09-12 23:57:16] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-13 00:00:43] Calculating training results metrics
+TRACE [2020-09-13 00:00:43] Testing predicting model 
+TRACE [2020-09-13 00:00:45] SEED <1087>
+TRACE [2020-09-13 00:00:45] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:00:45] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:00:45] Balancing training dataset
+TRACE [2020-09-13 00:00:45] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:00:46] Training prediction model 
+TRACE [2020-09-13 00:00:46] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-13 00:04:13] Calculating training results metrics
+TRACE [2020-09-13 00:04:13] Testing predicting model 
+TRACE [2020-09-13 00:04:15] SEED <2293>
+TRACE [2020-09-13 00:04:15] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:04:15] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:04:15] Balancing training dataset
+TRACE [2020-09-13 00:04:15] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:04:17] Training prediction model 
+TRACE [2020-09-13 00:04:17] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-13 00:07:44] Calculating training results metrics
+TRACE [2020-09-13 00:07:44] Testing predicting model 
+TRACE [2020-09-13 00:07:46] SEED <3581>
+TRACE [2020-09-13 00:07:46] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:07:46] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:07:46] Balancing training dataset
+TRACE [2020-09-13 00:07:46] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:07:48] Training prediction model 
+TRACE [2020-09-13 00:07:48] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-13 00:11:14] Calculating training results metrics
+TRACE [2020-09-13 00:11:14] Testing predicting model 
+TRACE [2020-09-13 00:11:16] Training results recorded on CSV file.
+TRACE [2020-09-13 00:11:16] Converting dataframe to term matrix
+TRACE [2020-09-13 00:11:24] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-13 00:11:24] SEED <144>
+TRACE [2020-09-13 00:11:24] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:11:24] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:11:24] Balancing training dataset
+TRACE [2020-09-13 00:11:24] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:11:24] Training prediction model 
+TRACE [2020-09-13 00:11:24] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-13 00:13:20] Calculating training results metrics
+TRACE [2020-09-13 00:13:20] Testing predicting model 
+TRACE [2020-09-13 00:13:32] SEED <283>
+TRACE [2020-09-13 00:13:32] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:13:32] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:13:32] Balancing training dataset
+TRACE [2020-09-13 00:13:32] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:13:32] Training prediction model 
+TRACE [2020-09-13 00:13:32] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-13 00:15:25] Calculating training results metrics
+TRACE [2020-09-13 00:15:25] Testing predicting model 
+TRACE [2020-09-13 00:15:37] SEED <1087>
+TRACE [2020-09-13 00:15:37] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:15:37] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:15:37] Balancing training dataset
+TRACE [2020-09-13 00:15:37] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:15:37] Training prediction model 
+TRACE [2020-09-13 00:15:37] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-13 00:17:32] Calculating training results metrics
+TRACE [2020-09-13 00:17:32] Testing predicting model 
+TRACE [2020-09-13 00:17:44] SEED <2293>
+TRACE [2020-09-13 00:17:44] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:17:44] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:17:44] Balancing training dataset
+TRACE [2020-09-13 00:17:44] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:17:44] Training prediction model 
+TRACE [2020-09-13 00:17:44] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-13 00:19:40] Calculating training results metrics
+TRACE [2020-09-13 00:19:40] Testing predicting model 
+TRACE [2020-09-13 00:19:51] SEED <3581>
+TRACE [2020-09-13 00:19:51] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:19:51] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:19:51] Balancing training dataset
+TRACE [2020-09-13 00:19:51] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:19:51] Training prediction model 
+TRACE [2020-09-13 00:19:51] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-13 00:21:47] Calculating training results metrics
+TRACE [2020-09-13 00:21:47] Testing predicting model 
+TRACE [2020-09-13 00:21:59] Training results recorded on CSV file.
+TRACE [2020-09-13 00:21:59] Converting dataframe to term matrix
+TRACE [2020-09-13 00:22:07] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-13 00:22:07] SEED <144>
+TRACE [2020-09-13 00:22:07] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:22:07] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:22:07] Balancing training dataset
+TRACE [2020-09-13 00:22:07] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:22:09] Training prediction model 
+TRACE [2020-09-13 00:22:09] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:24:15] Calculating training results metrics
+TRACE [2020-09-13 00:24:15] Testing predicting model 
+TRACE [2020-09-13 00:24:15] SEED <283>
+TRACE [2020-09-13 00:24:15] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:24:15] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:24:15] Balancing training dataset
+TRACE [2020-09-13 00:24:15] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:24:17] Training prediction model 
+TRACE [2020-09-13 00:24:17] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:26:26] Calculating training results metrics
+TRACE [2020-09-13 00:26:26] Testing predicting model 
+TRACE [2020-09-13 00:26:26] SEED <1087>
+TRACE [2020-09-13 00:26:26] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:26:26] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:26:26] Balancing training dataset
+TRACE [2020-09-13 00:26:26] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:26:28] Training prediction model 
+TRACE [2020-09-13 00:26:28] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:28:32] Calculating training results metrics
+TRACE [2020-09-13 00:28:32] Testing predicting model 
+TRACE [2020-09-13 00:28:32] SEED <2293>
+TRACE [2020-09-13 00:28:32] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:28:32] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:28:32] Balancing training dataset
+TRACE [2020-09-13 00:28:32] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:28:34] Training prediction model 
+TRACE [2020-09-13 00:28:34] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:30:42] Calculating training results metrics
+TRACE [2020-09-13 00:30:42] Testing predicting model 
+TRACE [2020-09-13 00:30:42] SEED <3581>
+TRACE [2020-09-13 00:30:42] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:30:42] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:30:42] Balancing training dataset
+TRACE [2020-09-13 00:30:42] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:30:44] Training prediction model 
+TRACE [2020-09-13 00:30:44] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:32:54] Calculating training results metrics
+TRACE [2020-09-13 00:32:54] Testing predicting model 
+TRACE [2020-09-13 00:32:54] Training results recorded on CSV file.
+TRACE [2020-09-13 00:32:54] Converting dataframe to term matrix
+TRACE [2020-09-13 00:33:02] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-13 00:33:02] SEED <144>
+TRACE [2020-09-13 00:33:02] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:33:02] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:33:02] Balancing training dataset
+TRACE [2020-09-13 00:33:02] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:33:02] Training prediction model 
+TRACE [2020-09-13 00:33:02] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:33:50] Calculating training results metrics
+TRACE [2020-09-13 00:33:50] Testing predicting model 
+TRACE [2020-09-13 00:33:50] SEED <283>
+TRACE [2020-09-13 00:33:50] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:33:50] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:33:50] Balancing training dataset
+TRACE [2020-09-13 00:33:50] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:33:50] Training prediction model 
+TRACE [2020-09-13 00:33:50] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:34:38] Calculating training results metrics
+TRACE [2020-09-13 00:34:38] Testing predicting model 
+TRACE [2020-09-13 00:34:38] SEED <1087>
+TRACE [2020-09-13 00:34:38] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:34:38] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:34:38] Balancing training dataset
+TRACE [2020-09-13 00:34:38] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:34:38] Training prediction model 
+TRACE [2020-09-13 00:34:38] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:35:27] Calculating training results metrics
+TRACE [2020-09-13 00:35:27] Testing predicting model 
+TRACE [2020-09-13 00:35:28] SEED <2293>
+TRACE [2020-09-13 00:35:28] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:35:28] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:35:28] Balancing training dataset
+TRACE [2020-09-13 00:35:28] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:35:28] Training prediction model 
+TRACE [2020-09-13 00:35:28] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:36:16] Calculating training results metrics
+TRACE [2020-09-13 00:36:16] Testing predicting model 
+TRACE [2020-09-13 00:36:17] SEED <3581>
+TRACE [2020-09-13 00:36:17] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:36:17] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:36:17] Balancing training dataset
+TRACE [2020-09-13 00:36:17] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 00:36:17] Training prediction model 
+TRACE [2020-09-13 00:36:17] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-13 00:37:04] Calculating training results metrics
+TRACE [2020-09-13 00:37:04] Testing predicting model 
+TRACE [2020-09-13 00:37:04] Training results recorded on CSV file.
+TRACE [2020-09-13 00:37:04] Converting dataframe to term matrix
+TRACE [2020-09-13 00:37:12] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-13 00:37:12] SEED <144>
+TRACE [2020-09-13 00:37:12] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:37:12] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:37:12] Balancing training dataset
+TRACE [2020-09-13 00:37:12] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:37:14] Training prediction model 
+TRACE [2020-09-13 00:37:14] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 00:42:22] Calculating training results metrics
+TRACE [2020-09-13 00:42:22] Testing predicting model 
+TRACE [2020-09-13 00:42:23] SEED <283>
+TRACE [2020-09-13 00:42:23] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:42:23] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:42:23] Balancing training dataset
+TRACE [2020-09-13 00:42:23] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:42:24] Training prediction model 
+TRACE [2020-09-13 00:42:24] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 00:47:34] Calculating training results metrics
+TRACE [2020-09-13 00:47:34] Testing predicting model 
+TRACE [2020-09-13 00:47:34] SEED <1087>
+TRACE [2020-09-13 00:47:34] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:47:34] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:47:34] Balancing training dataset
+TRACE [2020-09-13 00:47:34] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:47:36] Training prediction model 
+TRACE [2020-09-13 00:47:36] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 00:53:13] Calculating training results metrics
+TRACE [2020-09-13 00:53:13] Testing predicting model 
+TRACE [2020-09-13 00:53:13] SEED <2293>
+TRACE [2020-09-13 00:53:13] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:53:13] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:53:13] Balancing training dataset
+TRACE [2020-09-13 00:53:13] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:53:15] Training prediction model 
+TRACE [2020-09-13 00:53:15] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 00:58:51] Calculating training results metrics
+TRACE [2020-09-13 00:58:51] Testing predicting model 
+TRACE [2020-09-13 00:58:52] SEED <3581>
+TRACE [2020-09-13 00:58:52] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 00:58:52] Partitioning dataset in training and testing
+TRACE [2020-09-13 00:58:52] Balancing training dataset
+TRACE [2020-09-13 00:58:52] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 00:58:54] Training prediction model 
+TRACE [2020-09-13 00:58:54] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 01:04:26] Calculating training results metrics
+TRACE [2020-09-13 01:04:26] Testing predicting model 
+TRACE [2020-09-13 01:04:27] Training results recorded on CSV file.
+TRACE [2020-09-13 01:04:27] Converting dataframe to term matrix
+TRACE [2020-09-13 01:04:34] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-13 01:04:34] SEED <144>
+TRACE [2020-09-13 01:04:34] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:04:34] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:04:34] Balancing training dataset
+TRACE [2020-09-13 01:04:34] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:04:34] Training prediction model 
+TRACE [2020-09-13 01:04:34] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 01:05:54] Calculating training results metrics
+TRACE [2020-09-13 01:05:54] Testing predicting model 
+TRACE [2020-09-13 01:05:54] SEED <283>
+TRACE [2020-09-13 01:05:54] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:05:54] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:05:54] Balancing training dataset
+TRACE [2020-09-13 01:05:54] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:05:54] Training prediction model 
+TRACE [2020-09-13 01:05:54] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 01:07:12] Calculating training results metrics
+TRACE [2020-09-13 01:07:12] Testing predicting model 
+TRACE [2020-09-13 01:07:12] SEED <1087>
+TRACE [2020-09-13 01:07:12] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:07:12] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:07:13] Balancing training dataset
+TRACE [2020-09-13 01:07:13] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:07:13] Training prediction model 
+TRACE [2020-09-13 01:07:13] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 01:08:32] Calculating training results metrics
+TRACE [2020-09-13 01:08:32] Testing predicting model 
+TRACE [2020-09-13 01:08:32] SEED <2293>
+TRACE [2020-09-13 01:08:32] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:08:32] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:08:32] Balancing training dataset
+TRACE [2020-09-13 01:08:32] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:08:32] Training prediction model 
+TRACE [2020-09-13 01:08:32] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 01:09:50] Calculating training results metrics
+TRACE [2020-09-13 01:09:50] Testing predicting model 
+TRACE [2020-09-13 01:09:50] SEED <3581>
+TRACE [2020-09-13 01:09:50] Current parameters:
+ N.Terms...: [100]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:09:50] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:09:50] Balancing training dataset
+TRACE [2020-09-13 01:09:50] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:09:50] Training prediction model 
+TRACE [2020-09-13 01:09:50] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-13 01:11:09] Calculating training results metrics
+TRACE [2020-09-13 01:11:09] Testing predicting model 
+TRACE [2020-09-13 01:11:10] Training results recorded on CSV file.
+TRACE [2020-09-13 01:11:10] Converting dataframe to term matrix
+TRACE [2020-09-13 01:11:17] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-13 01:11:17] SEED <144>
+TRACE [2020-09-13 01:11:17] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:11:17] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:11:17] Balancing training dataset
+TRACE [2020-09-13 01:11:17] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 01:11:19] Training prediction model 
+TRACE [2020-09-13 01:11:19] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:14:13] Calculating training results metrics
+TRACE [2020-09-13 01:14:13] Testing predicting model 
+TRACE [2020-09-13 01:14:14] SEED <283>
+TRACE [2020-09-13 01:14:14] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:14:14] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:14:14] Balancing training dataset
+TRACE [2020-09-13 01:14:14] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 01:14:15] Training prediction model 
+TRACE [2020-09-13 01:14:15] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:16:57] Calculating training results metrics
+TRACE [2020-09-13 01:16:57] Testing predicting model 
+TRACE [2020-09-13 01:16:58] SEED <1087>
+TRACE [2020-09-13 01:16:58] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:16:58] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:16:58] Balancing training dataset
+TRACE [2020-09-13 01:16:58] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 01:17:00] Training prediction model 
+TRACE [2020-09-13 01:17:00] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:19:52] Calculating training results metrics
+TRACE [2020-09-13 01:19:52] Testing predicting model 
+TRACE [2020-09-13 01:19:53] SEED <2293>
+TRACE [2020-09-13 01:19:53] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:19:53] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:19:53] Balancing training dataset
+TRACE [2020-09-13 01:19:53] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 01:19:54] Training prediction model 
+TRACE [2020-09-13 01:19:54] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:22:48] Calculating training results metrics
+TRACE [2020-09-13 01:22:48] Testing predicting model 
+TRACE [2020-09-13 01:22:48] SEED <3581>
+TRACE [2020-09-13 01:22:48] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:22:48] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:22:48] Balancing training dataset
+TRACE [2020-09-13 01:22:48] [balance_dataset]: balancing method: smote
+TRACE [2020-09-13 01:22:50] Training prediction model 
+TRACE [2020-09-13 01:22:50] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:25:33] Calculating training results metrics
+TRACE [2020-09-13 01:25:33] Testing predicting model 
+TRACE [2020-09-13 01:25:33] Training results recorded on CSV file.
+TRACE [2020-09-13 01:25:33] Converting dataframe to term matrix
+TRACE [2020-09-13 01:25:41] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-13 01:25:41] SEED <144>
+TRACE [2020-09-13 01:25:41] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:25:41] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:25:41] Balancing training dataset
+TRACE [2020-09-13 01:25:41] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:25:41] Training prediction model 
+TRACE [2020-09-13 01:25:41] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:26:42] Calculating training results metrics
+TRACE [2020-09-13 01:26:42] Testing predicting model 
+TRACE [2020-09-13 01:26:42] SEED <283>
+TRACE [2020-09-13 01:26:42] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:26:42] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:26:42] Balancing training dataset
+TRACE [2020-09-13 01:26:42] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:26:43] Training prediction model 
+TRACE [2020-09-13 01:26:43] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:27:43] Calculating training results metrics
+TRACE [2020-09-13 01:27:43] Testing predicting model 
+TRACE [2020-09-13 01:27:44] SEED <1087>
+TRACE [2020-09-13 01:27:44] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:27:44] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:27:44] Balancing training dataset
+TRACE [2020-09-13 01:27:44] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:27:44] Training prediction model 
+TRACE [2020-09-13 01:27:44] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:28:45] Calculating training results metrics
+TRACE [2020-09-13 01:28:45] Testing predicting model 
+TRACE [2020-09-13 01:28:46] SEED <2293>
+TRACE [2020-09-13 01:28:46] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:28:46] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:28:46] Balancing training dataset
+TRACE [2020-09-13 01:28:46] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:28:46] Training prediction model 
+TRACE [2020-09-13 01:28:46] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:29:47] Calculating training results metrics
+TRACE [2020-09-13 01:29:47] Testing predicting model 
+TRACE [2020-09-13 01:29:47] SEED <3581>
+TRACE [2020-09-13 01:29:47] Current parameters:
+ N.Terms...: [100]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [short_description]
+ Threshold.: [365]
+ Balancing.: [unbalanced]
+ Resampling: [cv10]
+TRACE [2020-09-13 01:29:47] Partitioning dataset in training and testing
+TRACE [2020-09-13 01:29:47] Balancing training dataset
+TRACE [2020-09-13 01:29:47] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-13 01:29:47] Training prediction model 
+TRACE [2020-09-13 01:29:47] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-13 01:30:48] Calculating training results metrics
+TRACE [2020-09-13 01:30:48] Testing predicting model 
+TRACE [2020-09-13 01:30:49] Training results recorded on CSV file.
