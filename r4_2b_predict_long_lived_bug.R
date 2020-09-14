@@ -83,7 +83,7 @@ class_label <- "long_lived"
 prefix_reports <- "20200731"
 project_name <- 'eclipse'
 
-classifier <- c(SVM, NNET)
+classifier <- c(SVM)
 feature    <- c("long_description")
 balancing  <- c(SMOTEMETHOD)
 train_metric <- c(ACC)
