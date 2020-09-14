@@ -18,7 +18,7 @@ options(readr.num_columns = 0)
 timestamp <- format(Sys.time(), "%Y%m%d")
 
 # Constants --------------------------------------------------------------------
-debug_on     <- FALSE
+debug_on     <- TRUE
 force_create <- TRUE
 processors   <- ifelse(debug_on, 3, 24)
 base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
@@ -83,14 +83,14 @@ class_label <- "long_lived"
 prefix_reports <- "20200731"
 project_name <- 'eclipse'
 
-classifier <- c(SVM, NNET)
+classifier <- c(SVM)
 feature    <- c("long_description")
 balancing  <- c(SMOTEMETHOD)
 train_metric <- c(ACC)
 max_term   <- c(150)
 
 if (debug_on) {
-  threshold   <- c(8, 59)
+  threshold   <- c(8)
   seeds <- c(DEFAULT_SEED, 283)
 } else {
   threshold   <- c(8, 59, 102, 365)
@@ -236,6 +236,7 @@ for (row in 1:nrow(parameters)) {
     train.results$metric  <- parameter$train_metric
     train.results$max_term  <- parameter$max_term
     train.results$feature <- parameter$feature
+    train.results$threshold   <-  parameter$threshold
     
     if (parameter$classifier == NNET) {
       train.results$hyper1  <- "size"
