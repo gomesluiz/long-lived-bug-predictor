@@ -87,7 +87,7 @@ classifier <- c(SVM, NNET)
 feature    <- c("long_description")
 balancing  <- c(SMOTEMETHOD)
 train_metric <- c(ACC)
-max_term   <- c(100)
+max_term   <- c(150)
 
 if (debug_on) {
   threshold   <- c(8, 59)
