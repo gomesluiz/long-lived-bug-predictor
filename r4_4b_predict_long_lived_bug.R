@@ -87,7 +87,7 @@ feature    <- c("long_description")
 balancing  <- c(SMOTEMETHOD)
 train_metric <- c(ACC)
 max_term   <- c(150)
-threshold  <- c(8)
+threshold  <- c(365)
 seeds <- c(DEFAULT_SEED)
 
 if (debug_on) {
