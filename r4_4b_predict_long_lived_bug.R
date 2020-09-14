@@ -81,7 +81,6 @@ registerDoParallel(r_cluster)
 resampling <- c("cv10")
 class_label <- "long_lived"
 prefix_reports <- "20200731"
-project_name <- 'eclipse'
 
 classifier <- c(SVM)
 feature    <- c("long_description")
@@ -92,7 +91,7 @@ threshold  <- c(8)
 seeds <- c(DEFAULT_SEED)
 
 if (debug_on) {
-  projects   <- c("eclipse")
+  projects   <- c("eclipse", "winehq")
 } else {
   projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "winehq")
   flog.appender(
@@ -120,8 +119,19 @@ results.test.file <- sprintf(
   timestamp, 
   modo.exec
 )
+results.hat.file <- sprintf(
+  "%s_r4_4b_predict_long_lived_bug_hat_%s.csv", 
+  timestamp, 
+  modo.exec
+)
+parameters <- crossing(
+  feature, max_term, classifier,
+  balancing, resampling,
+  train_metric, threshold
+)
 
-for project_name in projects
+results.started <- FALSE
+for (project_name in projects)
 {
   flog.trace("Current project name : %s", project_name)
   reports.file <- file.path(data_path, sprintf("%s_%s_bug_report_data.csv", prefix_reports, project_name))
@@ -141,13 +151,8 @@ for project_name in projects
   flog.trace("Clean text feature")
   reports$short_description <- clean_text(reports$short_description)
   reports$long_description <- clean_text(reports$long_description)
-  results.started <- FALSE
 
-  parameters <- crossing(
-    feature, max_term, classifier,
-    balancing, resampling,
-    train_metric, threshold
-  )
+  
   for (row in 1:nrow(parameters)) {
     parameter <- parameters[row, ]
     flog.trace("Converting dataframe to term matrix")
@@ -166,7 +171,7 @@ for project_name in projects
       flog.trace("Partitioning dataset in training and testing")
       reports.dataset$long_lived <- as.factor(ifelse(reports.dataset$bug_fix_time <= parameter$threshold, "N", "Y"))
       in_train <- createDataPartition(reports.dataset$long_lived, p = 0.75, list = FALSE)
-      train.dataset <- reports.dataset
+      train.dataset <- reports.dataset[in_train, ]
       test.dataset  <- reports.dataset[-in_train, ]
 
       flog.trace("Balancing training dataset")
@@ -289,16 +294,22 @@ for project_name in projects
           seed     = seed,
           row = row
         )
+      
+        hat.results <- cbind(test.dataset[, c("bug_id", "bug_fix_time", "long_lived")], y_hat, project_name)
+      
         if (!results.started) {
-          all_train.results = train.results[FALSE, ]
-          all_test.results  = test.results[FALSE,]
-          results.started <- TRUE
+          all_train.results <- train.results[FALSE, ]
+          all_test.results  <- test.results[FALSE,]
+          all_hat.results   <- hat.results[FALSE, ]
+          results.started   <- TRUE
         }
         all_train.results <- rbind(all_train.results, train.results)
         all_test.results  <- rbind(all_test.results,  test.results)
+        all_hat.results   <- rbind(all_hat.results, hat.results)
     }
   }
 }
 write_csv(all_train.results, file.path(output_data_path, results.train.file))
 write_csv(all_test.results, file.path(output_data_path, results.test.file))
+write_csv(all_hat.results, file.path(output_data_path, results.hat.file))
 flog.trace("Training results recorded on CSV file.")

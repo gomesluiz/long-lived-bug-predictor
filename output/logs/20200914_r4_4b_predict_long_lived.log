@@ -1,0 +1,102 @@
+TRACE [2020-09-14 08:27:28] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 08:27:28] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 08:27:28] Current project name : eclipse
+TRACE [2020-09-14 08:27:28] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 08:27:29] Clean text feature
+TRACE [2020-09-14 08:28:02] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 08:28:02] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 08:28:04] Current project name : eclipse
+TRACE [2020-09-14 08:28:04] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 08:28:04] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-09-14 08:28:04] Clean text feature
+TRACE [2020-09-14 08:28:20] Converting dataframe to term matrix
+TRACE [2020-09-14 08:28:30] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-14 08:28:30] SEED <144>
+TRACE [2020-09-14 08:28:30] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [8]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-14 08:28:30] Partitioning dataset in training and testing
+TRACE [2020-09-14 08:32:56] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 08:32:56] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 08:32:57] Current project name : eclipse
+TRACE [2020-09-14 08:32:57] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 08:32:57] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-09-14 08:32:57] Clean text feature
+TRACE [2020-09-14 08:33:05] Converting dataframe to term matrix
+TRACE [2020-09-14 08:33:09] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-14 08:33:09] SEED <144>
+TRACE [2020-09-14 08:33:09] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [8]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-14 08:33:09] Partitioning dataset in training and testing
+TRACE [2020-09-14 08:34:57] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 08:34:57] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 08:34:58] Current project name : eclipse
+TRACE [2020-09-14 08:34:58] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 08:34:59] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-09-14 08:34:59] Clean text feature
+TRACE [2020-09-14 08:35:15] Converting dataframe to term matrix
+TRACE [2020-09-14 08:35:23] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-14 08:35:23] SEED <144>
+TRACE [2020-09-14 08:35:23] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [8]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-14 08:35:23] Partitioning dataset in training and testing
+TRACE [2020-09-14 08:36:08] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 08:36:08] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 08:36:09] Current project name : eclipse
+TRACE [2020-09-14 08:36:09] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 08:36:10] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-09-14 08:36:10] Clean text feature
+TRACE [2020-09-14 08:36:26] Converting dataframe to term matrix
+TRACE [2020-09-14 08:36:35] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-14 08:36:35] SEED <144>
+TRACE [2020-09-14 08:36:35] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [8]
+ Balancing.: [smote]
+ Resampling: [cv10]
+TRACE [2020-09-14 08:36:35] Partitioning dataset in training and testing
+TRACE [2020-09-14 08:36:58] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 08:36:58] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 08:37:10] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 08:37:10] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 08:37:11] Current project name : eclipse
+TRACE [2020-09-14 08:37:11] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 08:37:12] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-09-14 08:37:24] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 08:37:24] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 08:37:25] Current project name : eclipse
+TRACE [2020-09-14 08:37:25] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 08:37:25] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-09-14 08:37:25] Clean text feature
+TRACE [2020-09-14 08:37:59] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 08:37:59] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 08:38:00] Current project name : eclipse
+TRACE [2020-09-14 08:38:00] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 08:38:01] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-09-14 08:38:01] Clean text feature
+TRACE [2020-09-14 08:38:17] Converting dataframe to term matrix
+TRACE [2020-09-14 10:51:09] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-14 10:51:09] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-14 10:51:10] Current project name : eclipse
+TRACE [2020-09-14 10:51:10] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 10:51:12] Clean text feature
