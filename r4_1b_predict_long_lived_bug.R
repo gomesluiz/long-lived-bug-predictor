@@ -18,7 +18,7 @@ options(readr.num_columns = 0)
 timestamp <- format(Sys.time(), "%Y%m%d")
 
 # Constants --------------------------------------------------------------------
-debug_on     <- FALSE
+debug_on     <- TRUE
 force_create <- TRUE
 processors   <- ifelse(debug_on, 3, 24)
 base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
@@ -78,16 +78,16 @@ source(file.path(lib_path, "balance_dataset.R"))
 # Experimental parameters ------------------------------------------------------
 r_cluster    <- makePSOCKcluster(processors)
 registerDoParallel(r_cluster)
-resamplings <- c("cv10")
+resamplings <- c("repeatedcv5x10")
 max_terms   <- c(100)
 class_label <- "long_lived"
 prefix_reports <- "20200731"
 project_name <- 'eclipse'
 
 if (debug_on) {
-  seeds <- c(DEFAULT_SEED, 283, 1087, 2293, 3581)
+  seeds <- c(DEFAULT_SEED)
 } else {
-  seeds <- c(DEFAULT_SEED, 283, 1087, 2293, 3581)
+  seeds <- c(DEFAULT_SEED)
   flog.appender(
     appender.file(
       file.path(
@@ -103,7 +103,7 @@ flog.trace("Long live prediction Research Question 4 - Experiment 1b")
 flog.trace("Evaluation metrics ouput path: %s", output_data_path)
 
 metrics_file  <- sprintf( "%s_r4_1a_predict_long_lived_bug_results_%s.csv", 
-                          "20200911", ifelse(debug_on, "debug", "final")) 
+                          "20200914", ifelse(debug_on, "debug", "final")) 
 
 metrics_path   = file.path(output_data_path, metrics_file)
 metrics_data   = read_csv(metrics_path)
@@ -164,7 +164,7 @@ for (row in 1:nrow(all.best.metrics)) {
     reports.dataset$long_lived <- as.factor(ifelse(reports.dataset$bug_fix_time <= parameter$threshold, "N", "Y"))
     in_train <- createDataPartition(reports.dataset$long_lived, p = 0.75, list = FALSE)
     train.dataset <- reports.dataset
-    test.dataset  <- reports.dataset[-in_train, ]
+    #test.dataset  <- reports.dataset[-in_train, ]
 
     flog.trace("Balancing training dataset")
     train.balanced.dataset = balance_dataset( 
@@ -177,8 +177,8 @@ for (row in 1:nrow(all.best.metrics)) {
     X_train <- subset(train.balanced.dataset, select = -c(long_lived))
     y_train <- train.balanced.dataset[, class_label]
 
-    X_test <- subset(test.dataset, select = -c(bug_id, bug_fix_time, long_lived))
-    y_test <- test.dataset[, class_label]
+    #X_test <- subset(test.dataset, select = -c(bug_id, bug_fix_time, long_lived))
+    #y_test <- test.dataset[, class_label]
 
     flog.trace("Training prediction model ")
     if (parameter$classifier == KNN) {
@@ -207,8 +207,10 @@ for (row in 1:nrow(all.best.metrics)) {
     #  ) 
     #else 
     fit_control <- caret::trainControl(
-      method = "cv", 
-      number = 10
+      method = "repeatedcv", 
+      number = 5,
+      repeats = 10,
+      savePredictions="final"
     )
 
     fit_model <- train_with(
@@ -255,50 +257,49 @@ for (row in 1:nrow(all.best.metrics)) {
     train.results$hyper3  <- parameter$hyper3
     train.results$value3  <- parameter$value3
     train.results$seed    <- seed
-    train.results$row     <- row
     
-    flog.trace("Testing predicting model ")
-    y_hat <- predict(object = fit_model, X_test)
-    test.metrics <- calculate_metrics(y_hat, y_test)
-    test.results <-
-      data.frame(
-        project    = project_name,
-        feature    = parameter$feature,
-        max_term     = parameter$max_term,
-        classifier = parameter$classifier,
-        balancing  = parameter$balancing,
-        resampling = parameter$resampling,
-        metric     = parameter$train_metric,
-        threshold  = parameter$threshold,
-        train_size = nrow(X_train),
-        train_size_class_0 = length(subset(y_train, y_train == "N")),
-        train_size_class_1 = length(subset(y_train, y_train == "Y")),
-        test_size = nrow(X_test),
-        test_size_class_0 = length(subset(y_test, y_test == "N")),
-        test_size_class_1 = length(subset(y_test, y_test == "Y")),
-        tp = test.metrics$tp,
-        fp = test.metrics$fp,
-        tn = test.metrics$tn,
-        fn = test.metrics$fn,
-        sensitivity = test.metrics$sensitivity,
-        specificity = test.metrics$specificity,
-        balanced_acc = test.metrics$balanced_acc,
-        balanced_acc_manual = test.metrics$balanced_acc_manual,
-        precision = test.metrics$precision,
-        recall = test.metrics$recall,
-        fmeasure = test.metrics$fmeasure,
-        seed     = seed,
-        row = row
-      )
+    #flog.trace("Testing predicting model ")
+    #y_hat <- predict(object = fit_model, X_test)
+    #test.metrics <- calculate_metrics(y_hat, y_test)
+    #test.results <-
+    #  data.frame(
+    #    project    = project_name,
+    #    feature    = parameter$feature,
+    #    max_term     = parameter$max_term,
+    #    classifier = parameter$classifier,
+    #    balancing  = parameter$balancing,
+    #    resampling = parameter$resampling,
+    #    metric     = parameter$train_metric,
+    #    threshold  = parameter$threshold,
+    #    train_size = nrow(X_train),
+    #    train_size_class_0 = length(subset(y_train, y_train == "N")),
+    #    train_size_class_1 = length(subset(y_train, y_train == "Y")),
+    #    test_size = nrow(X_test),
+    #    test_size_class_0 = length(subset(y_test, y_test == "N")),
+    #    test_size_class_1 = length(subset(y_test, y_test == "Y")),
+    #    tp = test.metrics$tp,
+    #    fp = test.metrics$fp,
+    #    tn = test.metrics$tn,
+    #    fn = test.metrics$fn,
+    #    sensitivity = test.metrics$sensitivity,
+    #    specificity = test.metrics$specificity,
+    #    balanced_acc = test.metrics$balanced_acc,
+    #    balanced_acc_manual = test.metrics$balanced_acc_manual,
+    #    precision = test.metrics$precision,
+    #    recall = test.metrics$recall,
+    #    fmeasure = test.metrics$fmeasure,
+    #    seed     = seed,
+    #    row = row
+    #  )
       if (!results.started) {
         all_train.results = train.results[FALSE, ]
-        all_test.results  = test.results[FALSE,]
+    #    all_test.results  = test.results[FALSE,]
         results.started <- TRUE
       }
       all_train.results <- rbind(all_train.results, train.results)
-      all_test.results  <- rbind(all_test.results,  test.results)
+    #  all_test.results  <- rbind(all_test.results,  test.results)
   }
   write_csv(all_train.results, file.path(output_data_path, results.train.file))
-  write_csv(all_test.results, file.path(output_data_path, results.test.file))
+  #write_csv(all_test.results, file.path(output_data_path, results.test.file))
   flog.trace("Training results recorded on CSV file.")
 }

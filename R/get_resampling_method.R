@@ -6,7 +6,9 @@ resampling_methods = list(
   cv10  = "cv10",
   loocv = "LOOCV",
   lgocv = "LGOCV",
-  repeatedcv = "repeatedcv"
+  repeatedcv5x2  = "repeatedcv5x2",
+  repeatedcv5x10 = "repeatedcv5x10"
+  
 )
 
 get_resampling_method <- function(.method) {
@@ -19,9 +21,12 @@ get_resampling_method <- function(.method) {
   if (.method == resampling_methods[["cv10"]]) {
     result <- caret::trainControl(method = "cv", number = 10, search = "grid", savePredictions = 'final')
     flog.trace("[get_resampling_method] Resampling model %s", "10cv") 
-  } else if (.method == resampling_methods[["repeatedcv"]]) {
+  } else if (.method == resampling_methods[["repeatedcv5x2"]]) {
     result <- caret::trainControl(method = .method, number = 5, repeats = 2, search = "grid", savePredictions = 'final')
-    flog.trace("[get_resampling_method] Resampling model %s", "repeatedcv") 
+    flog.trace("[get_resampling_method] Resampling model %s", "repeatedcv 5x2") 
+  } else if (.method == resampling_methods[["repeatedcv5x10"]]) {
+    result <- caret::trainControl(method = "repeatedcv", number = 5, repeats = 10, search = "grid", savePredictions = 'final')
+    flog.trace("[get_resampling_method] Resampling model %s", "repeatedcv 5x10") 
   } else if (.method %in% c(resampling_methods[["none"]]
                             , resampling_methods[["boot"]]
                             , resampling_methods[["loocv"]]

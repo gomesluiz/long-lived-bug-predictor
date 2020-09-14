@@ -81,15 +81,15 @@ source(file.path(lib_path, "balance_dataset.R"))
 r_cluster    <- makePSOCKcluster(processors)
 registerDoParallel(r_cluster)
 threshold  <- c(365)
-resampling <- c("cv10")
+resampling <- c("repeatedcv5x10")
 max_term   <- c(100)
 class_label <- "long_lived"
 prefix_reports <- "20200731"
 projects      <- c("eclipse")
 
 if (debug_on) {
-  classifier   <- c(KNN, SVM)
-  feature      <- c("short_description")
+  classifier   <- c(SVM)
+  feature      <- c("long_description")
   balancing    <- c(UNBALANCED)
   train_metric <- c(ACC)
 } else {
@@ -149,8 +149,6 @@ for (project_name in projects) {
   reports_data$long_description  <- clean_text(reports_data$long_description)
   # feature engineering --------------------------------------------------------
   
-  last_feature  <- "@"
-  best_accuracy <- 0
   for (i in start_parameter:nrow(parameters)) {
     set.seed(DEFAULT_SEED)
     parameter <- parameters[i, ]
@@ -163,14 +161,11 @@ for (project_name in projects) {
     flog.trace("Processing balancing       : %s", parameter$balancing)
     flog.trace("Processing resampling      : %s", parameter$resampling)
     
-    if (parameter$feature != last_feature) {
-      flog.trace("Converting dataframe to term matrix")
-      reports_matrix <- convert_to_term_matrix(reports_data, parameter$feature, 
-                                               parameter$max_term)
-      flog.trace("Text mining: extracted %d terms from %s", 
+    flog.trace("Converting dataframe to term matrix")
+    reports_matrix <- convert_to_term_matrix(reports_data, parameter$feature, 
+                                             parameter$max_term)
+    flog.trace("Text mining: extracted %d terms from %s", 
                   ncol(reports_matrix) - 2, parameter$feature)
-      last_feature <- parameter$feature
-    }
 
     flog.trace("Partitioning dataset in training and testing")
     reports_matrix$long_lived <- as.factor(
@@ -201,8 +196,8 @@ for (project_name in projects) {
       .x = X_train,
       .y = y_train,
       .classifier = parameter$classifier,
-      .control = fit_control,
-      .metric = parameter$train_metric
+      .control    = fit_control,
+      .metric     = parameter$train_metric
     )
     
     flog.trace("Recording best tune hyperparameters in CSV file")

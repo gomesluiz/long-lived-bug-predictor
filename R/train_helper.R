@@ -267,24 +267,24 @@ train_with <- function(.x, .y, .classifier, .control=DEFAULT_CONTROL,
   if (!.metric %in% train_metrics)
     stop(sprintf("%s unknown metric!", .metric))
   
-  if ((.metric == ROC) & (is.na(.grid))){ 
-    flog.trace("Change control for ROC")
-    .control <- trainControl(method = "repeatedcv", 
-                             number =  5,
-                             repeats = 2, 
-                             classProbs = TRUE,  
-                             summaryFunction = twoClassSummary, 
-                             search = "grid")
-  }
+  #if ((.metric == ROC) & (is.na(.grid))){ 
+  #  flog.trace("Change control for ROC")
+  #  .control <- trainControl(method = "repeatedcv", 
+  #                           number =  5,
+  #                           repeats = 2, 
+  #                           classProbs = TRUE,  
+  #                           summaryFunction = twoClassSummary, 
+  #                           search = "grid")
+  #}
   
-  if (.metric == DST){ 
-    flog.trace("Change control for DST")
-    .control <- trainControl(method = "repeatedcv", 
-                             repeats = 5, 
-                             classProbs = TRUE, 
-                             summaryFunction = fourStats, 
-                             search = "grid")
-  }
+  #if (.metric == DST){ 
+  #  flog.trace("Change control for DST")
+  #  .control <- trainControl(method = "repeatedcv", 
+  #                           repeats = 5, 
+  #                           classProbs = TRUE, 
+  #                           summaryFunction = fourStats, 
+  #                           search = "grid")
+  #}
   
   if (.classifier == KNN) {
     return(train_with_knn(.x, .y, .control, .metric, .seed, .grid))
