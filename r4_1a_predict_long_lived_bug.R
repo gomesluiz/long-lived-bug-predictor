@@ -251,6 +251,6 @@ for (project_name in projects) {
     }
     all_train.results <- rbind(all_train.results, train.results)
   }
-  write_csv(all_train.results, file.path(output_data_path, results_file))
-  flog.trace("Training results recorded on CSV file.")
 }
+write_csv(all_train.results, file.path(output_data_path, results_file))
+flog.trace("Training results recorded on CSV file.")

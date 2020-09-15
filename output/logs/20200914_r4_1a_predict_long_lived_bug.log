@@ -1,0 +1,328 @@
+TRACE [2020-09-14 19:59:45] Long live prediction Research Question 4 - Experiment 1
+TRACE [2020-09-14 19:59:45] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output
+TRACE [2020-09-14 19:59:45] Project name: eclipse
+TRACE [2020-09-14 19:59:45] Loading or create metrics file
+TRACE [2020-09-14 19:59:45] Starting in parameter number: 1
+TRACE [2020-09-14 19:59:45] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-14 19:59:45] Clean text feature
+TRACE [2020-09-14 20:00:19] Processing feature         : long_description
+TRACE [2020-09-14 20:00:19] Processing number of terms : 100
+TRACE [2020-09-14 20:00:19] Processing classifier      : knn
+TRACE [2020-09-14 20:00:19] Processing training metric : Accuracy
+TRACE [2020-09-14 20:00:19] Processing threshold       : 365
+TRACE [2020-09-14 20:00:19] Processing balancing       : smote
+TRACE [2020-09-14 20:00:19] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-14 20:00:19] Converting dataframe to term matrix
+TRACE [2020-09-14 20:00:37] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-14 20:00:37] Partitioning dataset in training and testing
+TRACE [2020-09-14 20:00:37] Balancing training dataset
+TRACE [2020-09-14 20:00:37] [balance_dataset]: balancing method: smote
+TRACE [2020-09-14 20:00:40] Training model 
+TRACE [2020-09-14 20:00:40] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-14 20:00:40] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-14 20:05:49] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-14 20:05:49] Processing feature         : long_description
+TRACE [2020-09-14 20:05:49] Processing number of terms : 100
+TRACE [2020-09-14 20:05:49] Processing classifier      : knn
+TRACE [2020-09-14 20:05:49] Processing training metric : Accuracy
+TRACE [2020-09-14 20:05:49] Processing threshold       : 365
+TRACE [2020-09-14 20:05:49] Processing balancing       : unbalanced
+TRACE [2020-09-14 20:05:49] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-14 20:05:49] Converting dataframe to term matrix
+TRACE [2020-09-14 20:06:06] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-14 20:06:06] Partitioning dataset in training and testing
+TRACE [2020-09-14 20:06:06] Balancing training dataset
+TRACE [2020-09-14 20:06:06] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-14 20:06:06] Training model 
+TRACE [2020-09-14 20:06:06] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-14 20:06:06] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-14 20:07:28] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-14 20:07:28] Processing feature         : long_description
+TRACE [2020-09-14 20:07:28] Processing number of terms : 100
+TRACE [2020-09-14 20:07:28] Processing classifier      : nb
+TRACE [2020-09-14 20:07:28] Processing training metric : Accuracy
+TRACE [2020-09-14 20:07:28] Processing threshold       : 365
+TRACE [2020-09-14 20:07:28] Processing balancing       : smote
+TRACE [2020-09-14 20:07:28] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-14 20:07:28] Converting dataframe to term matrix
+TRACE [2020-09-14 20:07:45] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-14 20:07:45] Partitioning dataset in training and testing
+TRACE [2020-09-14 20:07:45] Balancing training dataset
+TRACE [2020-09-14 20:07:45] [balance_dataset]: balancing method: smote
+TRACE [2020-09-14 20:07:48] Training model 
+TRACE [2020-09-14 20:07:48] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-14 20:07:48] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-14 20:44:15] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-14 20:44:15] Processing feature         : long_description
+TRACE [2020-09-14 20:44:15] Processing number of terms : 100
+TRACE [2020-09-14 20:44:15] Processing classifier      : nb
+TRACE [2020-09-14 20:44:15] Processing training metric : Accuracy
+TRACE [2020-09-14 20:44:15] Processing threshold       : 365
+TRACE [2020-09-14 20:44:15] Processing balancing       : unbalanced
+TRACE [2020-09-14 20:44:15] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-14 20:44:15] Converting dataframe to term matrix
+TRACE [2020-09-14 20:44:33] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-14 20:44:33] Partitioning dataset in training and testing
+TRACE [2020-09-14 20:44:33] Balancing training dataset
+TRACE [2020-09-14 20:44:33] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-14 20:44:33] Training model 
+TRACE [2020-09-14 20:44:33] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-14 20:44:33] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-14 21:04:43] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-14 21:04:43] Processing feature         : long_description
+TRACE [2020-09-14 21:04:43] Processing number of terms : 100
+TRACE [2020-09-14 21:04:43] Processing classifier      : nn
+TRACE [2020-09-14 21:04:43] Processing training metric : Accuracy
+TRACE [2020-09-14 21:04:43] Processing threshold       : 365
+TRACE [2020-09-14 21:04:43] Processing balancing       : smote
+TRACE [2020-09-14 21:04:43] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-14 21:04:43] Converting dataframe to term matrix
+TRACE [2020-09-14 21:05:00] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-14 21:05:00] Partitioning dataset in training and testing
+TRACE [2020-09-14 21:05:00] Balancing training dataset
+TRACE [2020-09-14 21:05:00] [balance_dataset]: balancing method: smote
+TRACE [2020-09-14 21:05:03] Training model 
+TRACE [2020-09-14 21:05:03] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-14 21:05:03] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-14 21:11:25] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-14 21:11:25] Processing feature         : long_description
+TRACE [2020-09-14 21:11:25] Processing number of terms : 100
+TRACE [2020-09-14 21:11:25] Processing classifier      : nn
+TRACE [2020-09-14 21:11:25] Processing training metric : Accuracy
+TRACE [2020-09-14 21:11:25] Processing threshold       : 365
+TRACE [2020-09-14 21:11:25] Processing balancing       : unbalanced
+TRACE [2020-09-14 21:11:25] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-14 21:11:25] Converting dataframe to term matrix
+TRACE [2020-09-14 21:11:43] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-14 21:11:43] Partitioning dataset in training and testing
+TRACE [2020-09-14 21:11:43] Balancing training dataset
+TRACE [2020-09-14 21:11:43] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-14 21:11:43] Training model 
+TRACE [2020-09-14 21:11:43] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-14 21:11:43] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-14 21:14:41] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-14 21:14:41] Processing feature         : long_description
+TRACE [2020-09-14 21:14:41] Processing number of terms : 100
+TRACE [2020-09-14 21:14:41] Processing classifier      : rf
+TRACE [2020-09-14 21:14:41] Processing training metric : Accuracy
+TRACE [2020-09-14 21:14:41] Processing threshold       : 365
+TRACE [2020-09-14 21:14:41] Processing balancing       : smote
+TRACE [2020-09-14 21:14:41] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-14 21:14:41] Converting dataframe to term matrix
+TRACE [2020-09-14 21:14:58] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-14 21:14:58] Partitioning dataset in training and testing
+TRACE [2020-09-14 21:14:58] Balancing training dataset
+TRACE [2020-09-14 21:14:58] [balance_dataset]: balancing method: smote
+TRACE [2020-09-14 21:15:01] Training model 
+TRACE [2020-09-14 21:15:01] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-14 21:15:01] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-14 21:26:07] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-14 21:26:07] Processing feature         : long_description
+TRACE [2020-09-14 21:26:07] Processing number of terms : 100
+TRACE [2020-09-14 21:26:07] Processing classifier      : rf
+TRACE [2020-09-14 21:26:07] Processing training metric : Accuracy
+TRACE [2020-09-14 21:26:07] Processing threshold       : 365
+TRACE [2020-09-14 21:26:07] Processing balancing       : unbalanced
+TRACE [2020-09-14 21:26:07] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-14 21:26:07] Converting dataframe to term matrix
+TRACE [2020-09-14 21:26:25] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-14 21:26:25] Partitioning dataset in training and testing
+TRACE [2020-09-14 21:26:25] Balancing training dataset
+TRACE [2020-09-14 21:26:25] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-14 21:26:25] Training model 
+TRACE [2020-09-14 21:26:25] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-14 21:26:25] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-14 21:40:33] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-14 21:40:33] Processing feature         : long_description
+TRACE [2020-09-14 21:40:33] Processing number of terms : 100
+TRACE [2020-09-14 21:40:33] Processing classifier      : svm
+TRACE [2020-09-14 21:40:33] Processing training metric : Accuracy
+TRACE [2020-09-14 21:40:33] Processing threshold       : 365
+TRACE [2020-09-14 21:40:33] Processing balancing       : smote
+TRACE [2020-09-14 21:40:33] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-14 21:40:33] Converting dataframe to term matrix
+TRACE [2020-09-14 21:40:50] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-14 21:40:50] Partitioning dataset in training and testing
+TRACE [2020-09-14 21:40:50] Balancing training dataset
+TRACE [2020-09-14 21:40:51] [balance_dataset]: balancing method: smote
+TRACE [2020-09-14 21:40:53] Training model 
+TRACE [2020-09-14 21:40:53] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-14 21:40:53] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-15 02:14:49] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 02:14:49] Processing feature         : long_description
+TRACE [2020-09-15 02:14:49] Processing number of terms : 100
+TRACE [2020-09-15 02:14:49] Processing classifier      : svm
+TRACE [2020-09-15 02:14:49] Processing training metric : Accuracy
+TRACE [2020-09-15 02:14:49] Processing threshold       : 365
+TRACE [2020-09-15 02:14:49] Processing balancing       : unbalanced
+TRACE [2020-09-15 02:14:49] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 02:14:49] Converting dataframe to term matrix
+TRACE [2020-09-15 02:15:05] Text mining: extracted 100 terms from long_description
+TRACE [2020-09-15 02:15:05] Partitioning dataset in training and testing
+TRACE [2020-09-15 02:15:05] Balancing training dataset
+TRACE [2020-09-15 02:15:05] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-15 02:15:05] Training model 
+TRACE [2020-09-15 02:15:05] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 02:15:05] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-15 03:39:51] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 03:39:51] Processing feature         : short_description
+TRACE [2020-09-15 03:39:51] Processing number of terms : 100
+TRACE [2020-09-15 03:39:51] Processing classifier      : knn
+TRACE [2020-09-15 03:39:51] Processing training metric : Accuracy
+TRACE [2020-09-15 03:39:51] Processing threshold       : 365
+TRACE [2020-09-15 03:39:51] Processing balancing       : smote
+TRACE [2020-09-15 03:39:51] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 03:39:51] Converting dataframe to term matrix
+TRACE [2020-09-15 03:39:58] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 03:39:58] Partitioning dataset in training and testing
+TRACE [2020-09-15 03:39:58] Balancing training dataset
+TRACE [2020-09-15 03:39:58] [balance_dataset]: balancing method: smote
+TRACE [2020-09-15 03:40:01] Training model 
+TRACE [2020-09-15 03:40:01] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 03:40:01] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-15 03:44:15] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 03:44:15] Processing feature         : short_description
+TRACE [2020-09-15 03:44:15] Processing number of terms : 100
+TRACE [2020-09-15 03:44:15] Processing classifier      : knn
+TRACE [2020-09-15 03:44:15] Processing training metric : Accuracy
+TRACE [2020-09-15 03:44:15] Processing threshold       : 365
+TRACE [2020-09-15 03:44:15] Processing balancing       : unbalanced
+TRACE [2020-09-15 03:44:15] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 03:44:15] Converting dataframe to term matrix
+TRACE [2020-09-15 03:44:23] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 03:44:23] Partitioning dataset in training and testing
+TRACE [2020-09-15 03:44:23] Balancing training dataset
+TRACE [2020-09-15 03:44:23] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-15 03:44:23] Training model 
+TRACE [2020-09-15 03:44:23] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 03:44:23] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-15 03:45:31] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 03:45:31] Processing feature         : short_description
+TRACE [2020-09-15 03:45:31] Processing number of terms : 100
+TRACE [2020-09-15 03:45:31] Processing classifier      : nb
+TRACE [2020-09-15 03:45:31] Processing training metric : Accuracy
+TRACE [2020-09-15 03:45:31] Processing threshold       : 365
+TRACE [2020-09-15 03:45:31] Processing balancing       : smote
+TRACE [2020-09-15 03:45:31] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 03:45:31] Converting dataframe to term matrix
+TRACE [2020-09-15 03:45:38] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 03:45:38] Partitioning dataset in training and testing
+TRACE [2020-09-15 03:45:38] Balancing training dataset
+TRACE [2020-09-15 03:45:38] [balance_dataset]: balancing method: smote
+TRACE [2020-09-15 03:45:40] Training model 
+TRACE [2020-09-15 03:45:40] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 03:45:40] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-15 04:17:45] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 04:17:45] Processing feature         : short_description
+TRACE [2020-09-15 04:17:45] Processing number of terms : 100
+TRACE [2020-09-15 04:17:45] Processing classifier      : nb
+TRACE [2020-09-15 04:17:45] Processing training metric : Accuracy
+TRACE [2020-09-15 04:17:45] Processing threshold       : 365
+TRACE [2020-09-15 04:17:45] Processing balancing       : unbalanced
+TRACE [2020-09-15 04:17:45] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 04:17:45] Converting dataframe to term matrix
+TRACE [2020-09-15 04:17:52] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 04:17:52] Partitioning dataset in training and testing
+TRACE [2020-09-15 04:17:52] Balancing training dataset
+TRACE [2020-09-15 04:17:52] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-15 04:17:52] Training model 
+TRACE [2020-09-15 04:17:52] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 04:17:52] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-15 04:35:40] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 04:35:40] Processing feature         : short_description
+TRACE [2020-09-15 04:35:40] Processing number of terms : 100
+TRACE [2020-09-15 04:35:40] Processing classifier      : nn
+TRACE [2020-09-15 04:35:40] Processing training metric : Accuracy
+TRACE [2020-09-15 04:35:40] Processing threshold       : 365
+TRACE [2020-09-15 04:35:40] Processing balancing       : smote
+TRACE [2020-09-15 04:35:40] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 04:35:40] Converting dataframe to term matrix
+TRACE [2020-09-15 04:35:47] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 04:35:47] Partitioning dataset in training and testing
+TRACE [2020-09-15 04:35:47] Balancing training dataset
+TRACE [2020-09-15 04:35:47] [balance_dataset]: balancing method: smote
+TRACE [2020-09-15 04:35:49] Training model 
+TRACE [2020-09-15 04:35:49] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 04:35:49] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-15 04:42:17] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 04:42:17] Processing feature         : short_description
+TRACE [2020-09-15 04:42:17] Processing number of terms : 100
+TRACE [2020-09-15 04:42:17] Processing classifier      : nn
+TRACE [2020-09-15 04:42:17] Processing training metric : Accuracy
+TRACE [2020-09-15 04:42:17] Processing threshold       : 365
+TRACE [2020-09-15 04:42:17] Processing balancing       : unbalanced
+TRACE [2020-09-15 04:42:17] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 04:42:17] Converting dataframe to term matrix
+TRACE [2020-09-15 04:42:25] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 04:42:25] Partitioning dataset in training and testing
+TRACE [2020-09-15 04:42:25] Balancing training dataset
+TRACE [2020-09-15 04:42:25] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-15 04:42:25] Training model 
+TRACE [2020-09-15 04:42:25] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 04:42:25] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-15 04:45:53] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 04:45:53] Processing feature         : short_description
+TRACE [2020-09-15 04:45:53] Processing number of terms : 100
+TRACE [2020-09-15 04:45:53] Processing classifier      : rf
+TRACE [2020-09-15 04:45:53] Processing training metric : Accuracy
+TRACE [2020-09-15 04:45:53] Processing threshold       : 365
+TRACE [2020-09-15 04:45:53] Processing balancing       : smote
+TRACE [2020-09-15 04:45:53] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 04:45:53] Converting dataframe to term matrix
+TRACE [2020-09-15 04:46:00] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 04:46:00] Partitioning dataset in training and testing
+TRACE [2020-09-15 04:46:00] Balancing training dataset
+TRACE [2020-09-15 04:46:00] [balance_dataset]: balancing method: smote
+TRACE [2020-09-15 04:46:02] Training model 
+TRACE [2020-09-15 04:46:02] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 04:46:02] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-15 05:27:26] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 05:27:26] Processing feature         : short_description
+TRACE [2020-09-15 05:27:26] Processing number of terms : 100
+TRACE [2020-09-15 05:27:26] Processing classifier      : rf
+TRACE [2020-09-15 05:27:26] Processing training metric : Accuracy
+TRACE [2020-09-15 05:27:26] Processing threshold       : 365
+TRACE [2020-09-15 05:27:26] Processing balancing       : unbalanced
+TRACE [2020-09-15 05:27:26] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 05:27:26] Converting dataframe to term matrix
+TRACE [2020-09-15 05:27:34] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 05:27:34] Partitioning dataset in training and testing
+TRACE [2020-09-15 05:27:34] Balancing training dataset
+TRACE [2020-09-15 05:27:34] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-15 05:27:34] Training model 
+TRACE [2020-09-15 05:27:34] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 05:27:34] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-15 05:48:26] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 05:48:26] Processing feature         : short_description
+TRACE [2020-09-15 05:48:26] Processing number of terms : 100
+TRACE [2020-09-15 05:48:26] Processing classifier      : svm
+TRACE [2020-09-15 05:48:26] Processing training metric : Accuracy
+TRACE [2020-09-15 05:48:26] Processing threshold       : 365
+TRACE [2020-09-15 05:48:26] Processing balancing       : smote
+TRACE [2020-09-15 05:48:26] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 05:48:26] Converting dataframe to term matrix
+TRACE [2020-09-15 05:48:34] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 05:48:34] Partitioning dataset in training and testing
+TRACE [2020-09-15 05:48:34] Balancing training dataset
+TRACE [2020-09-15 05:48:34] [balance_dataset]: balancing method: smote
+TRACE [2020-09-15 05:48:36] Training model 
+TRACE [2020-09-15 05:48:36] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 05:48:36] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-15 08:44:47] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 08:44:47] Processing feature         : short_description
+TRACE [2020-09-15 08:44:47] Processing number of terms : 100
+TRACE [2020-09-15 08:44:47] Processing classifier      : svm
+TRACE [2020-09-15 08:44:47] Processing training metric : Accuracy
+TRACE [2020-09-15 08:44:47] Processing threshold       : 365
+TRACE [2020-09-15 08:44:47] Processing balancing       : unbalanced
+TRACE [2020-09-15 08:44:47] Processing resampling      : repeatedcv5x10
+TRACE [2020-09-15 08:44:47] Converting dataframe to term matrix
+TRACE [2020-09-15 08:44:55] Text mining: extracted 100 terms from short_description
+TRACE [2020-09-15 08:44:55] Partitioning dataset in training and testing
+TRACE [2020-09-15 08:44:55] Balancing training dataset
+TRACE [2020-09-15 08:44:55] [balance_dataset]: balancing method: unbalanced
+TRACE [2020-09-15 08:44:55] Training model 
+TRACE [2020-09-15 08:44:55] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-15 08:44:55] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-15 09:34:43] Recording best tune hyperparameters in CSV file
+TRACE [2020-09-15 09:34:43] Training results recorded on CSV file.
