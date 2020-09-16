@@ -297,9 +297,9 @@ for (row in 1:nrow(all.best.metrics)) {
         results.started <- TRUE
       }
       all_train.results <- rbind(all_train.results, train.results)
-    #  all_test.results  <- rbind(all_test.results,  test.results)
+      #all_test.results  <- rbind(all_test.results,  test.results)
+      write_csv(all_train.results, file.path(output_data_path, results.train.file))
+      #write_csv(all_test.results, file.path(output_data_path, results.test.file))
+      flog.trace("Training results recorded on CSV file.")
   }
-  write_csv(all_train.results, file.path(output_data_path, results.train.file))
-  #write_csv(all_test.results, file.path(output_data_path, results.test.file))
-  flog.trace("Training results recorded on CSV file.")
 }
