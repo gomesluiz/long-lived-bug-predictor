@@ -94,7 +94,8 @@ if (debug_on) {
   classifier <- c(KNN)
   projects   <- c("winehq")
 } else {
-  projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "winehq")
+  #projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "winehq")
+  projects   <- c("mozilla")
   flog.appender(
     appender.file(
       file.path(
@@ -111,17 +112,17 @@ flog.trace("Evaluation metrics ouput path: %s", output_data_path)
 
 modo.exec <- ifelse(debug_on, "debug", "final")
 results.train.file <- sprintf(
-  "%s_r4_4b_predict_long_lived_bug_train_%s.csv", 
+  "%s_r4_4b_predict_long_lived_bug_train_%s_mozilla.csv", 
   timestamp, 
   modo.exec
 )
 results.test.file <- sprintf(
-  "%s_r4_4b_predict_long_lived_bug_test_%s.csv", 
+  "%s_r4_4b_predict_long_lived_bug_test_%s_mozilla.csv", 
   timestamp, 
   modo.exec
 )
 results.hat.file <- sprintf(
-  "%s_r4_4b_predict_long_lived_bug_hat_%s.csv", 
+  "%s_r4_4b_predict_long_lived_bug_hat_%s_mozilla.csv", 
   timestamp, 
   modo.exec
 )
