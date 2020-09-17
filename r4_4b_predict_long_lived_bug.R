@@ -78,7 +78,7 @@ source(file.path(lib_path, "balance_dataset.R"))
 # Experimental parameters ------------------------------------------------------
 r_cluster    <- makePSOCKcluster(processors)
 registerDoParallel(r_cluster)
-resampling <- c("cv10")
+resampling <- c("repeatedcv5x10")
 class_label <- "long_lived"
 prefix_reports <- "20200731"
 
@@ -91,7 +91,8 @@ threshold  <- c(365)
 seeds <- c(DEFAULT_SEED)
 
 if (debug_on) {
-  projects   <- c("eclipse", "winehq")
+  classifier <- c(KNN)
+  projects   <- c("winehq")
 } else {
   projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "winehq")
   flog.appender(
@@ -190,7 +191,7 @@ for (project_name in projects)
 
       flog.trace("Training prediction model ")
       if (parameter$classifier == KNN) {
-        stop("KNN hyperparameter required.")
+        grid    <- expand.grid(k=c(5))
       } else if (parameter$classifier == NB) {
         stop("NB hyperparameter required.")
       } else if (parameter$classifier == NNET) {
@@ -201,12 +202,9 @@ for (project_name in projects)
         grid    <- expand.grid(C = c(2**(5)),sigma = c(2**(-5)))
       }
 
-      fit_control <- caret::trainControl(
-        method = "cv", 
-        number = 10
-      )
 
-      fit_model <- train_with(
+      fit_control <- get_resampling_method(parameter$resampling)
+      fit_model   <- train_with(
         .x = X_train, 
         .y = y_train, 
         .classifier = parameter$classifier,
@@ -221,8 +219,8 @@ for (project_name in projects)
       train.results <- train.results[, !(names(train.results) %in% names(fit_model$bestTune))]
 
       names(train.results)[1] <- "tn"
-      names(train.results)[2] <- "fn"
-      names(train.results)[3] <- "fp"
+      names(train.results)[2] <- "fp"
+      names(train.results)[3] <- "fn"
       names(train.results)[4] <- "tp"
 
       train.results$acc <- (train.results$tp + train.results$tn) / 
@@ -245,7 +243,11 @@ for (project_name in projects)
       train.results$feature <- parameter$feature
       train.results$threshold   <-  parameter$threshold
       
-      if (parameter$classifier == NNET) {
+      if (parameter$classifier == KNN) {
+        train.results$hyper1  <- "k"
+        train.results$value1  <- grid$k
+        train.results$hyper2  <- "" 
+      } else if (parameter$classifier == NNET) {
         train.results$hyper1  <- "size"
         train.results$value1  <- grid$size
         train.results$hyper2  <- "decay" 
@@ -308,8 +310,9 @@ for (project_name in projects)
         all_hat.results   <- rbind(all_hat.results, hat.results)
     }
   }
+  write_csv(all_train.results, file.path(output_data_path, results.train.file))
+  write_csv(all_test.results, file.path(output_data_path, results.test.file))
+  write_csv(all_hat.results, file.path(output_data_path, results.hat.file))
+  flog.trace("Training results recorded on CSV file.")
 }
-write_csv(all_train.results, file.path(output_data_path, results.train.file))
-write_csv(all_test.results, file.path(output_data_path, results.test.file))
-write_csv(all_hat.results, file.path(output_data_path, results.hat.file))
-flog.trace("Training results recorded on CSV file.")
+flog.trace("Experiment 4 - 4b Finished")
