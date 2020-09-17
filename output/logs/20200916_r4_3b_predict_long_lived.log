@@ -1,0 +1,136 @@
+TRACE [2020-09-16 19:54:33] Long live prediction Research Question 4 - Experiment 3b
+TRACE [2020-09-16 19:54:33] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-16 19:54:33] Current project name : eclipse
+TRACE [2020-09-16 19:54:33] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-16 19:54:33] Clean text feature
+TRACE [2020-09-16 19:55:07] Converting dataframe to term matrix
+TRACE [2020-09-16 19:55:24] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-16 19:55:24] SEED <144>
+TRACE [2020-09-16 19:55:24] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [8]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-16 19:55:24] Partitioning dataset in training and testing
+TRACE [2020-09-16 19:55:24] Balancing training dataset
+TRACE [2020-09-16 19:55:24] [balance_dataset]: balancing method: smote
+TRACE [2020-09-16 19:55:35] Training prediction model 
+TRACE [2020-09-16 19:55:35] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-16 19:55:35] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-16 20:07:21] Calculating training results metrics
+TRACE [2020-09-16 20:07:21] SEED <283>
+TRACE [2020-09-16 20:07:21] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [8]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-16 20:07:21] Partitioning dataset in training and testing
+TRACE [2020-09-16 20:07:21] Balancing training dataset
+TRACE [2020-09-16 20:07:21] [balance_dataset]: balancing method: smote
+TRACE [2020-09-16 20:07:31] Training prediction model 
+TRACE [2020-09-16 20:07:31] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-16 20:07:31] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-16 20:19:16] Calculating training results metrics
+TRACE [2020-09-16 20:19:16] SEED <1087>
+TRACE [2020-09-16 20:19:16] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [8]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-16 20:19:16] Partitioning dataset in training and testing
+TRACE [2020-09-16 20:19:16] Balancing training dataset
+TRACE [2020-09-16 20:19:16] [balance_dataset]: balancing method: smote
+TRACE [2020-09-16 20:19:27] Training prediction model 
+TRACE [2020-09-16 20:19:27] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-16 20:19:27] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-16 20:30:37] Long live prediction Research Question 4 - Experiment 3b
+TRACE [2020-09-16 20:30:37] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-16 20:30:37] Current project name : eclipse
+TRACE [2020-09-16 20:30:37] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-16 20:30:37] Clean text feature
+TRACE [2020-09-16 20:31:12] Converting dataframe to term matrix
+TRACE [2020-09-16 20:31:29] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-16 20:31:29] SEED <144>
+TRACE [2020-09-16 20:31:29] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [8]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-16 20:31:29] Partitioning dataset in training and testing
+TRACE [2020-09-16 20:31:29] Balancing training dataset
+TRACE [2020-09-16 20:31:29] [balance_dataset]: balancing method: smote
+TRACE [2020-09-16 20:31:40] Training prediction model 
+TRACE [2020-09-16 20:31:40] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-16 20:31:40] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-16 20:43:31] Calculating training results metrics
+TRACE [2020-09-16 20:43:31] Training results recorded on CSV file.
+TRACE [2020-09-16 20:43:31] Converting dataframe to term matrix
+TRACE [2020-09-16 20:43:48] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-16 20:43:48] SEED <144>
+TRACE [2020-09-16 20:43:48] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [59]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-16 20:43:48] Partitioning dataset in training and testing
+TRACE [2020-09-16 20:43:48] Balancing training dataset
+TRACE [2020-09-16 20:43:48] [balance_dataset]: balancing method: smote
+TRACE [2020-09-16 20:43:56] Training prediction model 
+TRACE [2020-09-16 20:43:56] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-16 20:43:56] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-16 21:01:34] Calculating training results metrics
+TRACE [2020-09-16 21:01:34] Training results recorded on CSV file.
+TRACE [2020-09-16 21:01:34] Converting dataframe to term matrix
+TRACE [2020-09-16 21:01:51] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-16 21:01:51] SEED <144>
+TRACE [2020-09-16 21:01:51] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [102]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-16 21:01:51] Partitioning dataset in training and testing
+TRACE [2020-09-16 21:01:51] Balancing training dataset
+TRACE [2020-09-16 21:01:51] [balance_dataset]: balancing method: smote
+TRACE [2020-09-16 21:01:59] Training prediction model 
+TRACE [2020-09-16 21:01:59] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-16 21:01:59] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-16 21:26:44] Calculating training results metrics
+TRACE [2020-09-16 21:26:44] Training results recorded on CSV file.
+TRACE [2020-09-16 21:26:44] Converting dataframe to term matrix
+TRACE [2020-09-16 21:27:01] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-16 21:27:01] SEED <144>
+TRACE [2020-09-16 21:27:01] Current parameters:
+ N.Terms...: [150]
+ Classifier: [svm]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-16 21:27:01] Partitioning dataset in training and testing
+TRACE [2020-09-16 21:27:01] Balancing training dataset
+TRACE [2020-09-16 21:27:01] [balance_dataset]: balancing method: smote
+TRACE [2020-09-16 21:27:05] Training prediction model 
+TRACE [2020-09-16 21:27:05] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-16 21:27:05] [train_with_svm] Training model with SVM and Accuracy
+TRACE [2020-09-16 21:53:09] Calculating training results metrics
+TRACE [2020-09-16 21:53:09] Training results recorded on CSV file.
+TRACE [2020-09-16 21:53:09] Experiment 4 - 3b Finished

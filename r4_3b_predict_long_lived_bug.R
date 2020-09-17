@@ -95,7 +95,7 @@ if (debug_on) {
   seeds <- c(DEFAULT_SEED, 283)
 } else {
   threshold   <- c(8, 59, 102, 365)
-  seeds <- c(DEFAULT_SEED, 283, 1087, 2293, 3581)
+  seeds <- c(DEFAULT_SEED)
   flog.appender(
     appender.file(
       file.path(
