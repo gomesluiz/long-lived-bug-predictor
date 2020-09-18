@@ -228,8 +228,8 @@ for (row in 1:nrow(all.best.metrics)) {
     train.results <- train.results[, !(names(train.results) %in% names(fit_model$bestTune))]
 
     names(train.results)[1] <- "tn"
-    names(train.results)[2] <- "fn"
-    names(train.results)[3] <- "fp"
+    names(train.results)[2] <- "fp"
+    names(train.results)[3] <- "fn"
     names(train.results)[4] <- "tp"
 
     train.results$acc <- (train.results$tp + train.results$tn) / 
@@ -247,16 +247,19 @@ for (row in 1:nrow(all.best.metrics)) {
     train.results$classifier <- parameter$classifier
     train.results$balancing  <- parameter$balancing
     train.results$resampling <- parameter$resampling
-    train.results$metric  <- parameter$train_metric
-    train.results$max_term  <- parameter$max_term
-    train.results$feature <- parameter$feature
-    train.results$hyper1  <- parameter$hyper1
-    train.results$value1  <- parameter$value1
-    train.results$hyper2  <- parameter$hyper2
-    train.results$value2  <- parameter$value2
-    train.results$hyper3  <- parameter$hyper3
-    train.results$value3  <- parameter$value3
-    train.results$seed    <- seed
+    train.results$metric     <- parameter$train_metric
+    train.results$max_term   <- parameter$max_term
+    train.results$feature    <- parameter$feature
+    train.results$hyper1     <- parameter$hyper1
+    train.results$value1     <- parameter$value1
+    train.results$hyper2     <- parameter$hyper2
+    train.results$value2     <- parameter$value2
+    train.results$hyper3     <- parameter$hyper3
+    train.results$value3     <- parameter$value3
+    train.results$train_size = nrow(X_train),
+    train.results$train_size_class_0 = length(subset(y_train, y_train == "N")),
+    train.results$train_size_class_1 = length(subset(y_train, y_train == "Y")),
+    train.results$seed       <- seed
     
     #flog.trace("Testing predicting model ")
     #y_hat <- predict(object = fit_model, X_test)

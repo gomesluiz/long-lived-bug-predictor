@@ -82,7 +82,7 @@ resampling <- c("repeatedcv5x10")
 class_label <- "long_lived"
 prefix_reports <- "20200731"
 
-classifier <- c(SVM)
+classifier <- c(KNN, NB, NNET, RF)
 feature    <- c("long_description")
 balancing  <- c(SMOTEMETHOD)
 train_metric <- c(ACC)
@@ -94,8 +94,8 @@ if (debug_on) {
   classifier <- c(KNN)
   projects   <- c("winehq")
 } else {
-  #projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "winehq")
-  projects   <- c("mozilla")
+  projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  #projects   <- c("mozilla")
   flog.appender(
     appender.file(
       file.path(
@@ -112,17 +112,17 @@ flog.trace("Evaluation metrics ouput path: %s", output_data_path)
 
 modo.exec <- ifelse(debug_on, "debug", "final")
 results.train.file <- sprintf(
-  "%s_r4_4b_predict_long_lived_bug_train_%s_mozilla.csv", 
+  "%s_r4_4b_predict_long_lived_bug_train_%s_others.csv", 
   timestamp, 
   modo.exec
 )
 results.test.file <- sprintf(
-  "%s_r4_4b_predict_long_lived_bug_test_%s_mozilla.csv", 
+  "%s_r4_4b_predict_long_lived_bug_test_%s_others.csv", 
   timestamp, 
   modo.exec
 )
 results.hat.file <- sprintf(
-  "%s_r4_4b_predict_long_lived_bug_hat_%s_mozilla.csv", 
+  "%s_r4_4b_predict_long_lived_bug_hat_%s_others.csv", 
   timestamp, 
   modo.exec
 )
@@ -298,7 +298,7 @@ for (project_name in projects)
           row = row
         )
       
-        hat.results <- cbind(test.dataset[, c("bug_id", "bug_fix_time", "long_lived")], y_hat, project_name)
+        hat.results <- cbind(test.dataset[, c("bug_id", "bug_fix_time", "long_lived")], y_hat, project_name, parameter$classifier)
       
         if (!results.started) {
           all_train.results <- train.results[FALSE, ]

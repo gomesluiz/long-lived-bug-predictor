@@ -84,7 +84,7 @@ resamplings <- c("cv10")
 class_label <- "long_lived"
 prefix_reports <- "20200731"
 
-classifiers <- c(SVM)
+classifiers <- c(KNN, NB, NNET, RF)
 features    <- c("long_description")
 balancings  <- c(SMOTEMETHOD)
 train_metrics <- c(ACC)
