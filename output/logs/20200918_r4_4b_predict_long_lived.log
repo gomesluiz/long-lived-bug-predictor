@@ -1,0 +1,6 @@
+TRACE [2020-09-18 15:53:01] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-18 15:53:02] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-18 15:53:02] Current project name : eclipse
+TRACE [2020-09-18 15:53:02] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-18 15:53:03] Clean text feature
+TRACE [2020-09-18 15:54:44] Converting dataframe to term matrix

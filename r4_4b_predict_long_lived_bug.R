@@ -194,15 +194,14 @@ for (project_name in projects)
       if (parameter$classifier == KNN) {
         grid    <- expand.grid(k=c(5))
       } else if (parameter$classifier == NB) {
-        stop("NB hyperparameter required.")
+        grid    <- expand.grid(fL=c(0), usekernel=c('adjust'))
       } else if (parameter$classifier == NNET) {
-        grid = expand.grid(size = c(30), decay = c(0.5))
+        grid = expand.grid(size = c(20), decay = c(0.5))
       } else if (parameter$classifier == RF) {
-        stop("RF hyperparameter required.")
+        grid    <- expand.grid(mtry=c(25))
       } else if (parameter$classifier == SVM) {
-        grid    <- expand.grid(C = c(2**(5)),sigma = c(2**(-5)))
+        grid    <- expand.grid(C = c(2**(5)), sigma = c(2**(-5)))
       }
-
 
       fit_control <- get_resampling_method(parameter$resampling)
       fit_model   <- train_with(
@@ -248,11 +247,20 @@ for (project_name in projects)
         train.results$hyper1  <- "k"
         train.results$value1  <- grid$k
         train.results$hyper2  <- "" 
+        train.results$value2  <- 0 
+      } else if (parameter$classifier == NB) {
+        train.results$hyper1  <- "fL"
+        train.results$value1  <- grid$fL
+        train.results$hyper2  <- "usekernel" 
+        train.results$value2  <- grid$usekernel
       } else if (parameter$classifier == NNET) {
         train.results$hyper1  <- "size"
         train.results$value1  <- grid$size
-        train.results$hyper2  <- "decay" 
+        train.results$hyper2  <- "decay"
         train.results$value2  <- grid$decay 
+      } else if (parameter$classifier == RF) {
+        train.results$hyper1  <- "mtry"
+        train.results$value1  <- grid$mtry
       } else if (parameter$classifier == SVM) {
         train.results$hyper1  <- "sigma"
         train.results$value1  <- grid$sigma
