@@ -94,7 +94,8 @@ if (debug_on) {
   classifier <- c(KNN)
   projects   <- c("winehq")
 } else {
-  projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "winehq")
+  projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  #projects   <- c("mozilla")
   flog.appender(
     appender.file(
       file.path(
