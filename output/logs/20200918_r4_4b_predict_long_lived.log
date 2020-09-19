@@ -4,3 +4,84 @@ TRACE [2020-09-18 15:53:02] Current project name : eclipse
 TRACE [2020-09-18 15:53:02] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
 TRACE [2020-09-18 15:53:03] Clean text feature
 TRACE [2020-09-18 15:54:44] Converting dataframe to term matrix
+TRACE [2020-09-18 20:46:47] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-09-18 20:46:47] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-ml-in-r/output/data
+TRACE [2020-09-18 20:46:47] Current project name : eclipse
+TRACE [2020-09-18 20:46:47] Bug report file name: ~/Workspace/long-lived-bug-predictor-ml-in-r/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-09-18 20:46:47] Clean text feature
+TRACE [2020-09-18 20:47:21] Converting dataframe to term matrix
+TRACE [2020-09-18 20:47:39] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-18 20:47:39] SEED <144>
+TRACE [2020-09-18 20:47:39] Current parameters:
+ N.Terms...: [150]
+ Classifier: [knn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-18 20:47:39] Partitioning dataset in training and testing
+TRACE [2020-09-18 20:47:39] Balancing training dataset
+TRACE [2020-09-18 20:47:39] [balance_dataset]: balancing method: smote
+TRACE [2020-09-18 20:47:42] Training prediction model 
+TRACE [2020-09-18 20:47:42] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-18 20:47:42] [train_with_knn] Training model with KNN and Accuracy
+TRACE [2020-09-18 20:48:37] Calculating training results metrics
+TRACE [2020-09-18 20:48:37] Testing predicting model 
+TRACE [2020-09-18 20:48:42] Converting dataframe to term matrix
+TRACE [2020-09-18 20:49:00] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-18 20:49:00] SEED <144>
+TRACE [2020-09-18 20:49:00] Current parameters:
+ N.Terms...: [150]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-18 20:49:00] Partitioning dataset in training and testing
+TRACE [2020-09-18 20:49:00] Balancing training dataset
+TRACE [2020-09-18 20:49:00] [balance_dataset]: balancing method: smote
+TRACE [2020-09-18 20:49:02] Training prediction model 
+TRACE [2020-09-18 20:49:02] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-18 20:49:02] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-09-18 21:32:15] Calculating training results metrics
+TRACE [2020-09-18 21:32:15] Testing predicting model 
+TRACE [2020-09-18 21:32:19] Converting dataframe to term matrix
+TRACE [2020-09-18 21:32:36] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-18 21:32:36] SEED <144>
+TRACE [2020-09-18 21:32:36] Current parameters:
+ N.Terms...: [150]
+ Classifier: [nn]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-18 21:32:36] Partitioning dataset in training and testing
+TRACE [2020-09-18 21:32:36] Balancing training dataset
+TRACE [2020-09-18 21:32:36] [balance_dataset]: balancing method: smote
+TRACE [2020-09-18 21:32:39] Training prediction model 
+TRACE [2020-09-18 21:32:39] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-18 21:32:39] [train_with_nnet] Training model with NNET and Accuracy
+TRACE [2020-09-18 21:35:03] Calculating training results metrics
+TRACE [2020-09-18 21:35:03] Testing predicting model 
+TRACE [2020-09-18 21:35:03] Converting dataframe to term matrix
+TRACE [2020-09-18 21:35:20] Text mining: extracted 150 terms from long_description
+TRACE [2020-09-18 21:35:20] SEED <144>
+TRACE [2020-09-18 21:35:20] Current parameters:
+ N.Terms...: [150]
+ Classifier: [rf]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x10]
+TRACE [2020-09-18 21:35:20] Partitioning dataset in training and testing
+TRACE [2020-09-18 21:35:20] Balancing training dataset
+TRACE [2020-09-18 21:35:20] [balance_dataset]: balancing method: smote
+TRACE [2020-09-18 21:35:23] Training prediction model 
+TRACE [2020-09-18 21:35:23] [get_resampling_method] Resampling model repeatedcv 5x10
+TRACE [2020-09-18 21:35:23] [train_with_rf] Training model with RF and Accuracy
+TRACE [2020-09-18 21:38:08] Calculating training results metrics
+TRACE [2020-09-18 21:38:08] Testing predicting model 
