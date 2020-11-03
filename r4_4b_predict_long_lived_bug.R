@@ -18,7 +18,7 @@ options(readr.num_columns = 0)
 timestamp <- format(Sys.time(), "%Y%m%d")
 
 # Constants --------------------------------------------------------------------
-debug_on     <- TRUE
+debug_on     <- FALSE
 force_create <- TRUE
 processors   <- ifelse(debug_on, 3, 24)
 base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-w-ml")
@@ -94,8 +94,8 @@ if (debug_on) {
   classifier <- c(KNN, RF)
   projects   <- c("mozilla", "winehq")
 } else {
-  #projects   <- c("winehq")
-  projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  #projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  projects   <- c("freedesktop", "gcc", "gnome", "mozilla", "winehq")
   flog.appender(
     appender.file(
       file.path(
@@ -179,7 +179,7 @@ for (project_name in projects)
   reports$long_description <- clean_text(reports$long_description)
 
   
-	results.started <- FALSE
+ results.started <- FALSE
   for (row in 1:nrow(parameters)) {
     parameter <- parameters[row, ]
     flog.trace("Converting dataframe to term matrix")
