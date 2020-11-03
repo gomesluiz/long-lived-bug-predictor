@@ -18,10 +18,10 @@ options(readr.num_columns = 0)
 timestamp <- format(Sys.time(), "%Y%m%d")
 
 # Constants --------------------------------------------------------------------
-debug_on     <- TRUE
+debug_on     <- FALSE
 force_create <- TRUE
 processors   <- ifelse(debug_on, 3, 24)
-base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
+base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-w-ml")
 lib_path    <- file.path(base_path, "R")
 data_path   <- file.path(base_path, "data")
 output_path <- file.path(base_path, "output")
