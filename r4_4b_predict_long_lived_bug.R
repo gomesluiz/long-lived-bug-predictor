@@ -91,11 +91,13 @@ threshold    <- c(365)
 seeds        <- c(DEFAULT_SEED)
 
 if (debug_on) {
-  classifier <- c(KNN, RF)
-  projects   <- c("mozilla", "winehq")
+  classifier <- c(NB)
+  projects   <- c("freedesktop")
 } else {
+  classifier <- c(NB)
+  projects   <- c("freedesktop")
   #projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
-  projects   <- c("freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  #projects   <- c("freedesktop", "gcc", "gnome", "mozilla", "winehq")
   flog.appender(
     appender.file(
       file.path(
@@ -184,6 +186,8 @@ for (project_name in projects)
     parameter <- parameters[row, ]
     flog.trace("Converting dataframe to term matrix")
     reports.dataset <- convert_to_term_matrix(reports, parameter$feature, parameter$max_term )
+    reports.dataset <- reports.dataset[complete.cases(reports.dataset), ]
+    
     flog.trace("Text mining: extracted %d terms from %s",  ncol(reports.dataset) - 2, parameter$feature )
     for (seed in seeds) {
       set.seed(seed)
