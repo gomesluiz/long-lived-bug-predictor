@@ -18,7 +18,7 @@ options(readr.num_columns = 0)
 timestamp <- format(Sys.time(), "%Y%m%d")
 
 # Constants --------------------------------------------------------------------
-debug_on     <- FALSE
+debug_on     <- TRUE
 force_create <- TRUE
 processors   <- ifelse(debug_on, 3, 24)
 base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-w-ml")
@@ -91,11 +91,11 @@ threshold    <- c(365)
 seeds        <- c(DEFAULT_SEED)
 
 if (debug_on) {
-  classifier <- c(KNN)
-  projects   <- c("winehq")
+  classifier <- c(KNN, RF)
+  projects   <- c("mozilla", "winehq")
 } else {
-  projects   <- c("winehq")
-  #projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  #projects   <- c("winehq")
+  projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
   flog.appender(
     appender.file(
       file.path(
@@ -285,6 +285,8 @@ for (project_name in projects)
       } else if (parameter$classifier == RF) {
         train.results$hyper1  <- "mtry"
         train.results$value1  <- grid$mtry
+        train.results$hyper2  <- "NA"
+        train.results$value2  <- 0 
       } else if (parameter$classifier == SVM) {
         train.results$hyper1  <- "sigma"
         train.results$value1  <- grid$sigma
@@ -338,8 +340,11 @@ for (project_name in projects)
           all_hat.results   <- hat.results[FALSE, ]
           results.started   <- TRUE
         }
+flog.trace("XXXX 1 - 4b Finished")
         all_train.results <- rbind(all_train.results, train.results)
+flog.trace("XXXX 2 - 4b Finished")
         all_test.results  <- rbind(all_test.results,  test.results)
+flog.trace("XXXX 3 - 4b Finished")
         all_hat.results   <- rbind(all_hat.results, hat.results)
     }
   }

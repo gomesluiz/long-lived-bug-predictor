@@ -1,0 +1,3 @@
+project,feature,max_term,classifier,balancing,resampling,metric,threshold,train_size,train_size_class_0,train_size_class_1,test_size,test_size_class_0,test_size_class_1,tp,fp,tn,fn,sensitivity,specificity,balanced_acc,balanced_acc_manual,precision,recall,fmeasure,seed,row
+winehq,long_description,100,knn,smote,repeatedcv5x2,Accuracy,365,750,441,309,248,146,102,35,39,107,67,0.3431372549019608,0.7328767123287672,0.538006983615364,0.538006983615364,0.47297297297297297,0.3431372549019608,0.39772727272727276,144,1
+winehq,long_description,100,rf,smote,repeatedcv5x2,Accuracy,365,750,441,309,248,146,102,36,36,110,66,0.35294117647058826,0.7534246575342466,0.5531829170024174,0.5531829170024174,0.5,0.35294117647058826,0.41379310344827586,144,2

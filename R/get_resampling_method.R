@@ -22,7 +22,7 @@ get_resampling_method <- function(.method) {
     result <- caret::trainControl(method = "cv", number = 10, search = "grid", savePredictions = 'final')
     flog.trace("[get_resampling_method] Resampling model %s", "10cv") 
   } else if (.method == resampling_methods[["repeatedcv5x2"]]) {
-    result <- caret::trainControl(method = .method, number = 5, repeats = 2, search = "grid", savePredictions = 'final')
+    result <- caret::trainControl(method = "cv", number = 5, repeats = 2, search = "grid", savePredictions = 'final')
     flog.trace("[get_resampling_method] Resampling model %s", "repeatedcv 5x2") 
   } else if (.method == resampling_methods[["repeatedcv5x10"]]) {
     result <- caret::trainControl(method = "repeatedcv", number = 5, repeats = 10, search = "grid", savePredictions = 'final')
