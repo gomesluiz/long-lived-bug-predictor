@@ -214,9 +214,11 @@ for (project_name in projects)
 
       X_train <- subset(train.balanced.dataset, select = -c(long_lived))
       y_train <- train.balanced.dataset[, class_label]
+print(table(y_train))
 
       X_test <- subset(test.dataset, select = -c(bug_id, bug_fix_time, long_lived))
       y_test <- test.dataset[, class_label]
+print(table(y_test))
 
       flog.trace("Training prediction model ")
       if (parameter$classifier == KNN) {

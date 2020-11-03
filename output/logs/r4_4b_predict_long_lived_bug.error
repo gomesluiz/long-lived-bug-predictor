@@ -124,3 +124,348 @@ In addition: Warning messages:
 5: In nominalTrainWorkflow(x = x, y = y, wts = weights, info = trainInfo,  :
   There were missing values in resampled performance measures.
 Execution halted
+Loading required package: caret
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: e1071
+Loading required package: klaR
+Loading required package: MASS
+Loading required package: kernlab
+
+Attaching package: ‘kernlab’
+
+The following object is masked from ‘package:ggplot2’:
+
+    alpha
+
+Loading required package: futile.logger
+Loading required package: nnet
+Loading required package: qdap
+Loading required package: qdapDictionaries
+Loading required package: qdapRegex
+
+Attaching package: ‘qdapRegex’
+
+The following object is masked from ‘package:ggplot2’:
+
+    %+%
+
+Loading required package: qdapTools
+Loading required package: RColorBrewer
+
+Attaching package: ‘qdap’
+
+The following object is masked from ‘package:base’:
+
+    Filter
+
+Loading required package: randomForest
+randomForest 4.6-14
+Type rfNews() to see new features/changes/bug fixes.
+
+Attaching package: ‘randomForest’
+
+The following object is masked from ‘package:ggplot2’:
+
+    margin
+
+Loading required package: SnowballC
+Loading required package: smotefamily
+Loading required package: tidyverse
+── [1mAttaching packages[22m ─────────────────────────────────────── tidyverse 1.2.1 ──
+[32m✔[39m [34mtibble [39m 2.1.3     [32m✔[39m [34mpurrr  [39m 0.3.2
+[32m✔[39m [34mtidyr  [39m 1.1.0     [32m✔[39m [34mdplyr  [39m 1.0.0
+[32m✔[39m [34mreadr  [39m 1.3.1     [32m✔[39m [34mstringr[39m 1.4.0
+[32m✔[39m [34mtibble [39m 2.1.3     [32m✔[39m [34mforcats[39m 0.4.0
+── [1mConflicts[22m ────────────────────────────────────────── tidyverse_conflicts() ──
+[31m✖[39m [34mqdapRegex[39m::[32m%+%()[39m       masks [34mggplot2[39m::%+%()
+[31m✖[39m [34mpurrr[39m::[32maccumulate()[39m    masks [34mforeach[39m::accumulate()
+[31m✖[39m [34mkernlab[39m::[32malpha()[39m       masks [34mggplot2[39m::alpha()
+[31m✖[39m [34mdplyr[39m::[32mcombine()[39m       masks [34mrandomForest[39m::combine()
+[31m✖[39m [34mpurrr[39m::[32mcross()[39m         masks [34mkernlab[39m::cross()
+[31m✖[39m [34mdplyr[39m::[32mexplain()[39m       masks [34mqdapRegex[39m::explain()
+[31m✖[39m [34mdplyr[39m::[32mfilter()[39m        masks [34mstats[39m::filter()
+[31m✖[39m [34mdplyr[39m::[32mid()[39m            masks [34mqdapTools[39m::id()
+[31m✖[39m [34mdplyr[39m::[32mlag()[39m           masks [34mstats[39m::lag()
+[31m✖[39m [34mpurrr[39m::[32mlift()[39m          masks [34mcaret[39m::lift()
+[31m✖[39m [34mrandomForest[39m::[32mmargin()[39m masks [34mggplot2[39m::margin()
+[31m✖[39m [34mdplyr[39m::[32mselect()[39m        masks [34mMASS[39m::select()
+[31m✖[39m [34mpurrr[39m::[32mwhen()[39m          masks [34mforeach[39m::when()
+Loading required package: tidytext
+Loading required package: tm
+Loading required package: NLP
+
+Attaching package: ‘NLP’
+
+The following object is masked from ‘package:qdap’:
+
+    ngrams
+
+The following object is masked from ‘package:ggplot2’:
+
+    annotate
+
+
+Attaching package: ‘tm’
+
+The following objects are masked from ‘package:qdap’:
+
+    as.DocumentTermMatrix, as.TermDocumentMatrix
+
+NULL
+NULL
+Something is wrong; all the Accuracy metric values are missing:
+    Accuracy       Kappa    
+ Min.   : NA   Min.   : NA  
+ 1st Qu.: NA   1st Qu.: NA  
+ Median : NA   Median : NA  
+ Mean   :NaN   Mean   :NaN  
+ 3rd Qu.: NA   3rd Qu.: NA  
+ Max.   : NA   Max.   : NA  
+ NA's   :72    NA's   :72   
+Error: Stopping
+In addition: Warning messages:
+1: In weighting(x) :
+  empty document(s): TELEPATHY-69258 TELEPATHY-29869 FREEDESKTOP.ORG-16497 GEOCLUE-69048 TELEPATHY-69311 POPPLER-12016 TELEPATHY-69272 DESKTOP-FILE-UTILS-108232 SHARED-MIME-INFO-104706 TELEPATHY-51250
+2: `repeats` has no meaning for this resampling method. 
+3: In nominalTrainWorkflow(x = x, y = y, wts = weights, info = trainInfo,  :
+  There were missing values in resampled performance measures.
+Execution halted
+Loading required package: caret
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: e1071
+Loading required package: klaR
+Loading required package: MASS
+Loading required package: kernlab
+
+Attaching package: ‘kernlab’
+
+The following object is masked from ‘package:ggplot2’:
+
+    alpha
+
+Loading required package: futile.logger
+Loading required package: nnet
+Loading required package: qdap
+Loading required package: qdapDictionaries
+Loading required package: qdapRegex
+
+Attaching package: ‘qdapRegex’
+
+The following object is masked from ‘package:ggplot2’:
+
+    %+%
+
+Loading required package: qdapTools
+Loading required package: RColorBrewer
+
+Attaching package: ‘qdap’
+
+The following object is masked from ‘package:base’:
+
+    Filter
+
+Loading required package: randomForest
+randomForest 4.6-14
+Type rfNews() to see new features/changes/bug fixes.
+
+Attaching package: ‘randomForest’
+
+The following object is masked from ‘package:ggplot2’:
+
+    margin
+
+Loading required package: SnowballC
+Loading required package: smotefamily
+Loading required package: tidyverse
+── [1mAttaching packages[22m ─────────────────────────────────────── tidyverse 1.2.1 ──
+[32m✔[39m [34mtibble [39m 2.1.3     [32m✔[39m [34mpurrr  [39m 0.3.2
+[32m✔[39m [34mtidyr  [39m 1.1.0     [32m✔[39m [34mdplyr  [39m 1.0.0
+[32m✔[39m [34mreadr  [39m 1.3.1     [32m✔[39m [34mstringr[39m 1.4.0
+[32m✔[39m [34mtibble [39m 2.1.3     [32m✔[39m [34mforcats[39m 0.4.0
+── [1mConflicts[22m ────────────────────────────────────────── tidyverse_conflicts() ──
+[31m✖[39m [34mqdapRegex[39m::[32m%+%()[39m       masks [34mggplot2[39m::%+%()
+[31m✖[39m [34mpurrr[39m::[32maccumulate()[39m    masks [34mforeach[39m::accumulate()
+[31m✖[39m [34mkernlab[39m::[32malpha()[39m       masks [34mggplot2[39m::alpha()
+[31m✖[39m [34mdplyr[39m::[32mcombine()[39m       masks [34mrandomForest[39m::combine()
+[31m✖[39m [34mpurrr[39m::[32mcross()[39m         masks [34mkernlab[39m::cross()
+[31m✖[39m [34mdplyr[39m::[32mexplain()[39m       masks [34mqdapRegex[39m::explain()
+[31m✖[39m [34mdplyr[39m::[32mfilter()[39m        masks [34mstats[39m::filter()
+[31m✖[39m [34mdplyr[39m::[32mid()[39m            masks [34mqdapTools[39m::id()
+[31m✖[39m [34mdplyr[39m::[32mlag()[39m           masks [34mstats[39m::lag()
+[31m✖[39m [34mpurrr[39m::[32mlift()[39m          masks [34mcaret[39m::lift()
+[31m✖[39m [34mrandomForest[39m::[32mmargin()[39m masks [34mggplot2[39m::margin()
+[31m✖[39m [34mdplyr[39m::[32mselect()[39m        masks [34mMASS[39m::select()
+[31m✖[39m [34mpurrr[39m::[32mwhen()[39m          masks [34mforeach[39m::when()
+Loading required package: tidytext
+Loading required package: tm
+Loading required package: NLP
+
+Attaching package: ‘NLP’
+
+The following object is masked from ‘package:qdap’:
+
+    ngrams
+
+The following object is masked from ‘package:ggplot2’:
+
+    annotate
+
+
+Attaching package: ‘tm’
+
+The following objects are masked from ‘package:qdap’:
+
+    as.DocumentTermMatrix, as.TermDocumentMatrix
+
+NULL
+NULL
+y_train
+   N    Y 
+4893 4698 
+y_test
+   N    Y 
+1631  260 
+Something is wrong; all the Accuracy metric values are missing:
+    Accuracy       Kappa    
+ Min.   : NA   Min.   : NA  
+ 1st Qu.: NA   1st Qu.: NA  
+ Median : NA   Median : NA  
+ Mean   :NaN   Mean   :NaN  
+ 3rd Qu.: NA   3rd Qu.: NA  
+ Max.   : NA   Max.   : NA  
+ NA's   :72    NA's   :72   
+Error: Stopping
+In addition: Warning messages:
+1: In weighting(x) :
+  empty document(s): TELEPATHY-69258 TELEPATHY-29869 FREEDESKTOP.ORG-16497 GEOCLUE-69048 TELEPATHY-69311 POPPLER-12016 TELEPATHY-69272 DESKTOP-FILE-UTILS-108232 SHARED-MIME-INFO-104706 TELEPATHY-51250
+2: `repeats` has no meaning for this resampling method. 
+3: In nominalTrainWorkflow(x = x, y = y, wts = weights, info = trainInfo,  :
+  There were missing values in resampled performance measures.
+Execution halted
+Loading required package: caret
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: e1071
+Loading required package: klaR
+Loading required package: MASS
+Loading required package: kernlab
+
+Attaching package: ‘kernlab’
+
+The following object is masked from ‘package:ggplot2’:
+
+    alpha
+
+Loading required package: futile.logger
+Loading required package: nnet
+Loading required package: qdap
+Loading required package: qdapDictionaries
+Loading required package: qdapRegex
+
+Attaching package: ‘qdapRegex’
+
+The following object is masked from ‘package:ggplot2’:
+
+    %+%
+
+Loading required package: qdapTools
+Loading required package: RColorBrewer
+
+Attaching package: ‘qdap’
+
+The following object is masked from ‘package:base’:
+
+    Filter
+
+Loading required package: randomForest
+randomForest 4.6-14
+Type rfNews() to see new features/changes/bug fixes.
+
+Attaching package: ‘randomForest’
+
+The following object is masked from ‘package:ggplot2’:
+
+    margin
+
+Loading required package: SnowballC
+Loading required package: smotefamily
+Loading required package: tidyverse
+── [1mAttaching packages[22m ─────────────────────────────────────── tidyverse 1.2.1 ──
+[32m✔[39m [34mtibble [39m 2.1.3     [32m✔[39m [34mpurrr  [39m 0.3.2
+[32m✔[39m [34mtidyr  [39m 1.1.0     [32m✔[39m [34mdplyr  [39m 1.0.0
+[32m✔[39m [34mreadr  [39m 1.3.1     [32m✔[39m [34mstringr[39m 1.4.0
+[32m✔[39m [34mtibble [39m 2.1.3     [32m✔[39m [34mforcats[39m 0.4.0
+── [1mConflicts[22m ────────────────────────────────────────── tidyverse_conflicts() ──
+[31m✖[39m [34mqdapRegex[39m::[32m%+%()[39m       masks [34mggplot2[39m::%+%()
+[31m✖[39m [34mpurrr[39m::[32maccumulate()[39m    masks [34mforeach[39m::accumulate()
+[31m✖[39m [34mkernlab[39m::[32malpha()[39m       masks [34mggplot2[39m::alpha()
+[31m✖[39m [34mdplyr[39m::[32mcombine()[39m       masks [34mrandomForest[39m::combine()
+[31m✖[39m [34mpurrr[39m::[32mcross()[39m         masks [34mkernlab[39m::cross()
+[31m✖[39m [34mdplyr[39m::[32mexplain()[39m       masks [34mqdapRegex[39m::explain()
+[31m✖[39m [34mdplyr[39m::[32mfilter()[39m        masks [34mstats[39m::filter()
+[31m✖[39m [34mdplyr[39m::[32mid()[39m            masks [34mqdapTools[39m::id()
+[31m✖[39m [34mdplyr[39m::[32mlag()[39m           masks [34mstats[39m::lag()
+[31m✖[39m [34mpurrr[39m::[32mlift()[39m          masks [34mcaret[39m::lift()
+[31m✖[39m [34mrandomForest[39m::[32mmargin()[39m masks [34mggplot2[39m::margin()
+[31m✖[39m [34mdplyr[39m::[32mselect()[39m        masks [34mMASS[39m::select()
+[31m✖[39m [34mpurrr[39m::[32mwhen()[39m          masks [34mforeach[39m::when()
+Loading required package: tidytext
+Loading required package: tm
+Loading required package: NLP
+
+Attaching package: ‘NLP’
+
+The following object is masked from ‘package:qdap’:
+
+    ngrams
+
+The following object is masked from ‘package:ggplot2’:
+
+    annotate
+
+
+Attaching package: ‘tm’
+
+The following objects are masked from ‘package:qdap’:
+
+    as.DocumentTermMatrix, as.TermDocumentMatrix
+
+NULL
+NULL
+y_train
+   N    Y 
+4893 4698 
+y_test
+   N    Y 
+1631  260 
+Something is wrong; all the Accuracy metric values are missing:
+    Accuracy       Kappa    
+ Min.   : NA   Min.   : NA  
+ 1st Qu.: NA   1st Qu.: NA  
+ Median : NA   Median : NA  
+ Mean   :NaN   Mean   :NaN  
+ 3rd Qu.: NA   3rd Qu.: NA  
+ Max.   : NA   Max.   : NA  
+ NA's   :72    NA's   :72   
+Error: Stopping
+In addition: Warning messages:
+1: In weighting(x) :
+  empty document(s): TELEPATHY-69258 TELEPATHY-29869 FREEDESKTOP.ORG-16497 GEOCLUE-69048 TELEPATHY-69311 POPPLER-12016 TELEPATHY-69272 DESKTOP-FILE-UTILS-108232 SHARED-MIME-INFO-104706 TELEPATHY-51250
+2: `repeats` has no meaning for this resampling method. 
+3: In nominalTrainWorkflow(x = x, y = y, wts = weights, info = trainInfo,  :
+  There were missing values in resampled performance measures.
+Execution halted

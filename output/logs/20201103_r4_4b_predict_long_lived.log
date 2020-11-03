@@ -322,3 +322,69 @@ TRACE [2020-11-03 15:56:47] [balance_dataset]: balancing method: smote
 TRACE [2020-11-03 15:56:49] Training prediction model 
 TRACE [2020-11-03 15:56:49] [get_resampling_method] Resampling model repeatedcv 5x2
 TRACE [2020-11-03 15:56:49] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-03 17:18:46] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-03 17:18:46] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-03 17:18:46] --- CURRENT PROJECT NAME : freedesktop ---
+TRACE [2020-11-03 17:18:46] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_freedesktop_bug_report_data.csv
+TRACE [2020-11-03 17:18:47] Clean text feature
+TRACE [2020-11-03 17:19:31] Converting dataframe to term matrix
+TRACE [2020-11-03 17:19:48] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-03 17:19:48] SEED <144>
+TRACE [2020-11-03 17:19:48] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-03 17:19:48] Partitioning dataset in training and testing
+TRACE [2020-11-03 17:19:48] Balancing training dataset
+TRACE [2020-11-03 17:19:48] [balance_dataset]: balancing method: smote
+TRACE [2020-11-03 17:19:50] Training prediction model 
+TRACE [2020-11-03 17:19:50] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-03 17:19:50] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-03 17:23:54] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-03 17:23:54] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-03 17:23:55] --- CURRENT PROJECT NAME : freedesktop ---
+TRACE [2020-11-03 17:23:55] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_freedesktop_bug_report_data.csv
+TRACE [2020-11-03 17:23:55] Clean text feature
+TRACE [2020-11-03 17:24:40] Converting dataframe to term matrix
+TRACE [2020-11-03 17:24:57] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-03 17:24:57] SEED <144>
+TRACE [2020-11-03 17:24:57] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-03 17:24:57] Partitioning dataset in training and testing
+TRACE [2020-11-03 17:24:57] Balancing training dataset
+TRACE [2020-11-03 17:24:57] [balance_dataset]: balancing method: smote
+TRACE [2020-11-03 17:24:59] Training prediction model 
+TRACE [2020-11-03 17:24:59] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-03 17:24:59] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-03 17:31:19] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-03 17:31:19] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-03 17:31:19] --- CURRENT PROJECT NAME : freedesktop ---
+TRACE [2020-11-03 17:31:19] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_freedesktop_bug_report_data.csv
+TRACE [2020-11-03 17:31:19] Clean text feature
+TRACE [2020-11-03 17:32:05] Converting dataframe to term matrix
+TRACE [2020-11-03 17:32:21] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-03 17:32:21] SEED <144>
+TRACE [2020-11-03 17:32:21] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-03 17:32:21] Partitioning dataset in training and testing
+TRACE [2020-11-03 17:32:21] Balancing training dataset
+TRACE [2020-11-03 17:32:21] [balance_dataset]: balancing method: smote
+TRACE [2020-11-03 17:32:24] Training prediction model 
+TRACE [2020-11-03 17:32:24] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-03 17:32:24] [train_with_nb] Training model with NB and Accuracy
