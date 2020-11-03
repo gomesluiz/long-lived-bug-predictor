@@ -18,7 +18,7 @@ options(readr.num_columns = 0)
 timestamp <- format(Sys.time(), "%Y%m%d")
 
 # Constants --------------------------------------------------------------------
-debug_on     <- FALSE
+debug_on     <- TRUE
 force_create <- TRUE
 processors   <- ifelse(debug_on, 3, 24)
 base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
@@ -91,11 +91,16 @@ threshold  <- c(365)
 seeds <- c(DEFAULT_SEED)
 
 if (debug_on) {
+<<<<<<< HEAD
   classifier <- c(RF)
+=======
+  exec_mode  <- "debug"
+  classifier <- c(KNN)
+>>>>>>> 4c5813625969f6844ec960b26984234c59739982
   projects   <- c("winehq")
 } else {
+  exec_mode  <- "final"
   projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
-  #projects   <- c("mozilla")
   flog.appender(
     appender.file(
       file.path(
@@ -111,8 +116,8 @@ flog.threshold(TRACE)
 flog.trace("Long live prediction Research Question 4 - Experiment 4b")
 flog.trace("Evaluation metrics ouput path: %s", output_data_path)
 
-modo.exec <- ifelse(debug_on, "debug", "final")
 results.train.file <- sprintf(
+<<<<<<< HEAD
   "%s_r4_4b_predict_long_lived_bug_train_%s_rf.csv", 
   timestamp, 
   modo.exec
@@ -126,11 +131,17 @@ results.hat.file <- sprintf(
   "%s_r4_4b_predict_long_lived_bug_hat_%s_rf.csv", 
   timestamp, 
   modo.exec
+=======
+  "%s_r4_4b_predict_long_lived_bug_train_%s.csv", 
+  timestamp, 
+  exec_mode
+>>>>>>> 4c5813625969f6844ec960b26984234c59739982
 )
+
 parameters <- crossing(
-  feature, max_term, classifier,
-  balancing, resampling,
-  train_metric, threshold
+  feature  , max_term  , classifier  ,
+  balancing, resampling, train_metric, 
+  threshold
 )
 
 results.started <- FALSE
@@ -153,8 +164,7 @@ for (project_name in projects)
   #
   flog.trace("Clean text feature")
   reports$short_description <- clean_text(reports$short_description)
-  reports$long_description <- clean_text(reports$long_description)
-
+  reports$long_description  <- clean_text(reports$long_description)
   
   for (row in 1:nrow(parameters)) {
     parameter <- parameters[row, ]
@@ -177,6 +187,12 @@ for (project_name in projects)
       train.dataset <- reports.dataset[in_train, ]
       test.dataset  <- reports.dataset[-in_train, ]
 
+      test.file <- file.path(data_path, sprintf("%s_%s_bug_report_test_data_%s.csv"
+                                                 , timestamp
+                                                 , project_name
+                                                 , exec_mode))
+      write_csv(test.dataset, test.file)
+      
       flog.trace("Balancing training dataset")
       train.balanced.dataset = balance_dataset( 
         train.dataset, 
@@ -214,7 +230,13 @@ for (project_name in projects)
         .seed       = seed, 
         .grid       = grid
       )
-
+      
+      model.file <- file.path(output_data_path, sprintf("%s_%s_long_lived_predict_model_%s.rds"
+                                                 , timestamp
+                                                 , project_name
+                                                 , exec_mode))
+      saveRDS(fit_model, model.file)
+      
       flog.trace("Calculating training results metrics")
       train.results <- fit_model$resampledCM
       train.results <- train.results[, !(names(train.results) %in% names(fit_model$bestTune))]
@@ -271,8 +293,8 @@ for (project_name in projects)
         stop("Hyperparameters is required to record metrics")
       }
       train.results$seed    <- seed
-      train.results$row     <- row
       
+<<<<<<< HEAD
       flog.trace("Testing predicting model ")
       y_hat <- predict(object = fit_model, X_test)
       test.metrics <- calculate_metrics(y_hat, y_test)
@@ -318,11 +340,16 @@ for (project_name in projects)
         all_test.results  <- rbind(all_test.results,  test.results)
         all_hat.results   <- rbind(all_hat.results, hat.results)
   	flog.trace("Testing metrics calculated")
+=======
+      if (!results.started) {
+        all_train.results <- train.results[FALSE, ]
+        results.started   <- TRUE
+      }
+      all_train.results <- rbind(all_train.results, train.results)
+>>>>>>> 4c5813625969f6844ec960b26984234c59739982
     }
   }
   write_csv(all_train.results, file.path(output_data_path, results.train.file))
-  write_csv(all_test.results, file.path(output_data_path, results.test.file))
-  write_csv(all_hat.results, file.path(output_data_path, results.hat.file))
   flog.trace("Training results recorded on CSV file.")
 }
 flog.trace("Experiment 4 - 4b Finished")
