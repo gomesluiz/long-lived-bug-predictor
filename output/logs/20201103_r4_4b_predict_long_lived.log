@@ -322,3 +322,33 @@ TRACE [2020-11-03 15:56:47] [balance_dataset]: balancing method: smote
 TRACE [2020-11-03 15:56:49] Training prediction model 
 TRACE [2020-11-03 15:56:49] [get_resampling_method] Resampling model repeatedcv 5x2
 TRACE [2020-11-03 15:56:49] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-03 14:29:14] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-03 14:29:14] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-03 14:29:15] --- CURRENT PROJECT NAME : freedesktop ---
+TRACE [2020-11-03 14:29:15] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_freedesktop_bug_report_data.csv
+TRACE [2020-11-03 14:29:16] Clean text feature
+TRACE [2020-11-03 14:31:46] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-03 14:31:46] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-03 14:32:08] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-03 14:32:08] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-03 14:32:08] --- CURRENT PROJECT NAME : freedesktop ---
+TRACE [2020-11-03 14:32:08] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_freedesktop_bug_report_data.csv
+TRACE [2020-11-03 14:32:09] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-11-03 14:32:09] Clean text feature
+TRACE [2020-11-03 14:32:32] Converting dataframe to term matrix
+TRACE [2020-11-03 14:32:42] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-03 14:32:42] SEED <144>
+TRACE [2020-11-03 14:32:42] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-03 14:32:42] Partitioning dataset in training and testing
+TRACE [2020-11-03 14:32:42] Balancing training dataset
+TRACE [2020-11-03 14:32:43] [balance_dataset]: balancing method: smote
+TRACE [2020-11-03 14:32:44] Training prediction model 
+TRACE [2020-11-03 14:32:44] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-03 14:32:44] [train_with_nb] Training model with NB and Accuracy
