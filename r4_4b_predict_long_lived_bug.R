@@ -78,15 +78,15 @@ source(file.path(lib_path, "balance_dataset.R"))
 # Experimental parameters ------------------------------------------------------
 r_cluster    <- makePSOCKcluster(processors)
 registerDoParallel(r_cluster)
-resampling <- c("repeatedcv5x10")
+resampling <- c("repeatedcv5x2")
 class_label <- "long_lived"
 prefix_reports <- "20200731"
 
-classifier   <- c(KNN, RF, NNET, SVM, NB)
+classifier   <- c(KNN, RF, SVM, NB)
 feature      <- c("long_description")
 balancing    <- c(SMOTEMETHOD)
 train_metric <- c(ACC)
-max_term     <- c(150)
+max_term     <- c(100)
 threshold    <- c(365)
 seeds        <- c(DEFAULT_SEED)
 
@@ -94,7 +94,8 @@ if (debug_on) {
   classifier <- c(KNN)
   projects   <- c("winehq")
 } else {
-  projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  projects   <- c("winehq")
+  #projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
   flog.appender(
     appender.file(
       file.path(
@@ -131,10 +132,34 @@ parameters <- crossing(
   train_metric, threshold
 )
 
-results.started <- FALSE
 for (project_name in projects)
 {
-  flog.trace("Current project name : %s", project_name)
+  flog.trace("--- CURRENT PROJECT NAME : %s ---", project_name)
+	results.train.file <- sprintf(
+	  "%s_r4_4b_predict_long_lived_bug_train_%s_%s.csv", 
+	  timestamp, 
+		project_name,
+	  modo.exec
+	)
+	results.test.file <- sprintf(
+	  "%s_r4_4b_predict_long_lived_bug_test_%s_%s.csv", 
+	  timestamp, 
+		project_name,
+	  modo.exec
+	)
+	results.hat.file <- sprintf(
+	  "%s_r4_4b_predict_long_lived_bug_hat_%s_%s.csv", 
+	  timestamp, 
+		project_name,
+	  modo.exec
+	)
+
+	parameters <- crossing(
+  	feature, max_term, classifier,
+ 	 	balancing, resampling,
+ 	  train_metric, threshold
+  )
+
   reports.file <- file.path(data_path, sprintf("%s_%s_bug_report_data.csv", prefix_reports, project_name))
   flog.trace("Bug report file name: %s", reports.file)
 
@@ -154,6 +179,7 @@ for (project_name in projects)
   reports$long_description <- clean_text(reports$long_description)
 
   
+	results.started <- FALSE
   for (row in 1:nrow(parameters)) {
     parameter <- parameters[row, ]
     flog.trace("Converting dataframe to term matrix")
@@ -162,7 +188,6 @@ for (project_name in projects)
     for (seed in seeds) {
       set.seed(seed)
       flog.trace("SEED <%d>", seed)
-      
       flog.trace("Current parameters:\n N.Terms...: [%d]\n Classifier: [%s]\n Metric...: [%s]\n Feature...: [%s]\n Threshold.: [%s]\n Balancing.: [%s]\n Resampling: [%s]",
         parameter$max_term, parameter$classifier, parameter$train_metric
         , parameter$feature, parameter$threshold, parameter$balancing
@@ -321,6 +346,6 @@ for (project_name in projects)
   write_csv(all_train.results, file.path(output_data_path, results.train.file))
   write_csv(all_test.results, file.path(output_data_path, results.test.file))
   write_csv(all_hat.results, file.path(output_data_path, results.hat.file))
-  flog.trace("Training results recorded on CSV file.")
+  flog.trace("--- Training results recorded on CSV file for %s. ---", project_name)
 }
 flog.trace("Experiment 4 - 4b Finished")

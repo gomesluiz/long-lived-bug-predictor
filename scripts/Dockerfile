@@ -15,14 +15,14 @@ RUN addgroup --gid ${GROUP_ID} ${USER_NAME}
 RUN adduser --disabled-password --gecos '' --uid ${USER_ID} --gid ${GROUP_ID} ${USER_NAME}
 
 # create directories
-WORKDIR /home/${USER_NAME}/Workspace/long-lived-bug-predictor-ml-in-r/
-RUN mkdir -p /home/${USER_NAME}/Workspace/long-lived-bug-predictor-ml-in-r/R/
-RUN mkdir -p /home/${USER_NAME}/Workspace/long-lived-bug-predictor-ml-in-r/data/
-RUN mkdir -p /home/${USER_NAME}/Workspace/long-lived-bug-predictor-ml-in-r/output/data/
-RUN mkdir -p /home/${USER_NAME}/Workspace/long-lived-bug-predictor-ml-in-r/output/logs/
-COPY  ./*.R /home/${USER_NAME}/Workspace/long-lived-bug-predictor-ml-in-r/
-COPY  ./R/* /home/${USER_NAME}/Workspace/long-lived-bug-predictor-ml-in-r/R/
-COPY  ./data/*.csv /home/${USER_NAME}/Workspace/long-lived-bug-predictor-ml-in-r/data/
+WORKDIR /home/${USER_NAME}/Workspace/long-lived-bug-predictor-w-ml/
+RUN mkdir -p /home/${USER_NAME}/Workspace/long-lived-bug-predictor-w-ml/R/
+RUN mkdir -p /home/${USER_NAME}/Workspace/long-lived-bug-predictor-w-ml/data/
+RUN mkdir -p /home/${USER_NAME}/Workspace/long-lived-bug-predictor-w-ml/output/data/
+RUN mkdir -p /home/${USER_NAME}/Workspace/long-lived-bug-predictor-w-ml/output/logs/
+COPY  ./*.R /home/${USER_NAME}/Workspace/long-lived-bug-predictor-w-ml/
+COPY  ./R/* /home/${USER_NAME}/Workspace/long-lived-bug-predictor-w-ml/R/
+COPY  ./data/*.csv /home/${USER_NAME}/Workspace/long-lived-bug-predictor-w-ml/data/
 
 RUN chown ${USER_ID}:${GROUP_ID} -R /home/${USER_NAME}
 USER ${USER_NAME}
