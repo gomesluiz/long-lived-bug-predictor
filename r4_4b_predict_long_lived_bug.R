@@ -21,7 +21,7 @@ timestamp <- format(Sys.time(), "%Y%m%d")
 debug_on     <- FALSE
 force_create <- TRUE
 processors   <- ifelse(debug_on, 3, 24)
-base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-ml-in-r")
+base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-w-ml")
 lib_path    <- file.path(base_path, "R")
 data_path   <- file.path(base_path, "data")
 output_path <- file.path(base_path, "output")
@@ -82,11 +82,11 @@ resampling <- c("repeatedcv5x10")
 class_label <- "long_lived"
 prefix_reports <- "20200731"
 
-classifier   <- c(KNN, NB, RF, NNET)
+classifier   <- c(KNN, RF, NNET, SVM, NB)
 feature      <- c("long_description")
 balancing    <- c(SMOTEMETHOD)
 train_metric <- c(ACC)
-max_term     <- c(150)
+max_term     <- c(100)
 threshold    <- c(365)
 seeds        <- c(DEFAULT_SEED)
 
@@ -111,17 +111,17 @@ flog.trace("Evaluation metrics ouput path: %s", output_data_path)
 
 modo.exec <- ifelse(debug_on, "debug", "final")
 results.train.file <- sprintf(
-  "%s_r4_4b_predict_long_lived_bug_train_all_%s.csv", 
+  "%s_r4_4b_predict_long_lived_bug_train_%s_others.csv", 
   timestamp, 
   modo.exec
 )
 results.test.file <- sprintf(
-  "%s_r4_4b_predict_long_lived_bug_test_all_%s.csv", 
+  "%s_r4_4b_predict_long_lived_bug_test_%s_others.csv", 
   timestamp, 
   modo.exec
 )
 results.hat.file <- sprintf(
-  "%s_r4_4b_predict_long_lived_bug_hat_all_%s.csv", 
+  "%s_r4_4b_predict_long_lived_bug_hat_%s_others.csv", 
   timestamp, 
   modo.exec
 )
@@ -137,7 +137,7 @@ for (project_name in projects)
   flog.trace("Current project name : %s", project_name)
   reports.file <- file.path(data_path, sprintf("%s_%s_bug_report_data.csv", prefix_reports, project_name))
   flog.trace("Bug report file name: %s", reports.file)
-  
+
   reports <- read_csv(reports.file, na = c("", "NA"))
   if (debug_on) {
     flog.trace("DEBUG_MODE: Sample bug reports dataset")
@@ -152,7 +152,7 @@ for (project_name in projects)
   flog.trace("Clean text feature")
   reports$short_description <- clean_text(reports$short_description)
   reports$long_description <- clean_text(reports$long_description)
-  
+
   
   for (row in 1:nrow(parameters)) {
     parameter <- parameters[row, ]
@@ -164,17 +164,17 @@ for (project_name in projects)
       flog.trace("SEED <%d>", seed)
       
       flog.trace("Current parameters:\n N.Terms...: [%d]\n Classifier: [%s]\n Metric...: [%s]\n Feature...: [%s]\n Threshold.: [%s]\n Balancing.: [%s]\n Resampling: [%s]",
-                 parameter$max_term, parameter$classifier, parameter$train_metric
-                 , parameter$feature, parameter$threshold, parameter$balancing
-                 , parameter$resampling)
-      
-      
+        parameter$max_term, parameter$classifier, parameter$train_metric
+        , parameter$feature, parameter$threshold, parameter$balancing
+        , parameter$resampling)
+
+
       flog.trace("Partitioning dataset in training and testing")
       reports.dataset$long_lived <- as.factor(ifelse(reports.dataset$bug_fix_time <= parameter$threshold, "N", "Y"))
       in_train <- createDataPartition(reports.dataset$long_lived, p = 0.75, list = FALSE)
       train.dataset <- reports.dataset[in_train, ]
       test.dataset  <- reports.dataset[-in_train, ]
-      
+
       flog.trace("Balancing training dataset")
       train.balanced.dataset = balance_dataset( 
         train.dataset, 
@@ -182,13 +182,13 @@ for (project_name in projects)
         c("bug_id", "bug_fix_time"), 
         parameter$balancing
       )
-      
+
       X_train <- subset(train.balanced.dataset, select = -c(long_lived))
       y_train <- train.balanced.dataset[, class_label]
-      
+
       X_test <- subset(test.dataset, select = -c(bug_id, bug_fix_time, long_lived))
       y_test <- test.dataset[, class_label]
-      
+
       flog.trace("Training prediction model ")
       if (parameter$classifier == KNN) {
         grid    <- expand.grid(k=c(5))
@@ -201,7 +201,7 @@ for (project_name in projects)
       } else if (parameter$classifier == SVM) {
         grid    <- expand.grid(C = c(2**(5)), sigma = c(2**(-5)))
       }
-      
+
       fit_control <- get_resampling_method(parameter$resampling)
       fit_model   <- train_with(
         .x = X_train, 
@@ -212,27 +212,27 @@ for (project_name in projects)
         .seed       = seed, 
         .grid       = grid
       )
-      
+
       flog.trace("Calculating training results metrics")
       train.results <- fit_model$resampledCM
       train.results <- train.results[, !(names(train.results) %in% names(fit_model$bestTune))]
-      
+
       names(train.results)[1] <- "tn"
       names(train.results)[2] <- "fp"
       names(train.results)[3] <- "fn"
       names(train.results)[4] <- "tp"
-      
+
       train.results$acc <- (train.results$tp + train.results$tn) / 
         (train.results$tp + train.results$fp + train.results$tn + train.results$fn)
-      
+
       positives <- train.results$tp + train.results$fn
       train.results$sensitivity <- ifelse(positives == 0, 0, train.results$tp/positives)
-      
+
       negatives <- train.results$tn + train.results$fp
       train.results$specificity <- ifelse(negatives == 0, 0, train.results$tn/negatives)
-      
+
       train.results$balanced_acc <- (train.results$sensitivity + train.results$specificity)/2
-      
+  
       train.results$project    <- project_name 
       train.results$classifier <- parameter$classifier
       train.results$balancing  <- parameter$balancing
@@ -305,17 +305,17 @@ for (project_name in projects)
           row = row
         )
       
-      hat.results <- cbind(test.dataset[, c("bug_id", "bug_fix_time", "long_lived")], y_hat, project_name, parameter$classifier)
+        hat.results <- cbind(test.dataset[, c("bug_id", "bug_fix_time", "long_lived")], y_hat, project_name, parameter$classifier)
       
-      if (!results.started) {
-        all_train.results <- train.results[FALSE, ]
-        all_test.results  <- test.results[FALSE,]
-        all_hat.results   <- hat.results[FALSE, ]
-        results.started   <- TRUE
-      }
-      all_train.results <- rbind(all_train.results, train.results)
-      all_test.results  <- rbind(all_test.results,  test.results)
-      all_hat.results   <- rbind(all_hat.results, hat.results)
+        if (!results.started) {
+          all_train.results <- train.results[FALSE, ]
+          all_test.results  <- test.results[FALSE,]
+          all_hat.results   <- hat.results[FALSE, ]
+          results.started   <- TRUE
+        }
+        all_train.results <- rbind(all_train.results, train.results)
+        all_test.results  <- rbind(all_test.results,  test.results)
+        all_hat.results   <- rbind(all_hat.results, hat.results)
     }
   }
   write_csv(all_train.results, file.path(output_data_path, results.train.file))
