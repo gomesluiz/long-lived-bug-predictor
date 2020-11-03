@@ -82,7 +82,7 @@ resampling <- c("repeatedcv5x2")
 class_label <- "long_lived"
 prefix_reports <- "20200731"
 
-classifier   <- c(KNN, RF, SVM, NB)
+classifier   <- c(KNN, RF, SVM)
 feature      <- c("long_description")
 balancing    <- c(SMOTEMETHOD)
 train_metric <- c(ACC)
@@ -92,12 +92,12 @@ seeds        <- c(DEFAULT_SEED)
 
 if (debug_on) {
   classifier <- c(NB)
-  projects   <- c("freedesktop")
+  projects   <- c("gcc")
 } else {
-  classifier <- c(NB)
-  projects   <- c("freedesktop")
+  #classifier <- c(NB)
+  #projects   <- c("freedesktop")
   #projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
-  #projects   <- c("freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  projects   <- c("freedesktop", "gcc", "gnome", "mozilla", "winehq")
   flog.appender(
     appender.file(
       file.path(
