@@ -1,0 +1,12 @@
+TRACE [2020-11-04 10:28:35] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-04 10:28:35] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-04 10:28:36] --- CURRENT PROJECT NAME : freedesktop ---
+TRACE [2020-11-04 10:28:36] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_freedesktop_bug_report_data.csv
+TRACE [2020-11-04 10:28:37] Clean text feature
+TRACE [2020-11-04 10:32:29] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-04 10:32:29] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-04 10:32:31] --- CURRENT PROJECT NAME : gcc ---
+TRACE [2020-11-04 10:32:31] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_gcc_bug_report_data.csv
+TRACE [2020-11-04 10:32:32] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-11-04 10:32:32] Clean text feature
+TRACE [2020-11-04 10:33:05] Converting dataframe to term matrix

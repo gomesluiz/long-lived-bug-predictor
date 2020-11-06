@@ -92,7 +92,7 @@ seeds        <- c(DEFAULT_SEED)
 
 if (debug_on) {
   classifier <- c(NB)
-  projects   <- c("gcc")
+  projects   <- c("winehq")
 } else {
   #classifier <- c(NB)
   #projects   <- c("freedesktop")
@@ -178,7 +178,7 @@ for (project_name in projects)
   #
   flog.trace("Clean text feature")
   reports$short_description <- clean_text(reports$short_description)
-  reports$long_description <- clean_text(reports$long_description)
+  reports$long_description  <- clean_text(reports$long_description)
 
   
  results.started <- FALSE
@@ -199,7 +199,7 @@ for (project_name in projects)
 
 
       flog.trace("Partitioning dataset in training and testing")
-      reports.dataset$long_lived <- as.factor(ifelse(reports.dataset$bug_fix_time <= parameter$threshold, "0", "1"))
+      reports.dataset$long_lived <- as.factor(ifelse(reports.dataset$bug_fix_time <= parameter$threshold, "N", "Y"))
       in_train <- createDataPartition(reports.dataset$long_lived, p = 0.75, list = FALSE)
       train.dataset <- reports.dataset[in_train, ]
       test.dataset  <- reports.dataset[-in_train, ]
@@ -224,7 +224,7 @@ print(table(y_test))
       if (parameter$classifier == KNN) {
         grid    <- expand.grid(k=c(5))
       } else if (parameter$classifier == NB) {
-        grid    <- expand.grid(fL=c(0), usekernel=c('adjust'))
+        grid    <- expand.grid(fL=c(1), usekernel=c('adjust'))
       } else if (parameter$classifier == NNET) {
         grid = expand.grid(size = c(20), decay = c(0.5))
       } else if (parameter$classifier == RF) {
@@ -233,7 +233,8 @@ print(table(y_test))
         grid    <- expand.grid(C = c(2**(5)), sigma = c(2**(-5)))
       }
 
-      fit_control <- get_resampling_method(parameter$resampling)
+      #fit_control <- get_resampling_method(parameter$resampling)
+      fit_control <- caret::trainControl(method = "repeatedcv", number=2, repeats=5, search = "grid", savePredictions = 'final')
       fit_model   <- train_with(
         .x = X_train, 
         .y = y_train, 
