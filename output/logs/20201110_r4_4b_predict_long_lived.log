@@ -1,0 +1,34 @@
+TRACE [2020-11-10 00:04:28] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-10 00:04:28] Evaluation metrics ouput path: C:/Users/gomes//Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-10 00:04:28] --- CURRENT PROJECT NAME : eclipse ---
+TRACE [2020-11-10 00:04:28] Bug report file name: C:/Users/gomes//Workspace/long-lived-bug-predictor-w-ml/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-11-10 00:04:32] Clean text feature
+TRACE [2020-11-10 00:05:50] Converting dataframe to term matrix
+TRACE [2020-11-10 00:12:01] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-10 00:12:01] Evaluation metrics ouput path: C:/Users/gomes//Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-10 00:12:06] --- CURRENT PROJECT NAME : eclipse ---
+TRACE [2020-11-10 00:12:06] Bug report file name: C:/Users/gomes//Workspace/long-lived-bug-predictor-w-ml/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-11-10 00:12:08] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-11-10 00:12:09] Clean text feature
+TRACE [2020-11-10 00:12:20] Converting dataframe to term matrix
+TRACE [2020-11-10 00:12:26] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-10 00:12:26] SEED <144>
+TRACE [2020-11-10 00:12:26] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-10 00:12:26] Partitioning dataset in training and testing
+TRACE [2020-11-10 00:12:28] Balancing training dataset
+TRACE [2020-11-10 00:12:28] [balance_dataset]: balancing method: smote
+TRACE [2020-11-10 00:12:29] Training prediction model 
+TRACE [2020-11-10 00:12:29] Getting parameters for NB 
+TRACE [2020-11-10 00:12:29] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-10 00:12:29] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-10 00:13:48] Calculating training results metrics
+TRACE [2020-11-10 00:13:48] Testing predicting model 
+TRACE [2020-11-10 00:13:51] --- Training results recorded on CSV file for eclipse. ---
+TRACE [2020-11-10 00:13:51] Experiment 4 - 4b Finished
