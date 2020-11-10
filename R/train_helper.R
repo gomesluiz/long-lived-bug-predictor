@@ -111,6 +111,7 @@ train_with_nb <- function(.x, .y, .control=DEFAULT_CONTROL, .metric=ACC
     method = NB,
     trControl = .control,
     tuneGrid  = .grid,
+    preProcess = c("pca"),
     metric=.metric
   )
 

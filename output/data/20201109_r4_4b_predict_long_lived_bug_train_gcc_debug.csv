@@ -1,0 +1,11 @@
+tn,fp,fn,tp,Resample,acc,sensitivity,specificity,balanced_acc,project,classifier,balancing,resampling,metric,max_term,feature,threshold,hyper1,value1,hyper2,value2,seed,row
+70,54,24,79,Fold1,0.6563876651982379,0.7669902912621359,0.5645161290322581,0.665753210147197,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1
+0,0,0,0,Fold1,NA,0,0,0,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1
+79,45,21,82,Fold2,0.7092511013215859,0.7961165048543689,0.6370967741935484,0.7166066395239586,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1
+0,0,0,0,Fold2,NA,0,0,0,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1
+78,46,26,78,Fold3,0.6842105263157895,0.75,0.6290322580645161,0.689516129032258,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1
+0,0,0,0,Fold3,NA,0,0,0,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1
+68,56,23,80,Fold4,0.6519823788546255,0.7766990291262136,0.5483870967741935,0.6625430629502036,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1
+0,0,0,0,Fold4,NA,0,0,0,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1
+74,50,32,71,Fold5,0.6387665198237885,0.6893203883495146,0.5967741935483871,0.6430472909489509,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1
+0,0,0,0,Fold5,NA,0,0,0,gcc,nb,smote,repeatedcv5x2,Accuracy,100,long_description,365,fL,0,usekernel,TRUE,144,1

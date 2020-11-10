@@ -21,7 +21,7 @@ timestamp <- format(Sys.time(), "%Y%m%d")
 debug_on     <- FALSE
 force_create <- TRUE
 processors   <- ifelse(debug_on, 3, 24)
-base_path   <- file.path("~", "Workspace", "long-lived-bug-predictor-w-ml")
+base_path   <- file.path( "~", "Workspace", "long-lived-bug-predictor-w-ml")
 lib_path    <- file.path(base_path, "R")
 data_path   <- file.path(base_path, "data")
 output_path <- file.path(base_path, "output")
@@ -82,7 +82,8 @@ resampling <- c("repeatedcv5x2")
 class_label <- "long_lived"
 prefix_reports <- "20200731"
 
-classifier   <- c(KNN, RF, SVM)
+#classifier   <- c(KNN, NB, RF, SVM)
+classifier   <- c(NB)
 feature      <- c("long_description")
 balancing    <- c(SMOTEMETHOD)
 train_metric <- c(ACC)
@@ -92,12 +93,9 @@ seeds        <- c(DEFAULT_SEED)
 
 if (debug_on) {
   classifier <- c(NB)
-  projects   <- c("winehq")
+  projects   <- c("gcc")
 } else {
-  classifier <- c(NB)
-  projects   <- c("freedesktop")
-  #projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
-  #projects   <- c("freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
   flog.appender(
     appender.file(
       file.path(
@@ -188,6 +186,7 @@ for (project_name in projects)
     reports.dataset <- convert_to_term_matrix(reports, parameter$feature, parameter$max_term )
     reports.dataset <- reports.dataset[complete.cases(reports.dataset), ]
     
+    
     flog.trace("Text mining: extracted %d terms from %s",  ncol(reports.dataset) - 2, parameter$feature )
     for (seed in seeds) {
       set.seed(seed)
@@ -214,17 +213,15 @@ for (project_name in projects)
 
       X_train <- subset(train.balanced.dataset, select = -c(long_lived))
       y_train <- train.balanced.dataset[, class_label]
-print(table(y_train))
-
       X_test <- subset(test.dataset, select = -c(bug_id, bug_fix_time, long_lived))
       y_test <- test.dataset[, class_label]
-print(table(y_test))
 
       flog.trace("Training prediction model ")
       if (parameter$classifier == KNN) {
         grid    <- expand.grid(k=c(5))
       } else if (parameter$classifier == NB) {
-        grid    <- expand.grid(fL=c(1), usekernel=c('adjust'))
+        flog.trace("Getting parameters for NB ")
+        grid    <- expand.grid(fL=0, usekernel=c(TRUE), adjust=seq(0))
       } else if (parameter$classifier == NNET) {
         grid = expand.grid(size = c(20), decay = c(0.5))
       } else if (parameter$classifier == RF) {
@@ -233,19 +230,17 @@ print(table(y_test))
         grid    <- expand.grid(C = c(2**(5)), sigma = c(2**(-5)))
       }
 
-      #fit_control <- get_resampling_method(parameter$resampling)
-      #fit_control <- caret::trainControl(method = "cv", number=2, search = "grid", savePredictions = 'final')
-      fit_control <- caret::trainControl(method = "cv", number=2)
+      fit_control <- get_resampling_method(parameter$resampling)
       fit_model   <- train_with(
         .x = X_train, 
         .y = y_train, 
         .classifier = parameter$classifier,
         .control    = fit_control, 
         .metric     = parameter$train_metric, 
-        .seed       = seed, 
-        .grid       = grid
+        .grid       = grid,
+        .seed       = seed 
       )
-
+    
       flog.trace("Calculating training results metrics")
       train.results <- fit_model$resampledCM
       train.results <- train.results[, !(names(train.results) %in% names(fit_model$bestTune))]
@@ -348,11 +343,8 @@ print(table(y_test))
           all_hat.results   <- hat.results[FALSE, ]
           results.started   <- TRUE
         }
-flog.trace("XXXX 1 - 4b Finished")
         all_train.results <- rbind(all_train.results, train.results)
-flog.trace("XXXX 2 - 4b Finished")
         all_test.results  <- rbind(all_test.results,  test.results)
-flog.trace("XXXX 3 - 4b Finished")
         all_hat.results   <- rbind(all_hat.results, hat.results)
     }
   }

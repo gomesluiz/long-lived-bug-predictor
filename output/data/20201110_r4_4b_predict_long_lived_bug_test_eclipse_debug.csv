@@ -1,0 +1,2 @@
+project,feature,max_term,classifier,balancing,resampling,metric,threshold,train_size,train_size_class_0,train_size_class_1,test_size,test_size_class_0,test_size_class_1,tp,fp,tn,fn,sensitivity,specificity,balanced_acc,balanced_acc_manual,precision,recall,fmeasure,seed,row
+eclipse,long_description,100,nb,smote,repeatedcv5x2,Accuracy,365,1311,675,636,242,225,17,8,98,127,9,0.47058823529411764,0.5644444444444444,0.517516339869281,0.517516339869281,0.07547169811320754,0.47058823529411764,0.13008130081300814,144,1

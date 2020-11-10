@@ -1,0 +1,181 @@
+TRACE [2020-11-10 00:04:28] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-10 00:04:28] Evaluation metrics ouput path: C:/Users/gomes//Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-10 00:04:28] --- CURRENT PROJECT NAME : eclipse ---
+TRACE [2020-11-10 00:04:28] Bug report file name: C:/Users/gomes//Workspace/long-lived-bug-predictor-w-ml/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-11-10 00:04:32] Clean text feature
+TRACE [2020-11-10 00:05:50] Converting dataframe to term matrix
+TRACE [2020-11-10 00:12:01] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-10 00:12:01] Evaluation metrics ouput path: C:/Users/gomes//Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-10 00:12:06] --- CURRENT PROJECT NAME : eclipse ---
+TRACE [2020-11-10 00:12:06] Bug report file name: C:/Users/gomes//Workspace/long-lived-bug-predictor-w-ml/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-11-10 00:12:08] DEBUG_MODE: Sample bug reports dataset
+TRACE [2020-11-10 00:12:09] Clean text feature
+TRACE [2020-11-10 00:12:20] Converting dataframe to term matrix
+TRACE [2020-11-10 00:12:26] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-10 00:12:26] SEED <144>
+TRACE [2020-11-10 00:12:26] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-10 00:12:26] Partitioning dataset in training and testing
+TRACE [2020-11-10 00:12:28] Balancing training dataset
+TRACE [2020-11-10 00:12:28] [balance_dataset]: balancing method: smote
+TRACE [2020-11-10 00:12:29] Training prediction model 
+TRACE [2020-11-10 00:12:29] Getting parameters for NB 
+TRACE [2020-11-10 00:12:29] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-10 00:12:29] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-10 00:13:48] Calculating training results metrics
+TRACE [2020-11-10 00:13:48] Testing predicting model 
+TRACE [2020-11-10 00:13:51] --- Training results recorded on CSV file for eclipse. ---
+TRACE [2020-11-10 00:13:51] Experiment 4 - 4b Finished
+TRACE [2020-11-10 03:31:18] Long live prediction Research Question 4 - Experiment 4b
+TRACE [2020-11-10 03:31:18] Evaluation metrics ouput path: ~/Workspace/long-lived-bug-predictor-w-ml/output/data
+TRACE [2020-11-10 03:31:18] --- CURRENT PROJECT NAME : eclipse ---
+TRACE [2020-11-10 03:31:18] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_eclipse_bug_report_data.csv
+TRACE [2020-11-10 03:31:18] Clean text feature
+TRACE [2020-11-10 03:31:53] Converting dataframe to term matrix
+TRACE [2020-11-10 03:32:12] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-10 03:32:12] SEED <144>
+TRACE [2020-11-10 03:32:12] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-10 03:32:12] Partitioning dataset in training and testing
+TRACE [2020-11-10 03:32:12] Balancing training dataset
+TRACE [2020-11-10 03:32:12] [balance_dataset]: balancing method: smote
+TRACE [2020-11-10 03:32:13] Training prediction model 
+TRACE [2020-11-10 03:32:13] Getting parameters for NB 
+TRACE [2020-11-10 03:32:13] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-10 03:32:13] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-10 03:37:08] Calculating training results metrics
+TRACE [2020-11-10 03:37:08] Testing predicting model 
+TRACE [2020-11-10 03:37:20] --- Training results recorded on CSV file for eclipse. ---
+TRACE [2020-11-10 03:37:20] --- CURRENT PROJECT NAME : freedesktop ---
+TRACE [2020-11-10 03:37:20] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_freedesktop_bug_report_data.csv
+TRACE [2020-11-10 03:37:20] Clean text feature
+TRACE [2020-11-10 03:38:06] Converting dataframe to term matrix
+TRACE [2020-11-10 03:38:22] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-10 03:38:22] SEED <144>
+TRACE [2020-11-10 03:38:22] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-10 03:38:22] Partitioning dataset in training and testing
+TRACE [2020-11-10 03:38:22] Balancing training dataset
+TRACE [2020-11-10 03:38:22] [balance_dataset]: balancing method: smote
+TRACE [2020-11-10 03:38:24] Training prediction model 
+TRACE [2020-11-10 03:38:24] Getting parameters for NB 
+TRACE [2020-11-10 03:38:24] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-10 03:38:24] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-10 03:42:11] Calculating training results metrics
+TRACE [2020-11-10 03:42:11] Testing predicting model 
+TRACE [2020-11-10 03:42:21] --- Training results recorded on CSV file for freedesktop. ---
+TRACE [2020-11-10 03:42:21] --- CURRENT PROJECT NAME : gcc ---
+TRACE [2020-11-10 03:42:21] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_gcc_bug_report_data.csv
+TRACE [2020-11-10 03:42:21] Clean text feature
+TRACE [2020-11-10 03:49:42] Converting dataframe to term matrix
+TRACE [2020-11-10 03:50:12] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-10 03:50:12] SEED <144>
+TRACE [2020-11-10 03:50:12] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-10 03:50:12] Partitioning dataset in training and testing
+TRACE [2020-11-10 03:50:12] Balancing training dataset
+TRACE [2020-11-10 03:50:12] [balance_dataset]: balancing method: smote
+TRACE [2020-11-10 03:50:15] Training prediction model 
+TRACE [2020-11-10 03:50:15] Getting parameters for NB 
+TRACE [2020-11-10 03:50:15] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-10 03:50:15] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-10 03:54:48] Calculating training results metrics
+TRACE [2020-11-10 03:54:48] Testing predicting model 
+TRACE [2020-11-10 03:55:01] --- Training results recorded on CSV file for gcc. ---
+TRACE [2020-11-10 03:55:01] --- CURRENT PROJECT NAME : gnome ---
+TRACE [2020-11-10 03:55:01] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_gnome_bug_report_data.csv
+TRACE [2020-11-10 03:55:01] Clean text feature
+TRACE [2020-11-10 03:59:52] Converting dataframe to term matrix
+TRACE [2020-11-10 04:00:13] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-10 04:00:13] SEED <144>
+TRACE [2020-11-10 04:00:13] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-10 04:00:13] Partitioning dataset in training and testing
+TRACE [2020-11-10 04:00:14] Balancing training dataset
+TRACE [2020-11-10 04:00:14] [balance_dataset]: balancing method: smote
+TRACE [2020-11-10 04:00:16] Training prediction model 
+TRACE [2020-11-10 04:00:16] Getting parameters for NB 
+TRACE [2020-11-10 04:00:16] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-10 04:00:16] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-10 04:03:50] Calculating training results metrics
+TRACE [2020-11-10 04:03:50] Testing predicting model 
+TRACE [2020-11-10 04:03:59] --- Training results recorded on CSV file for gnome. ---
+TRACE [2020-11-10 04:03:59] --- CURRENT PROJECT NAME : mozilla ---
+TRACE [2020-11-10 04:03:59] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_mozilla_bug_report_data.csv
+TRACE [2020-11-10 04:03:59] Clean text feature
+TRACE [2020-11-10 04:04:23] Converting dataframe to term matrix
+TRACE [2020-11-10 04:04:38] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-10 04:04:38] SEED <144>
+TRACE [2020-11-10 04:04:38] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-10 04:04:38] Partitioning dataset in training and testing
+TRACE [2020-11-10 04:04:38] Balancing training dataset
+TRACE [2020-11-10 04:04:38] [balance_dataset]: balancing method: smote
+TRACE [2020-11-10 04:04:42] Training prediction model 
+TRACE [2020-11-10 04:04:42] Getting parameters for NB 
+TRACE [2020-11-10 04:04:42] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-10 04:04:42] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-10 04:08:49] Calculating training results metrics
+TRACE [2020-11-10 04:08:49] Testing predicting model 
+TRACE [2020-11-10 04:09:01] --- Training results recorded on CSV file for mozilla. ---
+TRACE [2020-11-10 04:09:01] --- CURRENT PROJECT NAME : winehq ---
+TRACE [2020-11-10 04:09:01] Bug report file name: ~/Workspace/long-lived-bug-predictor-w-ml/data/20200731_winehq_bug_report_data.csv
+TRACE [2020-11-10 04:09:01] Clean text feature
+TRACE [2020-11-10 04:09:23] Converting dataframe to term matrix
+TRACE [2020-11-10 04:09:34] Text mining: extracted 100 terms from long_description
+TRACE [2020-11-10 04:09:34] SEED <144>
+TRACE [2020-11-10 04:09:34] Current parameters:
+ N.Terms...: [100]
+ Classifier: [nb]
+ Metric...: [Accuracy]
+ Feature...: [long_description]
+ Threshold.: [365]
+ Balancing.: [smote]
+ Resampling: [repeatedcv5x2]
+TRACE [2020-11-10 04:09:34] Partitioning dataset in training and testing
+TRACE [2020-11-10 04:09:34] Balancing training dataset
+TRACE [2020-11-10 04:09:34] [balance_dataset]: balancing method: smote
+TRACE [2020-11-10 04:09:37] Training prediction model 
+TRACE [2020-11-10 04:09:37] Getting parameters for NB 
+TRACE [2020-11-10 04:09:37] [get_resampling_method] Resampling model repeatedcv 5x2
+TRACE [2020-11-10 04:09:37] [train_with_nb] Training model with NB and Accuracy
+TRACE [2020-11-10 04:11:45] Calculating training results metrics
+TRACE [2020-11-10 04:11:45] Testing predicting model 
+TRACE [2020-11-10 04:11:53] --- Training results recorded on CSV file for winehq. ---
+TRACE [2020-11-10 04:11:53] Experiment 4 - 4b Finished
