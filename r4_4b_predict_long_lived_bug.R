@@ -94,10 +94,10 @@ if (debug_on) {
   classifier <- c(NB)
   projects   <- c("winehq")
 } else {
-  #classifier <- c(NB)
-  #projects   <- c("freedesktop")
+  classifier <- c(NB)
+  projects   <- c("freedesktop")
   #projects   <- c("eclipse", "freedesktop", "gcc", "gnome", "mozilla", "winehq")
-  projects   <- c("freedesktop", "gcc", "gnome", "mozilla", "winehq")
+  #projects   <- c("freedesktop", "gcc", "gnome", "mozilla", "winehq")
   flog.appender(
     appender.file(
       file.path(
@@ -234,7 +234,8 @@ print(table(y_test))
       }
 
       #fit_control <- get_resampling_method(parameter$resampling)
-      fit_control <- caret::trainControl(method = "repeatedcv", number=2, repeats=5, search = "grid", savePredictions = 'final')
+      #fit_control <- caret::trainControl(method = "cv", number=2, search = "grid", savePredictions = 'final')
+      fit_control <- caret::trainControl(method = "cv", number=2)
       fit_model   <- train_with(
         .x = X_train, 
         .y = y_train, 
