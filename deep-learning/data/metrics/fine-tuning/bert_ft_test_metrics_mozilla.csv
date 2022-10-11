@@ -1,0 +1,2 @@
+project,train_rows,valid_rows,test_rows,balanced_accuracy
+mozilla,6598,734,2444,0.587043578711222

@@ -1,0 +1,2 @@
+project,classifier,train_class_0,train_class_1,test_class_0,test_class_1,acc,balanced_acc,feature_extraction
+gcc,vc,3743,3727,1248,1243,0.5700521878763549,0.5700496498339418,bert

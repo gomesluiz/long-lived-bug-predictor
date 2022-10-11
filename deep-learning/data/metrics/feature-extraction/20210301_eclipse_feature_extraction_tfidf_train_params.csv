@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+eclipse,knn,tf-idf,{'n_neighbors': 15}
+eclipse,nb,tf-idf,{'var_smoothing': 0.533669923120631}
+eclipse,nn,tf-idf,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (20,), 'solver': 'adam'}"
+eclipse,svm,tf-idf,"{'C': 32, 'gamma': 0.03125, 'kernel': 'rbf'}"
+eclipse,rf,tf-idf,{'max_features': 25}

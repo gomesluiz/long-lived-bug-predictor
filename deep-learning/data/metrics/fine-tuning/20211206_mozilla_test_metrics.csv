@@ -1,0 +1,10 @@
+project,train_rows,test_rows,epochs,metric,value
+mozilla,7332,2444,10,loss,0.6719723343849182
+mozilla,7332,2444,10,tp,834
+mozilla,7332,2444,10,fp,581
+mozilla,7332,2444,10,tn,644
+mozilla,7332,2444,10,fn,385
+mozilla,7332,2444,10,accuracy,0.6047463417053223
+mozilla,7332,2444,10,precision,0.5893992781639099
+mozilla,7332,2444,10,recall,0.6841673254966736
+,,,,,"0,607624816711137"

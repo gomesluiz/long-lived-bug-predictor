@@ -1,0 +1,6 @@
+project,classifier,train_class_0,train_class_1,test_class_0,test_class_1,acc,balanced_acc,feature_extraction
+gcc,knn,28,22,25,25,0.58,0.58,tf-idf
+gcc,nb,28,22,25,25,0.6,0.6,tf-idf
+gcc,nn,28,22,25,25,0.54,0.54,tf-idf
+gcc,rf,28,22,25,25,0.42,0.42000000000000004,tf-idf
+gcc,svm,28,22,25,25,0.6,0.6,tf-idf

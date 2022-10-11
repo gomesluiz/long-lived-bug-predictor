@@ -1,0 +1,10 @@
+project,train_rows,test_rows,epochs,metric,value
+freedesktop,5719,1907,10,loss,0.683600127696991
+freedesktop,5719,1907,10,tp,554
+freedesktop,5719,1907,10,fp,438
+freedesktop,5719,1907,10,tn,518
+freedesktop,5719,1907,10,fn,397
+freedesktop,5719,1907,10,accuracy,0.5621395111083984
+freedesktop,5719,1907,10,precision,0.5584677457809448
+freedesktop,5719,1907,10,recall,0.5825446844100952
+,,,,balanced accuracy,"0,562293980257359"

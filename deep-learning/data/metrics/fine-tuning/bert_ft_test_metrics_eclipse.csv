@@ -1,0 +1,2 @@
+project,train_rows,valid_rows,test_rows,balanced_accuracy
+eclipse,6439,716,2385,0.5536155102350842

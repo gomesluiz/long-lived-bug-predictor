@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+gnome,knn,tf-idf,{'n_neighbors': 25}
+gnome,nb,tf-idf,{'var_smoothing': 0.43287612810830584}
+gnome,nn,tf-idf,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (20,), 'solver': 'adam'}"
+gnome,svm,tf-idf,"{'C': 1024, 'gamma': 0.0009765625, 'kernel': 'rbf'}"
+gnome,rf,tf-idf,{'max_features': 50}

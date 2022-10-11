@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+eclipse,knn,bert,{'n_neighbors': 33}
+eclipse,nb,bert,{'var_smoothing': 0.001873817422860383}
+eclipse,svm,bert,"{'C': 1024, 'gamma': 3.0517578125e-05, 'kernel': 'rbf'}"
+eclipse,rf,bert,{'max_features': 25}
+eclipse,nn,bert,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (10, 20, 30, 40, 50), 'solver': 'adam'}"

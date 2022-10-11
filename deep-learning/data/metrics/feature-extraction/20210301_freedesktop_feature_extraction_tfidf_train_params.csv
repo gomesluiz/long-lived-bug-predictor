@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+freedesktop,knn,tf-idf,{'n_neighbors': 11}
+freedesktop,nb,tf-idf,{'var_smoothing': 1.0}
+freedesktop,nn,tf-idf,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (20,), 'solver': 'adam'}"
+freedesktop,svm,tf-idf,"{'C': 1, 'gamma': 0.03125, 'kernel': 'rbf'}"
+freedesktop,rf,tf-idf,{'max_features': 50}

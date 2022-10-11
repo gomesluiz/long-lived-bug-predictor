@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+gcc,knn,tf-idf,{'n_neighbors': 25}
+gcc,nb,tf-idf,{'var_smoothing': 0.8111308307896871}
+gcc,nn,tf-idf,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (20,), 'solver': 'adam'}"
+gcc,svm,tf-idf,"{'C': 1, 'gamma': 1, 'kernel': 'rbf'}"
+gcc,rf,tf-idf,{'max_features': 25}

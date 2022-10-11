@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+freedesktop,knn,bert,{'n_neighbors': 33}
+freedesktop,nb,bert,{'var_smoothing': 0.0002310129700083158}
+freedesktop,svm,bert,"{'C': 32, 'gamma': 3.0517578125e-05, 'kernel': 'rbf'}"
+freedesktop,rf,bert,{'max_features': 25}
+freedesktop,nn,bert,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (10, 20, 30, 40, 50), 'solver': 'adam'}"

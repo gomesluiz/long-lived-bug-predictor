@@ -1,0 +1,2 @@
+project,classifier,train_class_0,train_class_1,test_class_0,test_class_1,acc,balanced_acc,feature_extraction
+gnome,vc,2923,2893,974,965,0.5487364620938628,0.5482743028587843,tf-idf

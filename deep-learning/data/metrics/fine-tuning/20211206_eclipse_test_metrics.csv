@@ -1,0 +1,10 @@
+project,train_rows,test_rows,epochs,metric,value
+eclipse,7155,2385,10,loss,0.6842936873435974
+eclipse,7155,2385,10,tp,575
+eclipse,7155,2385,10,fp,423
+eclipse,7155,2385,10,tn,783
+eclipse,7155,2385,10,fn,604
+eclipse,7155,2385,10,accuracy,0.5693920254707336
+eclipse,7155,2385,10,precision,0.5761523246765137
+eclipse,7155,2385,10,recall,0.4877014458179474
+eclipse,7155,2385,10,recall,"0,57034003117988"

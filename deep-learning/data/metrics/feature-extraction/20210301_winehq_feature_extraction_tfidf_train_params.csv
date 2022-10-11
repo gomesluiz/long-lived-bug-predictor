@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+winehq,knn,tf-idf,{'n_neighbors': 33}
+winehq,nb,tf-idf,{'var_smoothing': 0.657933224657568}
+winehq,nn,tf-idf,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (10, 20, 30, 40, 50), 'solver': 'adam'}"
+winehq,svm,tf-idf,"{'C': 1, 'gamma': 1, 'kernel': 'rbf'}"
+winehq,rf,tf-idf,{'max_features': 25}

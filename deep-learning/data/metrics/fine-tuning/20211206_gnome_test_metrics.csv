@@ -1,0 +1,10 @@
+project,train_rows,test_rows,epochs,metric,value
+gnome,5816,1939,10,loss,0.6839320063591003
+gnome,5816,1939,10,tp,679
+gnome,5816,1939,10,fp,557
+gnome,5816,1939,10,tn,417
+gnome,5816,1939,10,fn,286
+gnome,5816,1939,10,accuracy,0.5652397871017456
+gnome,5816,1939,10,precision,0.549352765083313
+gnome,5816,1939,10,recall,0.7036269307136536
+,,,,Balanced Accuracy,"0,571262435148485"

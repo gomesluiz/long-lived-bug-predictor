@@ -1,0 +1,9 @@
+output/data/*
+output/bert/*
+output/logs/*
+output/checkpoints/*
+data/models/*
+data/src/
+data/src/pycocotools
+src/pycocotools
+*.pyc

@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+mozilla,knn,bert,{'n_neighbors': 33}
+mozilla,nb,bert,{'var_smoothing': 3.511191734215127e-05}
+mozilla,svm,bert,"{'C': 1, 'gamma': 0.03125, 'kernel': 'rbf'}"
+mozilla,rf,bert,{'max_features': 75}
+mozilla,nn,bert,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (20,), 'solver': 'adam'}"

@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+winehq,knn,bert,{'n_neighbors': 21}
+winehq,nb,bert,{'var_smoothing': 1.0}
+winehq,svm,bert,"{'C': 0.03125, 'gamma': 3.0517578125e-05, 'kernel': 'rbf'}"
+winehq,rf,bert,{'max_features': 25}
+winehq,nn,bert,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (20,), 'solver': 'adam'}"

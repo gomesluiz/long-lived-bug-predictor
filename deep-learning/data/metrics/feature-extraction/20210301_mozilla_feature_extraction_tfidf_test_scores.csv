@@ -1,0 +1,2 @@
+project,classifier,train_class_0,train_class_1,test_class_0,test_class_1,acc,balanced_acc,feature_extraction
+mozilla,vc,3674,3658,1225,1219,0.5229132569558101,0.522647201620599,tf-idf

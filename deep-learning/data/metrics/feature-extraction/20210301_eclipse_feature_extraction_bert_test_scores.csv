@@ -1,0 +1,2 @@
+project,classifier,train_class_0,train_class_1,test_class_0,test_class_1,acc,balanced_acc,feature_extraction
+eclipse,vc,3616,3539,1206,1179,0.580293501048218,0.5801779904548504,bert

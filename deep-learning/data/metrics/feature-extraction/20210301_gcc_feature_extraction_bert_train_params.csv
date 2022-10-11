@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+gcc,knn,bert,{'n_neighbors': 25}
+gcc,nb,bert,{'var_smoothing': 0.0023101297000831605}
+gcc,svm,bert,"{'C': 1, 'gamma': 0.03125, 'kernel': 'rbf'}"
+gcc,rf,bert,{'max_features': 100}
+gcc,nn,bert,"{'activation': 'relu', 'alpha': 0.0001, 'hidden_layer_sizes': (10, 20, 30, 40, 50), 'solver': 'adam'}"

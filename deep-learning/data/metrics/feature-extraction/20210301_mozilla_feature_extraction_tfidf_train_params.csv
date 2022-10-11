@@ -1,0 +1,6 @@
+project,classifier,feature-extraction,params
+mozilla,knn,tf-idf,{'n_neighbors': 25}
+mozilla,nb,tf-idf,{'var_smoothing': 1.0}
+mozilla,nn,tf-idf,"{'activation': 'relu', 'alpha': 0.05, 'hidden_layer_sizes': (10, 20, 30, 40, 50), 'solver': 'adam'}"
+mozilla,svm,tf-idf,"{'C': 32, 'gamma': 0.0009765625, 'kernel': 'rbf'}"
+mozilla,rf,tf-idf,{'max_features': 50}

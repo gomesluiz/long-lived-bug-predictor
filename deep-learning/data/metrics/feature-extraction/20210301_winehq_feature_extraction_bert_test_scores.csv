@@ -1,0 +1,2 @@
+project,classifier,train_class_0,train_class_1,test_class_0,test_class_1,acc,balanced_acc,feature_extraction
+winehq,vc,2271,2272,758,757,0.572937293729373,0.5729514853452212,bert
